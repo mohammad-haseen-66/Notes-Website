@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Programming Course - Course.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="c-course.css" />
+  <link rel="stylesheet" href="compiler-modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">📘</div>
+        <h1><span>Course</span><span class="dot">.com</span></h1>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <button id="compiler-btn" class="compiler-nav-btn" title="Open Code Compiler">💻 Compiler</button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch to dark mode">🌙</button>
+        <a href="index.html" class="btn">All Courses →</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="course-header">
+    <div class="course-header-content">
+      <div class="course-badge">Java Programming</div>
+      <h1>Complete Java Programming Course</h1>
+      <p>Master Java programming from basics to advanced OOP concepts with hands-on examples, quizzes, and interactive coding.</p>
+    </div>
+  </section>
+
+  <div class="course-container">
+    <aside class="course-sidebar">
+      <h3>Course Topics</h3>
+      <nav class="topic-nav" aria-label="Course topics navigation">
+        <a href="#intro" class="topic-link active">1. Introduction to Java</a>
+        <a href="#variables" class="topic-link">2. Variables & Data Types</a>
+        <a href="#operators" class="topic-link">3. Operators</a>
+        <a href="#control-flow" class="topic-link">4. Control Flow</a>
+        <a href="#methods" class="topic-link">5. Methods</a>
+        <a href="#oop" class="topic-link">6. Object-Oriented Programming</a>
+        <a href="#collections" class="topic-link">7. Collections Framework</a>
+        <a href="#exceptions" class="topic-link">8. Exception Handling</a>
+      </nav>
+    </aside>
+
+    <main class="course-content">
+      <!-- Introduction -->
+      <section id="intro" class="topic-section">
+        <h2>1. Introduction to Java</h2>
+        <div class="topic-content">
+          <h3>What is Java?</h3>
+          <p>Java is a high-level, object-oriented programming language developed by James Gosling at Sun Microsystems (now owned by Oracle) in 1995. Java was designed with the philosophy of "Write Once, Run Anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+          
+          <p>Java is a <strong>compiled and interpreted language</strong>. Source code is compiled into bytecode, which is then executed by the Java Virtual Machine (JVM). This architecture makes Java platform-independent, secure, and portable. Java is one of the most popular programming languages in the world, widely used for developing web applications, mobile apps (Android), enterprise software, and large-scale systems.</p>
+
+          <h3>Key Characteristics of Java:</h3>
+          <ul>
+            <li><strong>Platform Independent:</strong> WORA - Write Once, Run Anywhere through JVM</li>
+            <li><strong>Object-Oriented:</strong> Pure OOP language with classes and objects</li>
+            <li><strong>Simple:</strong> Easy to learn with clear syntax</li>
+            <li><strong>Secure:</strong> Built-in security features and sandbox execution</li>
+            <li><strong>Multithreaded:</strong> Built-in support for concurrent programming</li>
+            <li><strong>Robust:</strong> Strong memory management and exception handling</li>
+            <li><strong>Portable:</strong> Architecture-neutral bytecode</li>
+            <li><strong>High Performance:</strong> Just-In-Time (JIT) compilation</li>
+            <li><strong>Distributed:</strong> Network-centric programming support</li>
+            <li><strong>Dynamic:</strong> Runtime polymorphism and dynamic loading</li>
+          </ul>
+          
+          <h3>Why Learn Java?</h3>
+          <ul>
+            <li><strong>Industry Demand:</strong> One of the most sought-after programming skills</li>
+            <li><strong>Android Development:</strong> Primary language for Android app development</li>
+            <li><strong>Enterprise Applications:</strong> Widely used in large-scale enterprise systems</li>
+            <li><strong>Career Opportunities:</strong> High-paying jobs in software development</li>
+            <li><strong>Large Community:</strong> Extensive support and resources available</li>
+            <li><strong>Rich Ecosystem:</strong> Vast libraries and frameworks (Spring, Hibernate, etc.)</li>
+            <li><strong>Scalability:</strong> Excellent for building scalable applications</li>
+          </ul>
+
+          <h3>Your First Java Program</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+          </div>
+
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>public class HelloWorld</code> - Defines a public class named HelloWorld (filename must match class name)</li>
+            <li><code>public static void main(String[] args)</code> - Main method where program execution begins</li>
+            <li><code>public</code> - Access modifier (accessible from anywhere)</li>
+            <li><code>static</code> - Can be called without creating an object</li>
+            <li><code>void</code> - Returns nothing</li>
+            <li><code>String[] args</code> - Command-line arguments</li>
+            <li><code>System.out.println()</code> - Prints text to console and adds a new line</li>
+          </ul>
+
+          <h3>Java Architecture:</h3>
+          <ul>
+            <li><strong>JDK (Java Development Kit):</strong> Development environment for Java</li>
+            <li><strong>JRE (Java Runtime Environment):</strong> Runtime environment to run Java programs</li>
+            <li><strong>JVM (Java Virtual Machine):</strong> Virtual machine that executes bytecode</li>
+            <li><strong>JIT (Just-In-Time) Compiler:</strong> Compiles bytecode to native code at runtime</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Introduction to Java</h3>
+            <div class="quiz" data-quiz="java-intro">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Who created the Java programming language?</p>
+                <label><input type="radio" name="q1" value="a"> a) Dennis Ritchie</label>
+                <label><input type="radio" name="q1" value="b"> b) James Gosling</label>
+                <label><input type="radio" name="q1" value="c"> c) Bjarne Stroustrup</label>
+                <label><input type="radio" name="q1" value="d"> d) Guido van Rossum</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> In which year was Java released?</p>
+                <label><input type="radio" name="q2" value="a"> a) 1991</label>
+                <label><input type="radio" name="q2" value="b"> b) 1995</label>
+                <label><input type="radio" name="q2" value="c"> c) 2000</label>
+                <label><input type="radio" name="q2" value="d"> d) 2005</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does WORA stand for in Java?</p>
+                <label><input type="radio" name="q3" value="a"> a) Write Once, Read Anywhere</label>
+                <label><input type="radio" name="q3" value="b"> b) Write Once, Run Anywhere</label>
+                <label><input type="radio" name="q3" value="c"> c) Write One, Run All</label>
+                <label><input type="radio" name="q3" value="d"> d) Write Once, Run Always</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does JVM stand for?</p>
+                <label><input type="radio" name="q4" value="a"> a) Java Virtual Machine</label>
+                <label><input type="radio" name="q4" value="b"> b) Java Variable Machine</label>
+                <label><input type="radio" name="q4" value="c"> c) Java Version Machine</label>
+                <label><input type="radio" name="q4" value="d"> d) Java Value Machine</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is the entry point of a Java program?</p>
+                <label><input type="radio" name="q5" value="a"> a) start() method</label>
+                <label><input type="radio" name="q5" value="b"> b) main() method</label>
+                <label><input type="radio" name="q5" value="c"> c) run() method</label>
+                <label><input type="radio" name="q5" value="d"> d) begin() method</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Which company currently owns Java?</p>
+                <label><input type="radio" name="q6" value="a"> a) Microsoft</label>
+                <label><input type="radio" name="q6" value="b"> b) Oracle</label>
+                <label><input type="radio" name="q6" value="c"> c) Google</label>
+                <label><input type="radio" name="q6" value="d"> d) IBM</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the file extension for Java source files?</p>
+                <label><input type="radio" name="q7" value="a"> a) .jav</label>
+                <label><input type="radio" name="q7" value="b"> b) .java</label>
+                <label><input type="radio" name="q7" value="c"> c) .class</label>
+                <label><input type="radio" name="q7" value="d"> d) .jar</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is bytecode in Java?</p>
+                <label><input type="radio" name="q8" value="a"> a) Machine code</label>
+                <label><input type="radio" name="q8" value="b"> b) Intermediate code executed by JVM</label>
+                <label><input type="radio" name="q8" value="c"> c) Source code</label>
+                <label><input type="radio" name="q8" value="d"> d) Assembly code</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does JDK stand for?</p>
+                <label><input type="radio" name="q9" value="a"> a) Java Development Kit</label>
+                <label><input type="radio" name="q9" value="b"> b) Java Development Key</label>
+                <label><input type="radio" name="q9" value="c"> c) Java Data Kit</label>
+                <label><input type="radio" name="q9" value="d"> d) Java Design Kit</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> Which method is used to print output in Java?</p>
+                <label><input type="radio" name="q10" value="a"> a) System.out.print()</label>
+                <label><input type="radio" name="q10" value="b"> b) System.out.println()</label>
+                <label><input type="radio" name="q10" value="c"> c) Both a and b</label>
+                <label><input type="radio" name="q10" value="d"> d) print()</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-intro')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Variables & Data Types -->
+      <section id="variables" class="topic-section">
+        <h2>2. Variables & Data Types</h2>
+        <div class="topic-content">
+          <h3>What are Variables?</h3>
+          <p>Variables are containers that store data values in Java. In Java, variables must be declared with a specific data type before they can be used. Java is a strongly-typed language, meaning variable types are checked at compile time.</p>
+
+          <h3>Variable Declaration Syntax:</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">data_type variable_name;
+data_type variable_name = value;</code></pre>
+          </div>
+
+          <h3>Primitive Data Types in Java</h3>
+          <table class="data-table">
+            <tr>
+              <th>Data Type</th>
+              <th>Size (bits)</th>
+              <th>Range</th>
+              <th>Default Value</th>
+            </tr>
+            <tr>
+              <td><code>byte</code></td>
+              <td>8</td>
+              <td>-128 to 127</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><code>short</code></td>
+              <td>16</td>
+              <td>-32,768 to 32,767</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><code>int</code></td>
+              <td>32</td>
+              <td>-2,147,483,648 to 2,147,483,647</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><code>long</code></td>
+              <td>64</td>
+              <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+              <td>0L</td>
+            </tr>
+            <tr>
+              <td><code>float</code></td>
+              <td>32</td>
+              <td>±3.4e±38 (7 decimal digits)</td>
+              <td>0.0f</td>
+            </tr>
+            <tr>
+              <td><code>double</code></td>
+              <td>64</td>
+              <td>±1.7e±308 (15 decimal digits)</td>
+              <td>0.0d</td>
+            </tr>
+            <tr>
+              <td><code>char</code></td>
+              <td>16</td>
+              <td>'\u0000' to '\uffff' (0 to 65,535)</td>
+              <td>'\u0000'</td>
+            </tr>
+            <tr>
+              <td><code>boolean</code></td>
+              <td>1</td>
+              <td>true or false</td>
+              <td>false</td>
+            </tr>
+          </table>
+
+          <h3>Non-Primitive Data Types:</h3>
+          <ul>
+            <li><strong>String:</strong> Sequence of characters</li>
+            <li><strong>Arrays:</strong> Collection of similar data types</li>
+            <li><strong>Classes:</strong> User-defined data types</li>
+            <li><strong>Interfaces:</strong> Abstract data types</li>
+          </ul>
+
+          <h3>Example: Variable Declaration and Usage</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class VariablesExample {
+    public static void main(String[] args) {
+        // Primitive data types
+        byte b = 100;
+        short s = 1000;
+        int age = 25;
+        long l = 1000000L;
+        float height = 5.9f;
+        double salary = 50000.50;
+        char grade = 'A';
+        boolean isStudent = true;
+        
+        // Non-primitive data type
+        String name = "John Doe";
+        
+        // Displaying variables
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Age: " + age);
+        System.out.println("Long: " + l);
+        System.out.println("Height: " + height);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Is Student: " + isStudent);
+        System.out.println("Name: " + name);
+    }
+}</code></pre>
+          </div>
+
+          <h3>Type Casting in Java</h3>
+          <p>Java supports two types of casting:</p>
+          <ul>
+            <li><strong>Widening Casting (Implicit):</strong> Converting smaller type to larger type</li>
+            <li><strong>Narrowing Casting (Explicit):</strong> Converting larger type to smaller type</li>
+          </ul>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">// Widening casting
+int num = 10;
+double d = num;  // Automatic
+
+// Narrowing casting
+double d = 10.5;
+int num = (int) d;  // Manual casting required</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Variables & Data Types</h3>
+            <div class="quiz" data-quiz="java-variables">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the default value of an int variable in Java?</p>
+                <label><input type="radio" name="q1" value="a"> a) null</label>
+                <label><input type="radio" name="q1" value="b"> b) 0</label>
+                <label><input type="radio" name="q1" value="c"> c) undefined</label>
+                <label><input type="radio" name="q1" value="d"> d) -1</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which data type is used to store a single character in Java?</p>
+                <label><input type="radio" name="q2" value="a"> a) String</label>
+                <label><input type="radio" name="q2" value="b"> b) char</label>
+                <label><input type="radio" name="q2" value="c"> c) Character</label>
+                <label><input type="radio" name="q2" value="d"> d) text</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is the size of a double in Java?</p>
+                <label><input type="radio" name="q3" value="a"> a) 32 bits</label>
+                <label><input type="radio" name="q3" value="b"> b) 64 bits</label>
+                <label><input type="radio" name="q3" value="c"> c) 16 bits</label>
+                <label><input type="radio" name="q3" value="d"> d) 8 bits</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> Which of the following is a primitive data type in Java?</p>
+                <label><input type="radio" name="q4" value="a"> a) String</label>
+                <label><input type="radio" name="q4" value="b"> b) int</label>
+                <label><input type="radio" name="q4" value="c"> c) Array</label>
+                <label><input type="radio" name="q4" value="d"> d) Class</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is the default value of a boolean variable?</p>
+                <label><input type="radio" name="q5" value="a"> a) true</label>
+                <label><input type="radio" name="q5" value="b"> b) false</label>
+                <label><input type="radio" name="q5" value="c"> c) null</label>
+                <label><input type="radio" name="q5" value="d"> d) 0</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is the range of a byte data type?</p>
+                <label><input type="radio" name="q6" value="a"> a) 0 to 255</label>
+                <label><input type="radio" name="q6" value="b"> b) -128 to 127</label>
+                <label><input type="radio" name="q6" value="c"> c) -256 to 255</label>
+                <label><input type="radio" name="q6" value="d"> d) 0 to 65535</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> Which suffix is used for long literals in Java?</p>
+                <label><input type="radio" name="q7" value="a"> a) L</label>
+                <label><input type="radio" name="q7" value="b"> b) l</label>
+                <label><input type="radio" name="q7" value="c"> c) Both a and b</label>
+                <label><input type="radio" name="q7" value="d"> d) Long</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is type casting?</p>
+                <label><input type="radio" name="q8" value="a"> a) Converting one data type to another</label>
+                <label><input type="radio" name="q8" value="b"> b) Declaring a variable</label>
+                <label><input type="radio" name="q8" value="c"> c) Initializing a variable</label>
+                <label><input type="radio" name="q8" value="d"> d) Printing a variable</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> Which of the following is a non-primitive data type?</p>
+                <label><input type="radio" name="q9" value="a"> a) int</label>
+                <label><input type="radio" name="q9" value="b"> b) String</label>
+                <label><input type="radio" name="q9" value="c"> c) char</label>
+                <label><input type="radio" name="q9" value="d"> d) boolean</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the size of a char in Java?</p>
+                <label><input type="radio" name="q10" value="a"> a) 8 bits</label>
+                <label><input type="radio" name="q10" value="b"> b) 16 bits</label>
+                <label><input type="radio" name="q10" value="c"> c) 32 bits</label>
+                <label><input type="radio" name="q10" value="d"> d) 64 bits</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-variables')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operators -->
+      <section id="operators" class="topic-section">
+        <h2>3. Operators</h2>
+        <div class="topic-content">
+          <h3>Types of Operators in Java</h3>
+          
+          <h4>1. Arithmetic Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td><code>+</code></td>
+              <td>Addition</td>
+              <td><code>a + b</code></td>
+            </tr>
+            <tr>
+              <td><code>-</code></td>
+              <td>Subtraction</td>
+              <td><code>a - b</code></td>
+            </tr>
+            <tr>
+              <td><code>*</code></td>
+              <td>Multiplication</td>
+              <td><code>a * b</code></td>
+            </tr>
+            <tr>
+              <td><code>/</code></td>
+              <td>Division</td>
+              <td><code>a / b</code></td>
+            </tr>
+            <tr>
+              <td><code>%</code></td>
+              <td>Modulus (remainder)</td>
+              <td><code>a % b</code></td>
+            </tr>
+            <tr>
+              <td><code>++</code></td>
+              <td>Increment</td>
+              <td><code>a++</code> or <code>++a</code></td>
+            </tr>
+            <tr>
+              <td><code>--</code></td>
+              <td>Decrement</td>
+              <td><code>a--</code> or <code>--a</code></td>
+            </tr>
+          </table>
+
+          <h4>2. Relational Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>==</code></td>
+              <td>Equal to</td>
+            </tr>
+            <tr>
+              <td><code>!=</code></td>
+              <td>Not equal to</td>
+            </tr>
+            <tr>
+              <td><code>&lt;</code></td>
+              <td>Less than</td>
+            </tr>
+            <tr>
+              <td><code>&gt;</code></td>
+              <td>Greater than</td>
+            </tr>
+            <tr>
+              <td><code>&lt;=</code></td>
+              <td>Less than or equal to</td>
+            </tr>
+            <tr>
+              <td><code>&gt;=</code></td>
+              <td>Greater than or equal to</td>
+            </tr>
+          </table>
+
+          <h4>3. Logical Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>&&</code></td>
+              <td>Logical AND</td>
+            </tr>
+            <tr>
+              <td><code>||</code></td>
+              <td>Logical OR</td>
+            </tr>
+            <tr>
+              <td><code>!</code></td>
+              <td>Logical NOT</td>
+            </tr>
+          </table>
+
+          <h4>4. Assignment Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td><code>=</code></td>
+              <td>Assign</td>
+              <td><code>a = b</code></td>
+            </tr>
+            <tr>
+              <td><code>+=</code></td>
+              <td>Add and assign</td>
+              <td><code>a += b</code></td>
+            </tr>
+            <tr>
+              <td><code>-=</code></td>
+              <td>Subtract and assign</td>
+              <td><code>a -= b</code></td>
+            </tr>
+            <tr>
+              <td><code>*=</code></td>
+              <td>Multiply and assign</td>
+              <td><code>a *= b</code></td>
+            </tr>
+            <tr>
+              <td><code>/=</code></td>
+              <td>Divide and assign</td>
+              <td><code>a /= b</code></td>
+            </tr>
+            <tr>
+              <td><code>%=</code></td>
+              <td>Modulus and assign</td>
+              <td><code>a %= b</code></td>
+            </tr>
+          </table>
+
+          <h3>Example: Using Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class OperatorsExample {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        
+        // Arithmetic operations
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+        
+        // Relational operations
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a == b: " + (a == b));
+        
+        // Logical operations
+        System.out.println("a > 5 && b < 10: " + (a > 5 && b < 10));
+        
+        // Assignment operators
+        int c = 10;
+        c += 5;  // c = c + 5
+        System.out.println("c after += 5: " + c);
+    }
+}</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Operators</h3>
+            <div class="quiz" data-quiz="java-operators">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the result of 10 % 3 in Java?</p>
+                <label><input type="radio" name="q1" value="a"> a) 3</label>
+                <label><input type="radio" name="q1" value="b"> b) 1</label>
+                <label><input type="radio" name="q1" value="c"> c) 0</label>
+                <label><input type="radio" name="q1" value="d"> d) 10</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which operator is used for logical AND in Java?</p>
+                <label><input type="radio" name="q2" value="a"> a) &&</label>
+                <label><input type="radio" name="q2" value="b"> b) ||</label>
+                <label><input type="radio" name="q2" value="c"> c) !</label>
+                <label><input type="radio" name="q2" value="d"> d) &</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does the operator += do?</p>
+                <label><input type="radio" name="q3" value="a"> a) Adds two numbers</label>
+                <label><input type="radio" name="q3" value="b"> b) Adds and assigns</label>
+                <label><input type="radio" name="q3" value="c"> c) Compares two numbers</label>
+                <label><input type="radio" name="q3" value="d"> d) Multiplies two numbers</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is the result of: int a = 5; int b = a++;</p>
+                <label><input type="radio" name="q4" value="a"> a) a = 6, b = 6</label>
+                <label><input type="radio" name="q4" value="b"> b) a = 6, b = 5</label>
+                <label><input type="radio" name="q4" value="c"> c) a = 5, b = 6</label>
+                <label><input type="radio" name="q4" value="d"> d) a = 5, b = 5</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> Which operator has the highest precedence?</p>
+                <label><input type="radio" name="q5" value="a"> a) +</label>
+                <label><input type="radio" name="q5" value="b"> b) *</label>
+                <label><input type="radio" name="q5" value="c"> c) ==</label>
+                <label><input type="radio" name="q5" value="d"> d) =</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is the result of: 5 / 2 in Java (with int types)?</p>
+                <label><input type="radio" name="q6" value="a"> a) 2.5</label>
+                <label><input type="radio" name="q6" value="b"> b) 2</label>
+                <label><input type="radio" name="q6" value="c"> c) 3</label>
+                <label><input type="radio" name="q6" value="d"> d) 2.0</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> Which operator is used for logical OR?</p>
+                <label><input type="radio" name="q7" value="a"> a) &&</label>
+                <label><input type="radio" name="q7" value="b"> b) ||</label>
+                <label><input type="radio" name="q7" value="c"> c) !</label>
+                <label><input type="radio" name="q7" value="d"> d) |</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does the ternary operator (?:) do?</p>
+                <label><input type="radio" name="q8" value="a"> a) Performs arithmetic</label>
+                <label><input type="radio" name="q8" value="b"> b) Conditional expression</label>
+                <label><input type="radio" name="q8" value="c"> c) Logical operation</label>
+                <label><input type="radio" name="q8" value="d"> d) Assignment</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is the result of: boolean result = !(5 > 3);</p>
+                <label><input type="radio" name="q9" value="a"> a) true</label>
+                <label><input type="radio" name="q9" value="b"> b) false</label>
+                <label><input type="radio" name="q9" value="c"> c) 1</label>
+                <label><input type="radio" name="q9" value="d"> d) 0</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the difference between == and equals() in Java?</p>
+                <label><input type="radio" name="q10" value="a"> a) == compares references, equals() compares values</label>
+                <label><input type="radio" name="q10" value="b"> b) No difference</label>
+                <label><input type="radio" name="q10" value="c"> c) == compares values, equals() compares references</label>
+                <label><input type="radio" name="q10" value="d"> d) Both compare references</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-operators')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Control Flow -->
+      <section id="control-flow" class="topic-section">
+        <h2>4. Control Flow</h2>
+        <div class="topic-content">
+          <h3>If-Else Statement</h3>
+          <p>The if-else statement allows you to execute different code blocks based on conditions.</p>
+          
+          <h3>Example: If-Else</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class IfElseExample {
+    public static void main(String[] args) {
+        int number = 10;
+        
+        if (number > 0) {
+            System.out.println("Number is positive");
+        } else if (number < 0) {
+            System.out.println("Number is negative");
+        } else {
+            System.out.println("Number is zero");
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>Switch Statement</h3>
+          <p>The switch statement allows you to select one of many code blocks to execute based on a value.</p>
+          
+          <h3>Example: Switch</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class SwitchExample {
+    public static void main(String[] args) {
+        int day = 3;
+        
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>Loops in Java</h3>
+          
+          <h4>1. For Loop</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class ForLoopExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(i + " ");
+        }
+        // Output: 1 2 3 4 5
+    }
+}</code></pre>
+          </div>
+
+          <h4>2. While Loop</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class WhileLoopExample {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i <= 5) {
+            System.out.print(i + " ");
+            i++;
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h4>3. Do-While Loop</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class DoWhileLoopExample {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.print(i + " ");
+            i++;
+        } while (i <= 5);
+    }
+}</code></pre>
+          </div>
+
+          <h4>4. Enhanced For Loop (For-Each)</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class ForEachExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>Jump Statements</h3>
+          <ul>
+            <li><strong>break:</strong> Exits the loop or switch statement</li>
+            <li><strong>continue:</strong> Skips the rest of the loop and continues to the next iteration</li>
+            <li><strong>return:</strong> Exits the method</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Control Flow</h3>
+            <div class="quiz" data-quiz="java-control-flow">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Which loop executes at least once?</p>
+                <label><input type="radio" name="q1" value="a"> a) for loop</label>
+                <label><input type="radio" name="q1" value="b"> b) while loop</label>
+                <label><input type="radio" name="q1" value="c"> c) do-while loop</label>
+                <label><input type="radio" name="q1" value="d"> d) if-else</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What keyword is used to exit a switch case?</p>
+                <label><input type="radio" name="q2" value="a"> a) exit</label>
+                <label><input type="radio" name="q2" value="b"> b) break</label>
+                <label><input type="radio" name="q2" value="c"> c) continue</label>
+                <label><input type="radio" name="q2" value="d"> d) return</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is the output of: for(int i=0; i&lt;3; i++) System.out.print(i);</p>
+                <label><input type="radio" name="q3" value="a"> a) 012</label>
+                <label><input type="radio" name="q3" value="b"> b) 123</label>
+                <label><input type="radio" name="q3" value="c"> c) 0123</label>
+                <label><input type="radio" name="q3" value="d"> d) 0 1 2</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does the 'continue' statement do?</p>
+                <label><input type="radio" name="q4" value="a"> a) Exits the loop</label>
+                <label><input type="radio" name="q4" value="b"> b) Skips current iteration</label>
+                <label><input type="radio" name="q4" value="c"> c) Restarts the loop</label>
+                <label><input type="radio" name="q4" value="d"> d) Pauses execution</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> Can a switch statement use String values in Java (Java 7+)?</p>
+                <label><input type="radio" name="q5" value="a"> a) Yes</label>
+                <label><input type="radio" name="q5" value="b"> b) No, only integers and chars</label>
+                <label><input type="radio" name="q5" value="c"> c) Only in Java 8</label>
+                <label><input type="radio" name="q5" value="d"> d) Only with final strings</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is the purpose of the 'default' case in a switch statement?</p>
+                <label><input type="radio" name="q6" value="a"> a) Required case</label>
+                <label><input type="radio" name="q6" value="b"> b) Executes when no case matches</label>
+                <label><input type="radio" name="q6" value="c"> c) First case to execute</label>
+                <label><input type="radio" name="q6" value="d"> d) Last case to execute</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is a nested loop?</p>
+                <label><input type="radio" name="q7" value="a"> a) A loop inside another loop</label>
+                <label><input type="radio" name="q7" value="b"> b) A broken loop</label>
+                <label><input type="radio" name="q7" value="c"> c) A loop with no condition</label>
+                <label><input type="radio" name="q7" value="d"> d) A recursive loop</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> Which loop is best when you know the number of iterations?</p>
+                <label><input type="radio" name="q8" value="a"> a) while loop</label>
+                <label><input type="radio" name="q8" value="b"> b) for loop</label>
+                <label><input type="radio" name="q8" value="c"> c) do-while loop</label>
+                <label><input type="radio" name="q8" value="d"> d) All are equal</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is the enhanced for loop syntax in Java?</p>
+                <label><input type="radio" name="q9" value="a"> a) for (type variable : array)</label>
+                <label><input type="radio" name="q9" value="b"> b) for (variable in array)</label>
+                <label><input type="radio" name="q9" value="c"> c) for (array : variable)</label>
+                <label><input type="radio" name="q9" value="d"> d) for (variable of array)</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What happens if you don't use 'break' in a switch case?</p>
+                <label><input type="radio" name="q10" value="a"> a) Compilation error</label>
+                <label><input type="radio" name="q10" value="b"> b) Fall-through to next case</label>
+                <label><input type="radio" name="q10" value="c"> c) Program crashes</label>
+                <label><input type="radio" name="q10" value="d"> d) Nothing happens</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-control-flow')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methods -->
+      <section id="methods" class="topic-section">
+        <h2>5. Methods</h2>
+        <div class="topic-content">
+          <h3>What are Methods?</h3>
+          <p>Methods are blocks of code that perform a specific task. In Java, methods are defined within classes and are used to organize code into reusable blocks. Methods help in code reusability, modularity, and organization.</p>
+
+          <h3>Method Syntax</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">access_modifier return_type method_name(parameters) {
+    // method body
+    return value;
+}</code></pre>
+          </div>
+
+          <h3>Example: Simple Method</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class MethodsExample {
+    // Method definition
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    
+    public static void main(String[] args) {
+        int result = add(5, 3);
+        System.out.println("Sum: " + result);
+    }
+}</code></pre>
+          </div>
+
+          <h3>Method Overloading</h3>
+          <p>Java allows multiple methods with the same name but different parameters (method overloading).</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class MethodOverloading {
+    // Overloaded methods
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    
+    public static double add(double a, double b) {
+        return a + b;
+    }
+    
+    public static int add(int a, int b, int c) {
+        return a + b + c;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(add(5, 3));        // Calls int add(int, int)
+        System.out.println(add(5.5, 3.2));    // Calls double add(double, double)
+        System.out.println(add(1, 2, 3));     // Calls int add(int, int, int)
+    }
+}</code></pre>
+          </div>
+
+          <h3>Access Modifiers</h3>
+          <ul>
+            <li><strong>public:</strong> Accessible from anywhere</li>
+            <li><strong>private:</strong> Accessible only within the class</li>
+            <li><strong>protected:</strong> Accessible within the package and subclasses</li>
+            <li><strong>default (no modifier):</strong> Accessible within the package</li>
+          </ul>
+
+          <h3>Static vs Non-Static Methods</h3>
+          <ul>
+            <li><strong>Static methods:</strong> Belong to the class, called without creating an object</li>
+            <li><strong>Non-static methods:</strong> Belong to the instance, called using object reference</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Methods</h3>
+            <div class="quiz" data-quiz="java-methods">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What keyword is used for methods that don't return a value?</p>
+                <label><input type="radio" name="q1" value="a"> a) int</label>
+                <label><input type="radio" name="q1" value="b"> b) void</label>
+                <label><input type="radio" name="q1" value="c"> c) char</label>
+                <label><input type="radio" name="q1" value="d"> d) float</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is method overloading in Java?</p>
+                <label><input type="radio" name="q2" value="a"> a) Methods with same name and same parameters</label>
+                <label><input type="radio" name="q2" value="b"> b) Methods with same name but different parameters</label>
+                <label><input type="radio" name="q2" value="c"> c) Recursive methods</label>
+                <label><input type="radio" name="q2" value="d"> d) Methods that call themselves</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does the 'static' keyword mean in a method?</p>
+                <label><input type="radio" name="q3" value="a"> a) Method belongs to the class</label>
+                <label><input type="radio" name="q3" value="b"> b) Method belongs to the instance</label>
+                <label><input type="radio" name="q3" value="c"> c) Method cannot be called</label>
+                <label><input type="radio" name="q3" value="d"> d) Method is constant</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> Can a method return multiple values in Java?</p>
+                <label><input type="radio" name="q4" value="a"> a) Yes, always</label>
+                <label><input type="radio" name="q4" value="b"> b) No, only one value</label>
+                <label><input type="radio" name="q4" value="c"> c) Yes, using arrays or objects</label>
+                <label><input type="radio" name="q4" value="d"> d) Only in Java 8</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is a recursive method?</p>
+                <label><input type="radio" name="q5" value="a"> a) A method that calls itself</label>
+                <label><input type="radio" name="q5" value="b"> b) A method that calls other methods</label>
+                <label><input type="radio" name="q5" value="c"> c) A static method</label>
+                <label><input type="radio" name="q5" value="d"> d) A void method</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Which access modifier makes a method accessible from anywhere?</p>
+                <label><input type="radio" name="q6" value="a"> a) private</label>
+                <label><input type="radio" name="q6" value="b"> b) public</label>
+                <label><input type="radio" name="q6" value="c"> c) protected</label>
+                <label><input type="radio" name="q6" value="d"> d) default</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is pass by value in Java?</p>
+                <label><input type="radio" name="q7" value="a"> a) Passing address of variable</label>
+                <label><input type="radio" name="q7" value="b"> b) Passing copy of variable value</label>
+                <label><input type="radio" name="q7" value="c"> c) Passing reference</label>
+                <label><input type="radio" name="q7" value="d"> d) Passing pointer</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> Can method overloading be based on return type only?</p>
+                <label><input type="radio" name="q8" value="a"> a) Yes</label>
+                <label><input type="radio" name="q8" value="b"> b) No, parameters must differ</label>
+                <label><input type="radio" name="q8" value="c"> c) Only in Java 8</label>
+                <label><input type="radio" name="q8" value="d"> d) Only for static methods</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is a method signature?</p>
+                <label><input type="radio" name="q9" value="a"> a) Method name and parameters</label>
+                <label><input type="radio" name="q9" value="b"> b) Method name only</label>
+                <label><input type="radio" name="q9" value="c"> c) Return type only</label>
+                <label><input type="radio" name="q9" value="d"> d) Access modifier only</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> How do you call a static method?</p>
+                <label><input type="radio" name="q10" value="a"> a) Using class name</label>
+                <label><input type="radio" name="q10" value="b"> b) Using object reference</label>
+                <label><input type="radio" name="q10" value="c"> c) Both a and b</label>
+                <label><input type="radio" name="q10" value="d"> d) Cannot be called</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-methods')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Object-Oriented Programming -->
+      <section id="oop" class="topic-section">
+        <h2>6. Object-Oriented Programming</h2>
+        <div class="topic-content">
+          <h3>What is OOP?</h3>
+          <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects" that contain data (attributes) and code (methods). Java is a pure OOP language, meaning everything in Java is an object.</p>
+
+          <h3>Key OOP Concepts:</h3>
+          <ul>
+            <li><strong>Class:</strong> Blueprint for creating objects</li>
+            <li><strong>Object:</strong> Instance of a class</li>
+            <li><strong>Encapsulation:</strong> Bundling data and methods together, hiding implementation details</li>
+            <li><strong>Inheritance:</strong> Creating new classes from existing ones (extends keyword)</li>
+            <li><strong>Polymorphism:</strong> Same interface, different implementations (method overriding/overloading)</li>
+            <li><strong>Abstraction:</strong> Hiding implementation details (abstract classes and interfaces)</li>
+          </ul>
+
+          <h3>Class and Object Example</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class Student {
+    // Attributes (fields)
+    private String name;
+    private int age;
+    
+    // Constructor
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    // Setter methods
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
+    // Display method
+    public void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+    
+    public static void main(String[] args) {
+        // Creating objects
+        Student s1 = new Student("John", 20);
+        Student s2 = new Student("Alice", 22);
+        
+        s1.display();
+        s2.display();
+    }
+}</code></pre>
+          </div>
+
+          <h3>Inheritance Example</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">// Base class
+class Animal {
+    public void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+// Derived class
+class Dog extends Animal {
+    public void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();   // Inherited from Animal
+        myDog.bark();  // Own method
+    }
+}</code></pre>
+          </div>
+
+          <h3>Access Modifiers</h3>
+          <ul>
+            <li><strong>public:</strong> Accessible from anywhere</li>
+            <li><strong>private:</strong> Accessible only within the class</li>
+            <li><strong>protected:</strong> Accessible within the package and subclasses</li>
+            <li><strong>default (no modifier):</strong> Accessible within the package</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Object-Oriented Programming</h3>
+            <div class="quiz" data-quiz="java-oop">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is a class in Java?</p>
+                <label><input type="radio" name="q1" value="a"> a) A function</label>
+                <label><input type="radio" name="q1" value="b"> b) A blueprint for objects</label>
+                <label><input type="radio" name="q1" value="c"> c) A variable</label>
+                <label><input type="radio" name="q1" value="d"> d) A loop</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What keyword is used for inheritance in Java?</p>
+                <label><input type="radio" name="q2" value="a"> a) implements</label>
+                <label><input type="radio" name="q2" value="b"> b) extends</label>
+                <label><input type="radio" name="q2" value="c"> c) inherits</label>
+                <label><input type="radio" name="q2" value="d"> d) super</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is 'this' keyword in Java?</p>
+                <label><input type="radio" name="q3" value="a"> a) Reference to current object</label>
+                <label><input type="radio" name="q3" value="b"> b) Reference to parent class</label>
+                <label><input type="radio" name="q3" value="c"> c) Reference to child class</label>
+                <label><input type="radio" name="q3" value="d"> d) Reference to method</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is method overriding?</p>
+                <label><input type="radio" name="q4" value="a"> a) Same method name, different parameters</label>
+                <label><input type="radio" name="q4" value="b"> b) Redefining method in subclass</label>
+                <label><input type="radio" name="q4" value="c"> c) Calling same method multiple times</label>
+                <label><input type="radio" name="q4" value="d"> d) Hiding a method</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is a constructor?</p>
+                <label><input type="radio" name="q5" value="a"> a) A method that destroys objects</label>
+                <label><input type="radio" name="q5" value="b"> b) A special method that initializes objects</label>
+                <label><input type="radio" name="q5" value="c"> c) A regular method</label>
+                <label><input type="radio" name="q5" value="d"> d) A variable</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Can Java support multiple inheritance?</p>
+                <label><input type="radio" name="q6" value="a"> a) Yes, through classes</label>
+                <label><input type="radio" name="q6" value="b"> b) No, only single inheritance</label>
+                <label><input type="radio" name="q6" value="c"> c) Yes, through interfaces</label>
+                <label><input type="radio" name="q6" value="d"> d) Only in Java 8</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is encapsulation?</p>
+                <label><input type="radio" name="q7" value="a"> a) Bundling data and methods together</label>
+                <label><input type="radio" name="q7" value="b"> b) Creating objects</label>
+                <label><input type="radio" name="q7" value="c"> c) Inheritance</label>
+                <label><input type="radio" name="q7" value="d"> d) Polymorphism</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is 'super' keyword used for?</p>
+                <label><input type="radio" name="q8" value="a"> a) Reference to current object</label>
+                <label><input type="radio" name="q8" value="b"> b) Reference to parent class</label>
+                <label><input type="radio" name="q8" value="c"> c) Reference to child class</label>
+                <label><input type="radio" name="q8" value="d"> d) Reference to method</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is an abstract class?</p>
+                <label><input type="radio" name="q9" value="a"> a) A class that cannot be instantiated</label>
+                <label><input type="radio" name="q9" value="b"> b) A regular class</label>
+                <label><input type="radio" name="q9" value="c"> c) A final class</label>
+                <label><input type="radio" name="q9" value="d"> d) A private class</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the difference between abstract class and interface?</p>
+                <label><input type="radio" name="q10" value="a"> a) Abstract class can have methods with body, interface cannot (Java 7)</label>
+                <label><input type="radio" name="q10" value="b"> b) No difference</label>
+                <label><input type="radio" name="q10" value="c"> c) Interface can have methods with body, abstract class cannot</label>
+                <label><input type="radio" name="q10" value="d"> d) Both are same</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-oop')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collections Framework -->
+      <section id="collections" class="topic-section">
+        <h2>7. Collections Framework</h2>
+        <div class="topic-content">
+          <h3>What is Collections Framework?</h3>
+          <p>The Java Collections Framework is a unified architecture for representing and manipulating collections. It provides interfaces, implementations, and algorithms to work with data structures like lists, sets, maps, etc.</p>
+
+          <h3>Main Interfaces:</h3>
+          <ul>
+            <li><strong>List:</strong> Ordered collection that allows duplicates (ArrayList, LinkedList)</li>
+            <li><strong>Set:</strong> Collection that does not allow duplicates (HashSet, TreeSet)</li>
+            <li><strong>Map:</strong> Key-value pairs (HashMap, TreeMap)</li>
+            <li><strong>Queue:</strong> FIFO data structure (PriorityQueue, LinkedList)</li>
+          </ul>
+
+          <h3>1. ArrayList (Dynamic Array)</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        
+        // Adding elements
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Orange");
+        
+        // Accessing elements
+        System.out.println(list.get(0));
+        System.out.println("Size: " + list.size());
+        
+        // Iterating
+        for (String fruit : list) {
+            System.out.println(fruit);
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>2. HashMap (Key-Value Pairs)</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+        
+        map.put("Apple", 10);
+        map.put("Banana", 20);
+        map.put("Orange", 15);
+        
+        System.out.println(map.get("Apple"));
+        
+        // Iterating
+        for (String key : map.keySet()) {
+            System.out.println(key + ": " + map.get(key));
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>3. HashSet (Unique Elements)</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
+        
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Apple");  // Duplicate, will be ignored
+        
+        System.out.println("Size: " + set.size());
+        
+        for (String item : set) {
+            System.out.println(item);
+        }
+    }
+}</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Collections Framework</h3>
+            <div class="quiz" data-quiz="java-collections">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Which collection does not allow duplicates?</p>
+                <label><input type="radio" name="q1" value="a"> a) List</label>
+                <label><input type="radio" name="q1" value="b"> b) Set</label>
+                <label><input type="radio" name="q1" value="c"> c) Map</label>
+                <label><input type="radio" name="q1" value="d"> d) Array</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which collection stores key-value pairs?</p>
+                <label><input type="radio" name="q2" value="a"> a) List</label>
+                <label><input type="radio" name="q2" value="b"> b) Set</label>
+                <label><input type="radio" name="q2" value="c"> c) Map</label>
+                <label><input type="radio" name="q2" value="d"> d) Queue</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> Which method is used to add an element to ArrayList?</p>
+                <label><input type="radio" name="q3" value="a"> a) add()</label>
+                <label><input type="radio" name="q3" value="b"> b) put()</label>
+                <label><input type="radio" name="q3" value="c"> c) insert()</label>
+                <label><input type="radio" name="q3" value="d"> d) append()</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> Which method is used to get a value from HashMap?</p>
+                <label><input type="radio" name="q4" value="a"> a) get()</label>
+                <label><input type="radio" name="q4" value="b"> b) retrieve()</label>
+                <label><input type="radio" name="q4" value="c"> c) find()</label>
+                <label><input type="radio" name="q4" value="d"> d) fetch()</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is the difference between ArrayList and LinkedList?</p>
+                <label><input type="radio" name="q5" value="a"> a) ArrayList is faster for random access</label>
+                <label><input type="radio" name="q5" value="b"> b) LinkedList is faster for insertions/deletions</label>
+                <label><input type="radio" name="q5" value="c"> c) Both a and b</label>
+                <label><input type="radio" name="q5" value="d"> d) No difference</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Which collection maintains insertion order?</p>
+                <label><input type="radio" name="q6" value="a"> a) HashSet</label>
+                <label><input type="radio" name="q6" value="b"> b) TreeSet</label>
+                <label><input type="radio" name="q6" value="c"> c) LinkedHashSet</label>
+                <label><input type="radio" name="q6" value="d"> d) HashMap</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the default initial capacity of ArrayList?</p>
+                <label><input type="radio" name="q7" value="a"> a) 5</label>
+                <label><input type="radio" name="q7" value="b"> b) 10</label>
+                <label><input type="radio" name="q7" value="c"> c) 16</label>
+                <label><input type="radio" name="q7" value="d"> d) 20</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> Which interface does ArrayList implement?</p>
+                <label><input type="radio" name="q8" value="a"> a) List</label>
+                <label><input type="radio" name="q8" value="b"> b) Set</label>
+                <label><input type="radio" name="q8" value="c"> c) Map</label>
+                <label><input type="radio" name="q8" value="d"> d) Queue</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is the difference between HashMap and Hashtable?</p>
+                <label><input type="radio" name="q9" value="a"> a) HashMap is synchronized, Hashtable is not</label>
+                <label><input type="radio" name="q9" value="b"> b) Hashtable is synchronized, HashMap is not</label>
+                <label><input type="radio" name="q9" value="c"> c) No difference</label>
+                <label><input type="radio" name="q9" value="d"> d) HashMap allows null keys, Hashtable does not</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> Which collection is sorted by default?</p>
+                <label><input type="radio" name="q10" value="a"> a) HashSet</label>
+                <label><input type="radio" name="q10" value="b"> b) TreeSet</label>
+                <label><input type="radio" name="q10" value="c"> c) LinkedHashSet</label>
+                <label><input type="radio" name="q10" value="d"> d) ArrayList</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-collections')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exception Handling -->
+      <section id="exceptions" class="topic-section">
+        <h2>8. Exception Handling</h2>
+        <div class="topic-content">
+          <h3>What is Exception Handling?</h3>
+          <p>Exception handling is a mechanism to handle runtime errors in Java. An exception is an event that disrupts the normal flow of program execution. Java provides try-catch blocks to handle exceptions gracefully.</p>
+
+          <h3>Types of Exceptions:</h3>
+          <ul>
+            <li><strong>Checked Exceptions:</strong> Compile-time exceptions that must be handled (IOException, SQLException)</li>
+            <li><strong>Unchecked Exceptions:</strong> Runtime exceptions (NullPointerException, ArrayIndexOutOfBoundsException)</li>
+            <li><strong>Errors:</strong> Serious problems that are not recoverable (OutOfMemoryError, StackOverflowError)</li>
+          </ul>
+
+          <h3>Try-Catch Block</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;  // This will throw ArithmeticException
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero!");
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            System.out.println("This block always executes");
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>Multiple Catch Blocks</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class MultipleCatchExample {
+    public static void main(String[] args) {
+        try {
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]);  // ArrayIndexOutOfBoundsException
+            int result = 10 / 0;  // ArithmeticException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index out of bounds!");
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero!");
+        } catch (Exception e) {
+            System.out.println("General exception: " + e.getMessage());
+        }
+    }
+}</code></pre>
+          </div>
+
+          <h3>Throw Keyword</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">public class ThrowExample {
+    public static void validateAge(int age) {
+        if (age < 18) {
+            throw new ArithmeticException("Age must be 18 or above");
+        } else {
+            System.out.println("Age is valid");
+        }
+    }
+    
+    public static void main(String[] args) {
+        validateAge(15);  // This will throw an exception
+    }
+}</code></pre>
+          </div>
+
+          <h3>Throws Keyword</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-java">import java.io.IOException;
+
+public class ThrowsExample {
+    public static void readFile() throws IOException {
+        // Code that may throw IOException
+        throw new IOException("File not found");
+    }
+    
+    public static void main(String[] args) {
+        try {
+            readFile();
+        } catch (IOException e) {
+            System.out.println("Exception handled: " + e.getMessage());
+        }
+    }
+}</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Exception Handling</h3>
+            <div class="quiz" data-quiz="java-exceptions">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is an exception in Java?</p>
+                <label><input type="radio" name="q1" value="a"> a) An error that occurs at compile time</label>
+                <label><input type="radio" name="q1" value="b"> b) An event that disrupts normal program flow</label>
+                <label><input type="radio" name="q1" value="c"> c) A variable</label>
+                <label><input type="radio" name="q1" value="d"> d) A method</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which block is used to handle exceptions?</p>
+                <label><input type="radio" name="q2" value="a"> a) try-catch</label>
+                <label><input type="radio" name="q2" value="b"> b) if-else</label>
+                <label><input type="radio" name="q2" value="c"> c) switch</label>
+                <label><input type="radio" name="q2" value="d"> d) for loop</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> Which block always executes regardless of exception?</p>
+                <label><input type="radio" name="q3" value="a"> a) try</label>
+                <label><input type="radio" name="q3" value="b"> b) catch</label>
+                <label><input type="radio" name="q3" value="c"> c) finally</label>
+                <label><input type="radio" name="q3" value="d"> d) throw</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is the difference between throw and throws?</p>
+                <label><input type="radio" name="q4" value="a"> a) throw is used to throw exception, throws is used to declare exception</label>
+                <label><input type="radio" name="q4" value="b"> b) No difference</label>
+                <label><input type="radio" name="q4" value="c"> c) throws is used to throw exception, throw is used to declare exception</label>
+                <label><input type="radio" name="q4" value="d"> d) Both are same</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> Which exception is thrown when dividing by zero?</p>
+                <label><input type="radio" name="q5" value="a"> a) NullPointerException</label>
+                <label><input type="radio" name="q5" value="b"> b) ArithmeticException</label>
+                <label><input type="radio" name="q5" value="c"> c) ArrayIndexOutOfBoundsException</label>
+                <label><input type="radio" name="q5" value="d"> d) IOException</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Which exception is thrown when accessing null object?</p>
+                <label><input type="radio" name="q6" value="a"> a) NullPointerException</label>
+                <label><input type="radio" name="q6" value="b"> b) ArithmeticException</label>
+                <label><input type="radio" name="q6" value="c"> c) ArrayIndexOutOfBoundsException</label>
+                <label><input type="radio" name="q6" value="d"> d) IOException</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is a checked exception?</p>
+                <label><input type="radio" name="q7" value="a"> a) Exception checked at compile time</label>
+                <label><input type="radio" name="q7" value="b"> b) Exception checked at runtime</label>
+                <label><input type="radio" name="q7" value="c"> c) No such thing</label>
+                <label><input type="radio" name="q7" value="d"> d) An error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> Can you have multiple catch blocks?</p>
+                <label><input type="radio" name="q8" value="a"> a) No</label>
+                <label><input type="radio" name="q8" value="b"> b) Yes</label>
+                <label><input type="radio" name="q8" value="c"> c) Only in Java 8</label>
+                <label><input type="radio" name="q8" value="d"> d) Only for checked exceptions</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is the parent class of all exceptions?</p>
+                <label><input type="radio" name="q9" value="a"> a) Exception</label>
+                <label><input type="radio" name="q9" value="b"> b) Throwable</label>
+                <label><input type="radio" name="q9" value="c"> c) Error</label>
+                <label><input type="radio" name="q9" value="d"> d) Object</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> Which exception is thrown when array index is out of bounds?</p>
+                <label><input type="radio" name="q10" value="a"> a) NullPointerException</label>
+                <label><input type="radio" name="q10" value="b"> b) ArithmeticException</label>
+                <label><input type="radio" name="q10" value="c"> c) ArrayIndexOutOfBoundsException</label>
+                <label><input type="radio" name="q10" value="d"> d) IOException</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('java-exceptions')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">📘</div>
+        <h2>Course<span>.com</span></h2>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Course.com. Crafted with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+  <div id="compiler-modal" class="compiler-modal">
+    <div class="compiler-modal-content">
+      <div class="compiler-modal-header">
+        <h2>💻 Code Compiler</h2>
+        <button class="compiler-close-btn" id="close-compiler">&times;</button>
+      </div>
+      <div class="compiler-body">
+        <div class="compiler-toolbar">
+          <div class="compiler-left-tools">
+            <button class="tool-btn" onclick="loadCodeTemplate('hello')">📝 Hello World</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('calculator')">🧮 Calculator</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('oop')">🎯 OOP Example</button>
+            <button class="tool-btn" onclick="clearCompilerCode()">🗑️ Clear</button>
+            <button class="tool-btn" onclick="saveCompilerCode()">💾 Save</button>
+            <button class="tool-btn" onclick="loadCompilerCode()">📂 Load</button>
+          </div>
+          <div class="compiler-right-tools">
+            <select id="compiler-language" class="compiler-language-selector" onchange="setCompilerLanguage(this.value)">
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java" selected>Java</option>
+              <option value="python">Python</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+            <input type="text" id="compiler-api-key" placeholder="RapidAPI Key" class="api-key-input-small" />
+            <button class="tool-btn primary" onclick="saveCompilerApiKey()">Save Key</button>
+            <button class="tool-btn run-btn-large" onclick="runCompilerCode()">▶ Run Code</button>
+          </div>
+        </div>
+        <div class="compiler-editor-container">
+          <div class="compiler-editor-section">
+            <div class="editor-tab">
+              <span class="tab-active">Code Editor</span>
+            </div>
+            <textarea id="compiler-code-editor" class="compiler-code-editor" placeholder="Enter your Java code here...">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</textarea>
+          </div>
+          <div class="compiler-input-section">
+            <div class="input-label">Input (stdin):</div>
+            <textarea id="compiler-input" class="compiler-input" placeholder="Enter input for your program (optional)"></textarea>
+          </div>
+        </div>
+        <div class="compiler-output-container">
+          <div class="output-header-bar">
+            <span>Output</span>
+            <div class="output-actions">
+              <span id="compiler-status" class="status-badge">Ready</span>
+              <button class="tool-btn-small" onclick="clearCompilerOutput()">Clear Output</button>
+              <button class="tool-btn-small" onclick="downloadCompilerOutput()">Download</button>
+            </div>
+          </div>
+          <div id="compiler-output" class="compiler-output-display"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="c-course.js"></script>
+  <script src="compiler.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setCompilerLanguage('java');
+    });
+  </script>
+</body>
+</html>
+

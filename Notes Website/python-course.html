@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Programming Course - Course.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="c-course.css" />
+  <link rel="stylesheet" href="compiler-modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">📘</div>
+        <h1><span>Course</span><span class="dot">.com</span></h1>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <button id="compiler-btn" class="compiler-nav-btn" title="Open Code Compiler">💻 Compiler</button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch to dark mode">🌙</button>
+        <a href="index.html" class="btn">All Courses →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Course Header -->
+  <section class="course-header">
+    <div class="course-header-content">
+      <div class="course-badge">Python Programming</div>
+      <h1>Complete Python Programming Course</h1>
+      <p>Master Python programming from basics to advanced concepts with hands-on examples, quizzes, and interactive coding.</p>
+    </div>
+  </section>
+
+  <!-- Sidebar Navigation -->
+  <div class="course-container">
+    <aside class="course-sidebar">
+      <h3>Course Topics</h3>
+      <nav class="topic-nav" aria-label="Course topics navigation">
+        <a href="#intro" class="topic-link active">1. Introduction to Python</a>
+        <a href="#variables" class="topic-link">2. Variables & Data Types</a>
+        <a href="#operators" class="topic-link">3. Operators</a>
+        <a href="#control-flow" class="topic-link">4. Control Flow</a>
+        <a href="#functions" class="topic-link">5. Functions</a>
+        <a href="#lists" class="topic-link">6. Lists & Tuples</a>
+        <a href="#dictionaries" class="topic-link">7. Dictionaries</a>
+        <a href="#strings" class="topic-link">8. Strings</a>
+        <a href="#oop" class="topic-link">9. Object-Oriented Programming</a>
+        <a href="#modules" class="topic-link">10. Modules & Packages</a>
+        <a href="#file-handling" class="topic-link">11. File Handling</a>
+        <a href="#compiler" class="topic-link">💻 Code Compiler</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="course-content">
+      <!-- Introduction -->
+      <section id="intro" class="topic-section">
+        <h2>1. Introduction to Python</h2>
+        <div class="topic-content">
+          <h3>What is Python?</h3>
+          <p>Python is a high-level, interpreted, general-purpose programming language created by Guido van Rossum and first released in 1991. Python emphasizes code readability with its notable use of significant whitespace and simple syntax that allows programmers to express concepts in fewer lines of code.</p>
+          
+          <p>Python is an <strong>interpreted language</strong>, meaning that Python code is executed line by line at runtime, making it excellent for rapid development and prototyping. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.</p>
+
+          <h3>Key Characteristics of Python:</h3>
+          <ul>
+            <li><strong>Easy to Learn:</strong> Python has a simple and readable syntax that is easy for beginners</li>
+            <li><strong>Interpreted Language:</strong> Code is executed directly without compilation</li>
+            <li><strong>Dynamically Typed:</strong> Variable types are determined at runtime</li>
+            <li><strong>Versatile:</strong> Used for web development, data science, AI, automation, and more</li>
+            <li><strong>Large Standard Library:</strong> Comes with extensive built-in modules</li>
+            <li><strong>Cross-platform:</strong> Runs on Windows, Linux, macOS, and other platforms</li>
+          </ul>
+          
+          <h3>Why Learn Python?</h3>
+          <ul>
+            <li><strong>Popularity:</strong> One of the most popular programming languages worldwide</li>
+            <li><strong>Career Opportunities:</strong> High demand in data science, AI, web development, and automation</li>
+            <li><strong>Easy Syntax:</strong> Simple and readable code makes it perfect for beginners</li>
+            <li><strong>Versatile Applications:</strong> Used in web development, data analysis, machine learning, automation, and more</li>
+            <li><strong>Strong Community:</strong> Large community and extensive documentation</li>
+            <li><strong>Rapid Development:</strong> Faster development cycle compared to compiled languages</li>
+          </ul>
+
+          <h3>Your First Python Program</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-python">print("Hello, World!")</code></pre>
+          </div>
+
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>print()</code> - Built-in function to display output to the console</li>
+            <li><code>"Hello, World!"</code> - String literal (text enclosed in quotes)</li>
+            <li>No semicolons or braces needed - Python uses indentation for code blocks</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Introduction to Python</h3>
+            <div class="quiz" data-quiz="intro">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Who created Python programming language?</p>
+                <label><input type="radio" name="q1" value="a"> a) Dennis Ritchie</label>
+                <label><input type="radio" name="q1" value="b"> b) Guido van Rossum</label>
+                <label><input type="radio" name="q1" value="c"> c) James Gosling</label>
+                <label><input type="radio" name="q1" value="d"> d) Bjarne Stroustrup</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Python is a compiled or interpreted language?</p>
+                <label><input type="radio" name="q2" value="a"> a) Compiled</label>
+                <label><input type="radio" name="q2" value="b"> b) Interpreted</label>
+                <label><input type="radio" name="q2" value="c"> c) Both</label>
+                <label><input type="radio" name="q2" value="d"> d) Neither</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> Which of the following is used for comments in Python?</p>
+                <label><input type="radio" name="q3" value="a"> a) //</label>
+                <label><input type="radio" name="q3" value="b"> b) /* */</label>
+                <label><input type="radio" name="q3" value="c"> c) #</label>
+                <label><input type="radio" name="q3" value="d"> d) --</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> Python uses indentation for what purpose?</p>
+                <label><input type="radio" name="q4" value="a"> a) Code formatting</label>
+                <label><input type="radio" name="q4" value="b"> b) Code blocks</label>
+                <label><input type="radio" name="q4" value="c"> c) Comments</label>
+                <label><input type="radio" name="q4" value="d"> d) Variable names</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is the file extension for Python files?</p>
+                <label><input type="radio" name="q5" value="a"> a) .pyc</label>
+                <label><input type="radio" name="q5" value="b"> b) .pyth</label>
+                <label><input type="radio" name="q5" value="c"> c) .py</label>
+                <label><input type="radio" name="q5" value="d"> d) .python</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Python was first released in which year?</p>
+                <label><input type="radio" name="q6" value="a"> a) 1989</label>
+                <label><input type="radio" name="q6" value="b"> b) 1991</label>
+                <label><input type="radio" name="q6" value="c"> c) 1995</label>
+                <label><input type="radio" name="q6" value="d"> d) 2000</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> Which programming paradigm does Python support?</p>
+                <label><input type="radio" name="q7" value="a"> a) Object-oriented only</label>
+                <label><input type="radio" name="q7" value="b"> b) Procedural only</label>
+                <label><input type="radio" name="q7" value="c"> c) Functional only</label>
+                <label><input type="radio" name="q7" value="d"> d) All of the above</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is PEP in Python?</p>
+                <label><input type="radio" name="q8" value="a"> a) Python Enhancement Proposal</label>
+                <label><input type="radio" name="q8" value="b"> b) Python Execution Process</label>
+                <label><input type="radio" name="q8" value="c"> c) Python Error Protocol</label>
+                <label><input type="radio" name="q8" value="d"> d) Python Extension Package</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> Which of the following is NOT a Python data type?</p>
+                <label><input type="radio" name="q9" value="a"> a) list</label>
+                <label><input type="radio" name="q9" value="b"> b) tuple</label>
+                <label><input type="radio" name="q9" value="c"> c) array</label>
+                <label><input type="radio" name="q9" value="d"> d) dictionary</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the purpose of Python's Zen (import this)?</p>
+                <label><input type="radio" name="q10" value="a"> a) To show Python's design philosophy</label>
+                <label><input type="radio" name="q10" value="b"> b) To import modules</label>
+                <label><input type="radio" name="q10" value="c"> c) To display errors</label>
+                <label><input type="radio" name="q10" value="d"> d) To create variables</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('intro')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Variables & Data Types -->
+      <section id="variables" class="topic-section">
+        <h2>2. Variables & Data Types</h2>
+        <div class="topic-content">
+          <h3>What are Variables?</h3>
+          <p>Variables are containers that store data values. In Python, you don't need to declare the type of a variable. Python automatically determines the type based on the value assigned to it.</p>
+
+          <h3>Variable Naming Rules:</h3>
+          <ul>
+            <li>Variable names can contain letters, numbers, and underscores</li>
+            <li>Must start with a letter or underscore (not a number)</li>
+            <li>Case-sensitive (age and Age are different)</li>
+            <li>Cannot use Python keywords as variable names</li>
+            <li>Use descriptive names (e.g., <code>user_name</code> instead of <code>un</code>)</li>
+          </ul>
+
+          <h3>Basic Data Types in Python</h3>
+          <table class="data-table">
+            <tr>
+              <th>Data Type</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td><code>int</code></td>
+              <td>Integer (whole numbers)</td>
+              <td><code>age = 25</code></td>
+            </tr>
+            <tr>
+              <td><code>float</code></td>
+              <td>Floating-point (decimal numbers)</td>
+              <td><code>height = 5.9</code></td>
+            </tr>
+            <tr>
+              <td><code>str</code></td>
+              <td>String (text)</td>
+              <td><code>name = "John"</code></td>
+            </tr>
+            <tr>
+              <td><code>bool</code></td>
+              <td>Boolean (True/False)</td>
+              <td><code>is_student = True</code></td>
+            </tr>
+            <tr>
+              <td><code>list</code></td>
+              <td>Ordered collection of items</td>
+              <td><code>numbers = [1, 2, 3]</code></td>
+            </tr>
+            <tr>
+              <td><code>tuple</code></td>
+              <td>Immutable ordered collection</td>
+              <td><code>coordinates = (10, 20)</code></td>
+            </tr>
+            <tr>
+              <td><code>dict</code></td>
+              <td>Key-value pairs</td>
+              <td><code>person = {"name": "John"}</code></td>
+            </tr>
+          </table>
+
+          <h3>Example: Variable Declaration and Usage</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-python"># Integer variable
+age = 25
+
+# Float variable
+height = 5.9
+
+# String variable
+name = "John Doe"
+
+# Boolean variable
+is_student = True
+
+# Displaying variables
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Height: {height}")
+print(f"Is Student: {is_student}")
+
+# Type checking
+print(type(age))      # <class 'int'>
+print(type(height))   # <class 'float'>
+print(type(name))     # <class 'str'>
+print(type(is_student))  # <class 'bool'></code></pre>
+          </div>
+
+          <h3>Type Conversion</h3>
+          <p>Python allows you to convert between different data types using built-in functions:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-python"># Converting to integer
+num_str = "25"
+num_int = int(num_str)
+
+# Converting to float
+num_float = float(num_str)
+
+# Converting to string
+age = 25
+age_str = str(age)
+
+# Converting to boolean
+value = 1
+bool_value = bool(value)  # True</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Variables & Data Types</h3>
+            <div class="quiz" data-quiz="variables">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Which of the following is a valid variable name in Python?</p>
+                <label><input type="radio" name="q1" value="a"> a) 2name</label>
+                <label><input type="radio" name="q1" value="b"> b) name-2</label>
+                <label><input type="radio" name="q1" value="c"> c) name_2</label>
+                <label><input type="radio" name="q1" value="d"> d) name.2</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is the data type of the variable: x = 3.14?</p>
+                <label><input type="radio" name="q2" value="a"> a) int</label>
+                <label><input type="radio" name="q2" value="b"> b) float</label>
+                <label><input type="radio" name="q2" value="c"> c) str</label>
+                <label><input type="radio" name="q2" value="d"> d) bool</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> How do you check the type of a variable in Python?</p>
+                <label><input type="radio" name="q3" value="a"> a) typeof()</label>
+                <label><input type="radio" name="q3" value="b"> b) type()</label>
+                <label><input type="radio" name="q3" value="c"> c) gettype()</label>
+                <label><input type="radio" name="q3" value="d"> d) var_type()</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is the output of: print(bool(0))?</p>
+                <label><input type="radio" name="q4" value="a"> a) True</label>
+                <label><input type="radio" name="q4" value="b"> b) False</label>
+                <label><input type="radio" name="q4" value="c"> c) 0</label>
+                <label><input type="radio" name="q4" value="d"> d) Error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> Which function is used to convert a string to an integer?</p>
+                <label><input type="radio" name="q5" value="a"> a) int()</label>
+                <label><input type="radio" name="q5" value="b"> b) integer()</label>
+                <label><input type="radio" name="q5" value="c"> c) str_to_int()</label>
+                <label><input type="radio" name="q5" value="d"> d) convert_int()</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is the data type of: x = [1, 2, 3]?</p>
+                <label><input type="radio" name="q6" value="a"> a) tuple</label>
+                <label><input type="radio" name="q6" value="b"> b) list</label>
+                <label><input type="radio" name="q6" value="c"> c) array</label>
+                <label><input type="radio" name="q6" value="d"> d) dict</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> Are Python variable names case-sensitive?</p>
+                <label><input type="radio" name="q7" value="a"> a) Yes</label>
+                <label><input type="radio" name="q7" value="b"> b) No</label>
+                <label><input type="radio" name="q7" value="c"> c) Sometimes</label>
+                <label><input type="radio" name="q7" value="d"> d) Depends on version</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the output of: print(type(True))?</p>
+                <label><input type="radio" name="q8" value="a"> a) &lt;class 'bool'&gt;</label>
+                <label><input type="radio" name="q8" value="b"> b) &lt;class 'int'&gt;</label>
+                <label><input type="radio" name="q8" value="c"> c) &lt;class 'str'&gt;</label>
+                <label><input type="radio" name="q8" value="d"> d) &lt;class 'boolean'&gt;</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> Can you assign multiple values to multiple variables in one line in Python?</p>
+                <label><input type="radio" name="q9" value="a"> a) Yes</label>
+                <label><input type="radio" name="q9" value="b"> b) No</label>
+                <label><input type="radio" name="q9" value="c"> c) Only in Python 3</label>
+                <label><input type="radio" name="q9" value="d"> d) Only with lists</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the maximum length of a Python variable name?</p>
+                <label><input type="radio" name="q10" value="a"> a) 32 characters</label>
+                <label><input type="radio" name="q10" value="b"> b) 64 characters</label>
+                <label><input type="radio" name="q10" value="c"> c) 128 characters</label>
+                <label><input type="radio" name="q10" value="d"> d) No limit</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('variables')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+            <!-- Operators -->
+            <section id="operators" class="topic-section">
+              <h2>3. Operators</h2>
+              <div class="topic-content">
+                <h3>What are Operators?</h3>
+                <p>Operators are special symbols that perform operations on variables and values. Python supports various types of operators for different operations.</p>
+      
+                <h3>Arithmetic Operators</h3>
+                <p>Arithmetic operators are used to perform mathematical operations:</p>
+                <table class="data-table">
+                  <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                  <tr>
+                    <td><code>+</code></td>
+                    <td>Addition</td>
+                    <td><code>5 + 3 = 8</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>-</code></td>
+                    <td>Subtraction</td>
+                    <td><code>5 - 3 = 2</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>*</code></td>
+                    <td>Multiplication</td>
+                    <td><code>5 * 3 = 15</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/</code></td>
+                    <td>Division</td>
+                    <td><code>5 / 3 = 1.666...</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>%</code></td>
+                    <td>Modulus (remainder)</td>
+                    <td><code>5 % 3 = 2</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>**</code></td>
+                    <td>Exponentiation</td>
+                    <td><code>5 ** 3 = 125</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>//</code></td>
+                    <td>Floor division</td>
+                    <td><code>5 // 3 = 1</code></td>
+                  </tr>
+                </table>
+      
+                <h3>Comparison Operators</h3>
+                <p>Comparison operators compare two values and return a boolean result:</p>
+                <table class="data-table">
+                  <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                  <tr>
+                    <td><code>==</code></td>
+                    <td>Equal to</td>
+                    <td><code>5 == 5 → True</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>!=</code></td>
+                    <td>Not equal to</td>
+                    <td><code>5 != 3 → True</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>&lt;</code></td>
+                    <td>Less than</td>
+                    <td><code>3 &lt; 5 → True</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>&gt;</code></td>
+                    <td>Greater than</td>
+                    <td><code>5 &gt; 3 → True</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>&lt;=</code></td>
+                    <td>Less than or equal to</td>
+                    <td><code>5 &lt;= 5 → True</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>&gt;=</code></td>
+                    <td>Greater than or equal to</td>
+                    <td><code>5 &gt;= 3 → True</code></td>
+                  </tr>
+                </table>
+      
+                <h3>Logical Operators</h3>
+                <p>Logical operators are used to combine conditional statements:</p>
+                <table class="data-table">
+                  <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                  <tr>
+                    <td><code>and</code></td>
+                    <td>Returns True if both statements are true</td>
+                    <td><code>True and False → False</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>or</code></td>
+                    <td>Returns True if one of the statements is true</td>
+                    <td><code>True or False → True</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>not</code></td>
+                    <td>Reverse the result</td>
+                    <td><code>not True → False</code></td>
+                  </tr>
+                </table>
+      
+                <h3>Assignment Operators</h3>
+                <p>Assignment operators are used to assign values to variables:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Basic assignment
+      x = 5
+      
+      # Addition assignment
+      x += 3  # Same as x = x + 3
+      
+      # Subtraction assignment
+      x -= 2  # Same as x = x - 2
+      
+      # Multiplication assignment
+      x *= 2  # Same as x = x * 2
+      
+      # Division assignment
+      x /= 2  # Same as x = x / 2
+      
+      # Modulus assignment
+      x %= 3  # Same as x = x % 3
+      
+      # Exponentiation assignment
+      x **= 2  # Same as x = x ** 2
+      
+      # Floor division assignment
+      x //= 2  # Same as x = x // 2</code></pre>
+                </div>
+      
+                <h3>Identity Operators</h3>
+                <p>Identity operators compare the memory locations of two objects:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># is - Returns True if both variables are the same object
+      x = [1, 2, 3]
+      y = x
+      print(x is y)  # True
+      
+      # is not - Returns True if both variables are not the same object
+      a = [1, 2, 3]
+      b = [1, 2, 3]
+      print(a is not b)  # True (different objects)</code></pre>
+                </div>
+      
+                <h3>Membership Operators</h3>
+                <p>Membership operators test if a value is present in a sequence:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># in - Returns True if value is found in sequence
+      fruits = ["apple", "banana", "cherry"]
+      print("banana" in fruits)  # True
+      
+      # not in - Returns True if value is not found in sequence
+      print("orange" not in fruits)  # True</code></pre>
+                </div>
+      
+                <h3>Example: Using Operators</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Arithmetic operations
+      a = 10
+      b = 3
+      print(f"Addition: {a + b}")        # 13
+      print(f"Subtraction: {a - b}")     # 7
+      print(f"Multiplication: {a * b}")  # 30
+      print(f"Division: {a / b}")        # 3.333...
+      print(f"Modulus: {a % b}")         # 1
+      print(f"Exponentiation: {a ** b}") # 1000
+      print(f"Floor division: {a // b}") # 3
+      
+      # Comparison operations
+      x = 5
+      y = 10
+      print(x == y)  # False
+      print(x != y)  # True
+      print(x < y)   # True
+      print(x > y)   # False
+      
+      # Logical operations
+      age = 25
+      has_license = True
+      print(age >= 18 and has_license)  # True
+      print(age < 18 or has_license)    # True
+      print(not has_license)            # False</code></pre>
+                </div>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Operators</h3>
+                  <div class="quiz" data-quiz="operators">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What is the result of: 10 // 3?</p>
+                      <label><input type="radio" name="q1" value="a"> a) 3.33</label>
+                      <label><input type="radio" name="q1" value="b"> b) 3</label>
+                      <label><input type="radio" name="q1" value="c"> c) 1</label>
+                      <label><input type="radio" name="q1" value="d"> d) 0</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> What is the result of: 2 ** 3?</p>
+                      <label><input type="radio" name="q2" value="a"> a) 6</label>
+                      <label><input type="radio" name="q2" value="b"> b) 8</label>
+                      <label><input type="radio" name="q2" value="c"> c) 9</label>
+                      <label><input type="radio" name="q2" value="d"> d) 5</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> Which operator is used for floor division?</p>
+                      <label><input type="radio" name="q3" value="a"> a) /</label>
+                      <label><input type="radio" name="q3" value="b"> b) //</label>
+                      <label><input type="radio" name="q3" value="c"> c) %</label>
+                      <label><input type="radio" name="q3" value="d"> d) **</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> What is the result of: True and False?</p>
+                      <label><input type="radio" name="q4" value="a"> a) True</label>
+                      <label><input type="radio" name="q4" value="b"> b) False</label>
+                      <label><input type="radio" name="q4" value="c"> c) None</label>
+                      <label><input type="radio" name="q4" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> What is the result of: True or False?</p>
+                      <label><input type="radio" name="q5" value="a"> a) True</label>
+                      <label><input type="radio" name="q5" value="b"> b) False</label>
+                      <label><input type="radio" name="q5" value="c"> c) None</label>
+                      <label><input type="radio" name="q5" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> What does the operator 'is' check?</p>
+                      <label><input type="radio" name="q6" value="a"> a) Value equality</label>
+                      <label><input type="radio" name="q6" value="b"> b) Identity (same object)</label>
+                      <label><input type="radio" name="q6" value="c"> c) Type equality</label>
+                      <label><input type="radio" name="q6" value="d"> d) Size equality</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q7:</strong> What is the result of: 10 % 3?</p>
+                      <label><input type="radio" name="q7" value="a"> a) 3</label>
+                      <label><input type="radio" name="q7" value="b"> b) 1</label>
+                      <label><input type="radio" name="q7" value="c"> c) 0</label>
+                      <label><input type="radio" name="q7" value="d"> d) 3.33</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q8:</strong> What does x += 5 mean?</p>
+                      <label><input type="radio" name="q8" value="a"> a) x = x + 5</label>
+                      <label><input type="radio" name="q8" value="b"> b) x = 5</label>
+                      <label><input type="radio" name="q8" value="c"> c) x = x * 5</label>
+                      <label><input type="radio" name="q8" value="d"> d) x = x / 5</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q9:</strong> What is the result of: "apple" in ["apple", "banana"]?</p>
+                      <label><input type="radio" name="q9" value="a"> a) True</label>
+                      <label><input type="radio" name="q9" value="b"> b) False</label>
+                      <label><input type="radio" name="q9" value="c"> c) Error</label>
+                      <label><input type="radio" name="q9" value="d"> d) None</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q10:</strong> What is the result of: not True?</p>
+                      <label><input type="radio" name="q10" value="a"> a) True</label>
+                      <label><input type="radio" name="q10" value="b"> b) False</label>
+                      <label><input type="radio" name="q10" value="c"> c) None</label>
+                      <label><input type="radio" name="q10" value="d"> d) Error</label>
+                    </div>
+                    <button class="quiz-submit" onclick="checkQuiz('operators')">Submit Quiz</button>
+                    <div class="quiz-result"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <!-- Control Flow -->
+            <section id="control-flow" class="topic-section">
+              <h2>4. Control Flow</h2>
+              <div class="topic-content">
+                <h3>What is Control Flow?</h3>
+                <p>Control flow statements allow you to control the order in which your code executes. Python provides several control flow statements including if-else, loops, and break/continue.</p>
+      
+                <h3>If-Else Statements</h3>
+                <p>The if statement is used to execute code conditionally:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Simple if statement
+      age = 18
+      if age >= 18:
+          print("You are an adult")
+      
+      # If-else statement
+      age = 16
+      if age >= 18:
+          print("You are an adult")
+      else:
+          print("You are a minor")
+      
+      # If-elif-else statement
+      score = 85
+      if score >= 90:
+          print("Grade: A")
+      elif score >= 80:
+          print("Grade: B")
+      elif score >= 70:
+          print("Grade: C")
+      else:
+          print("Grade: F")</code></pre>
+                </div>
+      
+                <h3>For Loops</h3>
+                <p>For loops are used to iterate over a sequence (list, tuple, string, etc.):</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Iterating over a list
+      fruits = ["apple", "banana", "cherry"]
+      for fruit in fruits:
+          print(fruit)
+      
+      # Using range() function
+      for i in range(5):
+          print(i)  # Prints 0, 1, 2, 3, 4
+      
+      # Range with start and end
+      for i in range(2, 6):
+          print(i)  # Prints 2, 3, 4, 5
+      
+      # Range with step
+      for i in range(0, 10, 2):
+          print(i)  # Prints 0, 2, 4, 6, 8
+      
+      # Iterating with index
+      fruits = ["apple", "banana", "cherry"]
+      for index, fruit in enumerate(fruits):
+          print(f"{index}: {fruit}")</code></pre>
+                </div>
+      
+                <h3>While Loops</h3>
+                <p>While loops execute as long as a condition is true:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Basic while loop
+      count = 0
+      while count < 5:
+          print(count)
+          count += 1
+      
+      # While loop with break
+      count = 0
+      while True:
+          print(count)
+          count += 1
+          if count >= 5:
+              break
+      
+      # While loop with continue
+      count = 0
+      while count < 5:
+          count += 1
+          if count == 3:
+              continue
+          print(count)</code></pre>
+                </div>
+      
+                <h3>Break and Continue</h3>
+                <p><code>break</code> exits the loop, while <code>continue</code> skips the current iteration:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Using break
+      for i in range(10):
+          if i == 5:
+              break
+          print(i)  # Prints 0, 1, 2, 3, 4
+      
+      # Using continue
+      for i in range(10):
+          if i == 5:
+              continue
+          print(i)  # Prints 0, 1, 2, 3, 4, 6, 7, 8, 9</code></pre>
+                </div>
+      
+                <h3>Nested Loops</h3>
+                <p>You can nest loops inside other loops:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Nested for loops
+      for i in range(3):
+          for j in range(3):
+              print(f"({i}, {j})")
+      
+      # Creating a multiplication table
+      for i in range(1, 6):
+          for j in range(1, 6):
+              print(f"{i * j:3}", end=" ")
+          print()</code></pre>
+                </div>
+      
+                <h3>Pass Statement</h3>
+                <p>The <code>pass</code> statement is a null operation - it does nothing. It's used as a placeholder:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Using pass as placeholder
+      if age >= 18:
+          pass  # Will implement later
+      else:
+          print("Minor")
+      
+      # Pass in function definition
+      def my_function():
+          pass  # Function body to be implemented later</code></pre>
+                </div>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Control Flow</h3>
+                  <div class="quiz" data-quiz="control-flow">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What is the output of: for i in range(3): print(i)</p>
+                      <label><input type="radio" name="q1" value="a"> a) 0, 1, 2</label>
+                      <label><input type="radio" name="q1" value="b"> b) 1, 2, 3</label>
+                      <label><input type="radio" name="q1" value="c"> c) 0, 1, 2, 3</label>
+                      <label><input type="radio" name="q1" value="d"> d) 3</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> What does the 'break' statement do in a loop?</p>
+                      <label><input type="radio" name="q2" value="a"> a) Skips current iteration</label>
+                      <label><input type="radio" name="q2" value="b"> b) Exits the loop</label>
+                      <label><input type="radio" name="q2" value="c"> c) Continues to next iteration</label>
+                      <label><input type="radio" name="q2" value="d"> d) Restarts the loop</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> What does the 'continue' statement do in a loop?</p>
+                      <label><input type="radio" name="q3" value="a"> a) Exits the loop</label>
+                      <label><input type="radio" name="q3" value="b"> b) Skips current iteration</label>
+                      <label><input type="radio" name="q3" value="c"> c) Restarts the loop</label>
+                      <label><input type="radio" name="q3" value="d"> d) Pauses the loop</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> How many times will this loop execute: while False: print("Hello")</p>
+                      <label><input type="radio" name="q4" value="a"> a) 0 times</label>
+                      <label><input type="radio" name="q4" value="b"> b) 1 time</label>
+                      <label><input type="radio" name="q4" value="c"> c) Infinite times</label>
+                      <label><input type="radio" name="q4" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> What is the purpose of 'elif' in Python?</p>
+                      <label><input type="radio" name="q5" value="a"> a) To create nested if statements</label>
+                      <label><input type="radio" name="q5" value="b"> b) To check multiple conditions</label>
+                      <label><input type="radio" name="q5" value="c"> c) To handle else if conditions</label>
+                      <label><input type="radio" name="q5" value="d"> d) To create loops</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> What is the output of: range(2, 5)?</p>
+                      <label><input type="radio" name="q6" value="a"> a) [2, 3, 4, 5]</label>
+                      <label><input type="radio" name="q6" value="b"> b) [2, 3, 4]</label>
+                      <label><input type="radio" name="q6" value="c"> c) [3, 4, 5]</label>
+                      <label><input type="radio" name="q6" value="d"> d) [1, 2, 3, 4]</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q7:</strong> What does 'pass' do in Python?</p>
+                      <label><input type="radio" name="q7" value="a"> a) Exits the function</label>
+                      <label><input type="radio" name="q7" value="b"> b) Does nothing (placeholder)</label>
+                      <label><input type="radio" name="q7" value="c"> c) Skips code</label>
+                      <label><input type="radio" name="q7" value="d"> d) Returns None</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q8:</strong> Can you have multiple 'elif' statements in an if-elif-else block?</p>
+                      <label><input type="radio" name="q8" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q8" value="b"> b) No</label>
+                      <label><input type="radio" name="q8" value="c"> c) Only in Python 3</label>
+                      <label><input type="radio" name="q8" value="d"> d) Maximum 2</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q9:</strong> What is the output of: for i in range(0, 10, 3): print(i)</p>
+                      <label><input type="radio" name="q9" value="a"> a) 0, 3, 6, 9</label>
+                      <label><input type="radio" name="q9" value="b"> b) 0, 1, 2, 3</label>
+                      <label><input type="radio" name="q9" value="c"> c) 3, 6, 9</label>
+                      <label><input type="radio" name="q9" value="d"> d) 0, 3, 6, 9, 12</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q10:</strong> What is the purpose of 'enumerate()' function?</p>
+                      <label><input type="radio" name="q10" value="a"> a) To count items</label>
+                      <label><input type="radio" name="q10" value="b"> b) To get index and value</label>
+                      <label><input type="radio" name="q10" value="c"> c) To sort items</label>
+                      <label><input type="radio" name="q10" value="d"> d) To filter items</label>
+                    </div>
+                    <button class="quiz-submit" onclick="checkQuiz('control-flow')">Submit Quiz</button>
+                    <div class="quiz-result"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <!-- Functions -->
+            <section id="functions" class="topic-section">
+              <h2>5. Functions</h2>
+              <div class="topic-content">
+                <h3>What are Functions?</h3>
+                <p>Functions are reusable blocks of code that perform a specific task. They help organize code, make it more readable, and avoid repetition.</p>
+      
+                <h3>Defining Functions</h3>
+                <p>Functions are defined using the <code>def</code> keyword:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Simple function
+      def greet():
+          print("Hello, World!")
+      
+      # Calling a function
+      greet()  # Output: Hello, World!
+      
+      # Function with parameters
+      def greet(name):
+          print(f"Hello, {name}!")
+      
+      greet("Alice")  # Output: Hello, Alice!
+      
+      # Function with multiple parameters
+      def add(a, b):
+          return a + b
+      
+      result = add(5, 3)
+      print(result)  # Output: 8</code></pre>
+                </div>
+      
+                <h3>Return Statement</h3>
+                <p>The <code>return</code> statement sends a value back to the caller:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Function with return
+      def multiply(x, y):
+          return x * y
+      
+      result = multiply(4, 5)
+      print(result)  # Output: 20
+      
+      # Function returning multiple values
+      def get_name_age():
+          return "John", 25
+      
+      name, age = get_name_age()
+      print(f"{name} is {age} years old")</code></pre>
+                </div>
+      
+                <h3>Default Parameters</h3>
+                <p>You can provide default values for function parameters:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Function with default parameter
+      def greet(name, greeting="Hello"):
+          print(f"{greeting}, {name}!")
+      
+      greet("Alice")              # Output: Hello, Alice!
+      greet("Bob", "Hi")          # Output: Hi, Bob!
+      
+      # Multiple default parameters
+      def create_profile(name, age=18, city="Unknown"):
+          print(f"Name: {name}, Age: {age}, City: {city}")
+      
+      create_profile("Alice")                    # Uses defaults
+      create_profile("Bob", 25)                  # Overrides age
+      create_profile("Charlie", 30, "New York")  # Overrides all</code></pre>
+                </div>
+      
+                <h3>Keyword Arguments</h3>
+                <p>You can pass arguments by name using keyword arguments:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">def introduce(name, age, city):
+          print(f"{name} is {age} years old and lives in {city}")
+      
+      # Using keyword arguments
+      introduce(name="Alice", age=25, city="London")
+      introduce(city="Paris", name="Bob", age=30)  # Order doesn't matter</code></pre>
+                </div>
+      
+                <h3>Arbitrary Arguments</h3>
+                <p>You can accept any number of arguments using <code>*args</code> and <code>**kwargs</code>:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># *args for positional arguments
+      def sum_all(*args):
+          total = 0
+          for num in args:
+              total += num
+          return total
+      
+      print(sum_all(1, 2, 3, 4, 5))  # Output: 15
+      
+      # **kwargs for keyword arguments
+      def print_info(**kwargs):
+          for key, value in kwargs.items():
+              print(f"{key}: {value}")
+      
+      print_info(name="Alice", age=25, city="London")</code></pre>
+                </div>
+      
+                <h3>Lambda Functions</h3>
+                <p>Lambda functions are small anonymous functions defined with the <code>lambda</code> keyword:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Lambda function
+      square = lambda x: x ** 2
+      print(square(5))  # Output: 25
+      
+      # Lambda with multiple parameters
+      add = lambda x, y: x + y
+      print(add(3, 4))  # Output: 7
+      
+      # Lambda in higher-order functions
+      numbers = [1, 2, 3, 4, 5]
+      squared = list(map(lambda x: x ** 2, numbers))
+      print(squared)  # Output: [1, 4, 9, 16, 25]</code></pre>
+                </div>
+      
+                <h3>Scope and Global Variables</h3>
+                <p>Variables have different scopes - local and global:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Global variable
+      x = 10
+      
+      def my_function():
+          # Local variable
+          y = 5
+          print(f"Local y: {y}")
+          print(f"Global x: {x}")
+      
+      my_function()
+      
+      # Modifying global variable
+      count = 0
+      
+      def increment():
+          global count
+          count += 1
+      
+      increment()
+      print(count)  # Output: 1</code></pre>
+                </div>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Functions</h3>
+                  <div class="quiz" data-quiz="functions">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What keyword is used to define a function in Python?</p>
+                      <label><input type="radio" name="q1" value="a"> a) function</label>
+                      <label><input type="radio" name="q1" value="b"> b) def</label>
+                      <label><input type="radio" name="q1" value="c"> c) func</label>
+                      <label><input type="radio" name="q1" value="d"> d) define</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> What does the 'return' statement do?</p>
+                      <label><input type="radio" name="q2" value="a"> a) Prints a value</label>
+                      <label><input type="radio" name="q2" value="b"> b) Sends a value back to caller</label>
+                      <label><input type="radio" name="q2" value="c"> c) Exits the program</label>
+                      <label><input type="radio" name="q2" value="d"> d) Continues execution</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> What is *args used for?</p>
+                      <label><input type="radio" name="q3" value="a"> a) Keyword arguments</label>
+                      <label><input type="radio" name="q3" value="b"> b) Positional arguments</label>
+                      <label><input type="radio" name="q3" value="c"> c) Default arguments</label>
+                      <label><input type="radio" name="q3" value="d"> d) Required arguments</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> What is **kwargs used for?</p>
+                      <label><input type="radio" name="q4" value="a"> a) Positional arguments</label>
+                      <label><input type="radio" name="q4" value="b"> b) Keyword arguments</label>
+                      <label><input type="radio" name="q4" value="c"> c) Default arguments</label>
+                      <label><input type="radio" name="q4" value="d"> d) Required arguments</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> What keyword is used to modify a global variable inside a function?</p>
+                      <label><input type="radio" name="q5" value="a"> a) global</label>
+                      <label><input type="radio" name="q5" value="b"> b) var</label>
+                      <label><input type="radio" name="q5" value="c"> c) modify</label>
+                      <label><input type="radio" name="q5" value="d"> d) change</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> What is a lambda function?</p>
+                      <label><input type="radio" name="q6" value="a"> a) A named function</label>
+                      <label><input type="radio" name="q6" value="b"> b) An anonymous function</label>
+                      <label><input type="radio" name="q6" value="c"> c) A recursive function</label>
+                      <label><input type="radio" name="q6" value="d"> d) A built-in function</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q7:</strong> Can a function return multiple values in Python?</p>
+                      <label><input type="radio" name="q7" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q7" value="b"> b) No</label>
+                      <label><input type="radio" name="q7" value="c"> c) Only in Python 3</label>
+                      <label><input type="radio" name="q7" value="d"> d) Only with lists</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q8:</strong> What is the output of: def func(x=5): return x; print(func())</p>
+                      <label><input type="radio" name="q8" value="a"> a) 5</label>
+                      <label><input type="radio" name="q8" value="b"> b) None</label>
+                      <label><input type="radio" name="q8" value="c"> c) Error</label>
+                      <label><input type="radio" name="q8" value="d"> d) 0</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q9:</strong> What is a function scope?</p>
+                      <label><input type="radio" name="q9" value="a"> a) The function name</label>
+                      <label><input type="radio" name="q9" value="b"> b) Where variables are accessible</label>
+                      <label><input type="radio" name="q9" value="c"> c) The function parameters</label>
+                      <label><input type="radio" name="q9" value="d"> d) The return value</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q10:</strong> What is the correct syntax for a lambda function?</p>
+                      <label><input type="radio" name="q10" value="a"> a) lambda x: x * 2</label>
+                      <label><input type="radio" name="q10" value="b"> b) lambda(x): x * 2</label>
+                      <label><input type="radio" name="q10" value="c"> c) lambda x { return x * 2 }</label>
+                      <label><input type="radio" name="q10" value="d"> d) function lambda(x) { x * 2 }</label>
+                    </div>
+                    <button class="quiz-submit" onclick="checkQuiz('functions')">Submit Quiz</button>
+                    <div class="quiz-result"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <!-- Lists & Tuples -->
+            <section id="lists" class="topic-section">
+              <h2>6. Lists & Tuples</h2>
+              <div class="topic-content">
+                <h3>What are Lists?</h3>
+                <p>Lists are ordered, mutable (changeable) collections of items. They can contain items of different data types.</p>
+      
+                <h3>Creating Lists</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Empty list
+      my_list = []
+      
+      # List with items
+      fruits = ["apple", "banana", "cherry"]
+      numbers = [1, 2, 3, 4, 5]
+      
+      # List with mixed types
+      mixed = [1, "hello", 3.14, True]
+      
+      # Using list() constructor
+      numbers = list((1, 2, 3))</code></pre>
+                </div>
+      
+                <h3>Accessing List Items</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+      
+      # Access by index
+      print(fruits[0])   # apple
+      print(fruits[1])   # banana
+      print(fruits[-1]) # cherry (negative indexing)
+      
+      # Slicing
+      print(fruits[1:3])      # ['banana', 'cherry']
+      print(fruits[:2])       # ['apple', 'banana']
+      print(fruits[1:])      # ['banana', 'cherry']</code></pre>
+                </div>
+      
+                <h3>Modifying Lists</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+      
+      # Change item
+      fruits[1] = "orange"
+      
+      # Add item
+      fruits.append("grape")        # Add to end
+      fruits.insert(1, "mango")     # Insert at index
+      
+      # Remove item
+      fruits.remove("banana")       # Remove by value
+      fruits.pop(1)                 # Remove by index
+      fruits.pop()                  # Remove last item
+      del fruits[0]                 # Delete by index
+      
+      # Extend list
+      fruits.extend(["kiwi", "pear"])</code></pre>
+                </div>
+      
+                <h3>List Methods</h3>
+                <table class="data-table">
+                  <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td><code>append()</code></td>
+                    <td>Adds an element at the end</td>
+                  </tr>
+                  <tr>
+                    <td><code>insert()</code></td>
+                    <td>Inserts element at specified position</td>
+                  </tr>
+                  <tr>
+                    <td><code>remove()</code></td>
+                    <td>Removes first occurrence of value</td>
+                  </tr>
+                  <tr>
+                    <td><code>pop()</code></td>
+                    <td>Removes element at specified position</td>
+                  </tr>
+                  <tr>
+                    <td><code>clear()</code></td>
+                    <td>Removes all elements</td>
+                  </tr>
+                  <tr>
+                    <td><code>index()</code></td>
+                    <td>Returns index of first occurrence</td>
+                  </tr>
+                  <tr>
+                    <td><code>count()</code></td>
+                    <td>Returns count of element</td>
+                  </tr>
+                  <tr>
+                    <td><code>sort()</code></td>
+                    <td>Sorts the list</td>
+                  </tr>
+                  <tr>
+                    <td><code>reverse()</code></td>
+                    <td>Reverses the list</td>
+                  </tr>
+                  <tr>
+                    <td><code>copy()</code></td>
+                    <td>Returns a copy of the list</td>
+                  </tr>
+                </table>
+      
+                <h3>List Comprehension</h3>
+                <p>List comprehension provides a concise way to create lists:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Traditional way
+      squares = []
+      for x in range(5):
+          squares.append(x ** 2)
+      
+      # List comprehension
+      squares = [x ** 2 for x in range(5)]
+      
+      # With condition
+      evens = [x for x in range(10) if x % 2 == 0]
+      
+      # Nested list comprehension
+      matrix = [[i * j for j in range(3)] for i in range(3)]</code></pre>
+                </div>
+      
+                <h3>What are Tuples?</h3>
+                <p>Tuples are ordered, immutable (unchangeable) collections of items. Once created, they cannot be modified.</p>
+      
+                <h3>Creating Tuples</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Empty tuple
+      my_tuple = ()
+      
+      # Tuple with items
+      fruits = ("apple", "banana", "cherry")
+      numbers = (1, 2, 3, 4, 5)
+      
+      # Single item tuple (note the comma)
+      single = (5,)
+      
+      # Using tuple() constructor
+      numbers = tuple([1, 2, 3])</code></pre>
+                </div>
+      
+                <h3>Accessing Tuple Items</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">fruits = ("apple", "banana", "cherry")
+      
+      # Access by index
+      print(fruits[0])   # apple
+      print(fruits[-1])  # cherry
+      
+      # Slicing
+      print(fruits[1:3])  # ('banana', 'cherry')
+      
+      # Unpacking
+      a, b, c = fruits
+      print(a, b, c)  # apple banana cherry</code></pre>
+                </div>
+      
+                <h3>Tuple Methods</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">fruits = ("apple", "banana", "cherry", "apple")
+      
+      # count() - Count occurrences
+      print(fruits.count("apple"))  # 2
+      
+      # index() - Find index
+      print(fruits.index("banana"))  # 1</code></pre>
+                </div>
+      
+                <h3>Lists vs Tuples</h3>
+                <table class="data-table">
+                  <tr>
+                    <th>Feature</th>
+                    <th>List</th>
+                    <th>Tuple</th>
+                  </tr>
+                  <tr>
+                    <td>Mutability</td>
+                    <td>Mutable (changeable)</td>
+                    <td>Immutable (unchangeable)</td>
+                  </tr>
+                  <tr>
+                    <td>Syntax</td>
+                    <td>Square brackets []</td>
+                    <td>Parentheses ()</td>
+                  </tr>
+                  <tr>
+                    <td>Performance</td>
+                    <td>Slower</td>
+                    <td>Faster</td>
+                  </tr>
+                  <tr>
+                    <td>Memory</td>
+                    <td>More memory</td>
+                    <td>Less memory</td>
+                  </tr>
+                  <tr>
+                    <td>Use Case</td>
+                    <td>When data needs to change</td>
+                    <td>When data should not change</td>
+                  </tr>
+                </table>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Lists & Tuples</h3>
+                  <div class="quiz" data-quiz="lists">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What is the output of: [1, 2, 3][-1]?</p>
+                      <label><input type="radio" name="q1" value="a"> a) 1</label>
+                      <label><input type="radio" name="q1" value="b"> b) 3</label>
+                      <label><input type="radio" name="q1" value="c"> c) Error</label>
+                      <label><input type="radio" name="q1" value="d"> d) None</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> Which method adds an item to the end of a list?</p>
+                      <label><input type="radio" name="q2" value="a"> a) add()</label>
+                      <label><input type="radio" name="q2" value="b"> b) append()</label>
+                      <label><input type="radio" name="q2" value="c"> c) insert()</label>
+                      <label><input type="radio" name="q2" value="d"> d) extend()</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> Are tuples mutable or immutable?</p>
+                      <label><input type="radio" name="q3" value="a"> a) Mutable</label>
+                      <label><input type="radio" name="q3" value="b"> b) Immutable</label>
+                      <label><input type="radio" name="q3" value="c"> c) Both</label>
+                      <label><input type="radio" name="q3" value="d"> d) Depends</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> What is the output of: [x*2 for x in range(3)]?</p>
+                      <label><input type="radio" name="q4" value="a"> a) [0, 2, 4]</label>
+                      <label><input type="radio" name="q4" value="b"> b) [2, 4, 6]</label>
+                      <label><input type="radio" name="q4" value="c"> c) [0, 1, 2]</label>
+                      <label><input type="radio" name="q4" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> What is the correct syntax for a single-item tuple?</p>
+                      <label><input type="radio" name="q5" value="a"> a) (5)</label>
+                      <label><input type="radio" name="q5" value="b"> b) (5,)</label>
+                      <label><input type="radio" name="q5" value="c"> c) [5]</label>
+                      <label><input type="radio" name="q5" value="d"> d) {5}</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> What does list.pop() do?</p>
+                      <label><input type="radio" name="q6" value="a"> a) Adds an item</label>
+                      <label><input type="radio" name="q6" value="b"> b) Removes last item</label>
+                      <label><input type="radio" name="q6" value="c"> c) Sorts the list</label>
+                      <label><input type="radio" name="q6" value="d"> d) Reverses the list</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q7:</strong> What is the output of: (1, 2, 3)[1:3]?</p>
+                      <label><input type="radio" name="q7" value="a"> a) (1, 2)</label>
+                      <label><input type="radio" name="q7" value="b"> b) (2, 3)</label>
+                      <label><input type="radio" name="q7" value="c"> c) (1, 2, 3)</label>
+                      <label><input type="radio" name="q7" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q8:</strong> Which is faster: list or tuple?</p>
+                      <label><input type="radio" name="q8" value="a"> a) List</label>
+                      <label><input type="radio" name="q8" value="b"> b) Tuple</label>
+                      <label><input type="radio" name="q8" value="c"> c) Same</label>
+                      <label><input type="radio" name="q8" value="d"> d) Depends</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q9:</strong> What does list.extend() do?</p>
+                      <label><input type="radio" name="q9" value="a"> a) Adds one item</label>
+                      <label><input type="radio" name="q9" value="b"> b) Adds multiple items</label>
+                      <label><input type="radio" name="q9" value="c"> c) Removes items</label>
+                      <label><input type="radio" name="q9" value="d"> d) Sorts items</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q10:</strong> Can you modify a tuple after creation?</p>
+                      <label><input type="radio" name="q10" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q10" value="b"> b) No</label>
+                      <label><input type="radio" name="q10" value="c"> c) Only in Python 3</label>
+                      <label><input type="radio" name="q10" value="d"> d) Only with methods</label>
+                    </div>
+                    <button class="quiz-submit" onclick="checkQuiz('lists')">Submit Quiz</button>
+                    <div class="quiz-result"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <!-- Dictionaries -->
+            <section id="dictionaries" class="topic-section">
+              <h2>7. Dictionaries</h2>
+              <div class="topic-content">
+                <h3>What are Dictionaries?</h3>
+                <p>Dictionaries are unordered, mutable collections of key-value pairs. Each key is unique and maps to a value. Dictionaries are also known as associative arrays or hash maps.</p>
+      
+                <h3>Creating Dictionaries</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Empty dictionary
+      my_dict = {}
+      
+      # Dictionary with items
+      person = {
+          "name": "John",
+          "age": 30,
+          "city": "New York"
+      }
+      
+      # Using dict() constructor
+      person = dict(name="John", age=30, city="New York")
+      
+      # Dictionary with different data types
+      mixed = {
+          "string": "hello",
+          "number": 42,
+          "list": [1, 2, 3],
+          "nested": {"key": "value"}
+      }</code></pre>
+                </div>
+      
+                <h3>Accessing Dictionary Items</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">person = {"name": "John", "age": 30, "city": "New York"}
+      
+      # Access by key
+      print(person["name"])        # John
+      print(person.get("age"))     # 30
+      
+      # Using get() with default
+      print(person.get("email", "Not found"))  # Not found
+      
+      # Get all keys
+      print(person.keys())         # dict_keys(['name', 'age', 'city'])
+      
+      # Get all values
+      print(person.values())       # dict_values(['John', 30, 'New York'])
+      
+      # Get all items
+      print(person.items())        # dict_items([('name', 'John'), ...])</code></pre>
+                </div>
+      
+                <h3>Modifying Dictionaries</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">person = {"name": "John", "age": 30}
+      
+      # Add or update item
+      person["city"] = "New York"
+      person["age"] = 31
+      
+      # Update multiple items
+      person.update({"age": 32, "email": "john@example.com"})
+      
+      # Remove item
+      del person["city"]
+      person.pop("age")
+      person.popitem()  # Removes last item
+      
+      # Clear dictionary
+      person.clear()</code></pre>
+                </div>
+      
+                <h3>Dictionary Methods</h3>
+                <table class="data-table">
+                  <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td><code>get()</code></td>
+                    <td>Returns value for key, or default if not found</td>
+                  </tr>
+                  <tr>
+                    <td><code>keys()</code></td>
+                    <td>Returns all keys</td>
+                  </tr>
+                  <tr>
+                    <td><code>values()</code></td>
+                    <td>Returns all values</td>
+                  </tr>
+                  <tr>
+                    <td><code>items()</code></td>
+                    <td>Returns all key-value pairs</td>
+                  </tr>
+                  <tr>
+                    <td><code>update()</code></td>
+                    <td>Updates dictionary with another dictionary</td>
+                  </tr>
+                  <tr>
+                    <td><code>pop()</code></td>
+                    <td>Removes and returns value for key</td>
+                  </tr>
+                  <tr>
+                    <td><code>popitem()</code></td>
+                    <td>Removes and returns last key-value pair</td>
+                  </tr>
+                  <tr>
+                    <td><code>clear()</code></td>
+                    <td>Removes all items</td>
+                  </tr>
+                  <tr>
+                    <td><code>copy()</code></td>
+                    <td>Returns a copy of the dictionary</td>
+                  </tr>
+                </table>
+      
+                <h3>Iterating Over Dictionaries</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">person = {"name": "John", "age": 30, "city": "New York"}
+      
+      # Iterate over keys
+      for key in person:
+          print(key)
+      
+      # Iterate over keys explicitly
+      for key in person.keys():
+          print(key)
+      
+      # Iterate over values
+      for value in person.values():
+          print(value)
+      
+      # Iterate over key-value pairs
+      for key, value in person.items():
+          print(f"{key}: {value}")</code></pre>
+                </div>
+      
+                <h3>Dictionary Comprehension</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Create dictionary from list
+      squares = {x: x**2 for x in range(5)}
+      # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+      
+      # With condition
+      evens = {x: x*2 for x in range(10) if x % 2 == 0}
+      
+      # From two lists
+      keys = ['a', 'b', 'c']
+      values = [1, 2, 3]
+      my_dict = {k: v for k, v in zip(keys, values)}</code></pre>
+                </div>
+      
+                <h3>Nested Dictionaries</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Nested dictionary
+      students = {
+          "student1": {
+              "name": "Alice",
+              "age": 20,
+              "grades": [85, 90, 88]
+          },
+          "student2": {
+              "name": "Bob",
+              "age": 21,
+              "grades": [92, 87, 95]
+          }
+      }
+      
+      # Accessing nested values
+      print(students["student1"]["name"])
+      print(students["student1"]["grades"][0])</code></pre>
+                </div>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Dictionaries</h3>
+                  <div class="quiz" data-quiz="dictionaries">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What is the correct syntax to access a dictionary value?</p>
+                      <label><input type="radio" name="q1" value="a"> a) dict[0]</label>
+                      <label><input type="radio" name="q1" value="b"> b) dict["key"]</label>
+                      <label><input type="radio" name="q1" value="c"> c) dict.get(0)</label>
+                      <label><input type="radio" name="q1" value="d"> d) dict.value("key")</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> What method returns all keys in a dictionary?</p>
+                      <label><input type="radio" name="q2" value="a"> a) keys()</label>
+                      <label><input type="radio" name="q2" value="b"> b) get_keys()</label>
+                      <label><input type="radio" name="q2" value="c"> c) all_keys()</label>
+                      <label><input type="radio" name="q2" value="d"> d) key_list()</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> What does dict.get("key", "default") do?</p>
+                      <label><input type="radio" name="q3" value="a"> a) Returns value or error</label>
+                      <label><input type="radio" name="q3" value="b"> b) Returns value or default</label>
+                      <label><input type="radio" name="q3" value="c"> c) Sets default value</label>
+                      <label><input type="radio" name="q3" value="d"> d) Adds key with default</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> What method removes and returns a key-value pair?</p>
+                      <label><input type="radio" name="q4" value="a"> a) remove()</label>
+                      <label><input type="radio" name="q4" value="b"> b) pop()</label>
+                      <label><input type="radio" name="q4" value="c"> c) delete()</label>
+                      <label><input type="radio" name="q4" value="d"> d) popitem()</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> Can dictionary keys be of different types?</p>
+                      <label><input type="radio" name="q5" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q5" value="b"> b) No</label>
+                      <label><input type="radio" name="q5" value="c"> c) Only strings</label>
+                      <label><input type="radio" name="q5" value="d"> d) Only numbers</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> What is the output of: {"a": 1, "b": 2}.items()?</p>
+                      <label><input type="radio" name="q6" value="a"> a) ['a', 'b']</label>
+                      <label><input type="radio" name="q6" value="b"> b) [1, 2]</label>
+                      <label><input type="radio" name="q6" value="c"> c) [('a', 1), ('b', 2)]</label>
+                      <label><input type="radio" name="q6" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q7:</strong> Are dictionaries ordered in Python 3.7+?</p>
+                      <label><input type="radio" name="q7" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q7" value="b"> b) No</label>
+                      <label><input type="radio" name="q7" value="c"> c) Only in Python 3.8+</label>
+                      <label><input type="radio" name="q7" value="d"> d) Depends</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q8:</strong> What does dict.update() do?</p>
+                      <label><input type="radio" name="q8" value="a"> a) Returns updated dict</label>
+                      <label><input type="radio" name="q8" value="b"> b) Updates with another dict</label>
+                      <label><input type="radio" name="q8" value="c"> c) Clears the dict</label>
+                      <label><input type="radio" name="q8" value="d"> d) Sorts the dict</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q9:</strong> Can dictionary values be lists?</p>
+                      <label><input type="radio" name="q9" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q9" value="b"> b) No</label>
+                      <label><input type="radio" name="q9" value="c"> c) Only in Python 3</label>
+                      <label><input type="radio" name="q9" value="d"> d) Only strings</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q10:</strong> What is dictionary comprehension syntax?</p>
+                      <label><input type="radio" name="q10" value="a"> a) {x: x*2 for x in range(3)}</label>
+                      <label><input type="radio" name="q10" value="b"> b) [x: x*2 for x in range(3)]</label>
+                      <label><input type="radio" name="q10" value="c"> c) (x: x*2 for x in range(3))</label>
+                      <label><input type="radio" name="q10" value="d"> d) {x*2 for x in range(3)}</label>
+                    </div>
+                    <button class="quiz-submit" onclick="checkQuiz('dictionaries')">Submit Quiz</button>
+                    <div class="quiz-result"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <!-- Strings -->
+            <section id="strings" class="topic-section">
+              <h2>8. Strings</h2>
+              <div class="topic-content">
+                <h3>What are Strings?</h3>
+                <p>Strings are sequences of characters enclosed in quotes. In Python, strings are immutable, meaning they cannot be changed after creation.</p>
+      
+                <h3>Creating Strings</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Single quotes
+      name = 'John'
+      
+      # Double quotes
+      name = "John"
+      
+      # Triple quotes for multiline
+      text = """This is a
+      multiline string"""
+      
+      # Using str() constructor
+      number = str(123)</code></pre>
+                </div>
+      
+                <h3>String Indexing and Slicing</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">text = "Hello, World!"
+      
+      # Access by index
+      print(text[0])    # H
+      print(text[-1])   # ! (negative indexing)
+      
+      # Slicing
+      print(text[0:5])   # Hello
+      print(text[:5])    # Hello
+      print(text[7:])    # World!
+      print(text[::2])   # Hlo ol! (step by 2)</code></pre>
+                </div>
+      
+                <h3>String Methods</h3>
+                <table class="data-table">
+                  <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td><code>upper()</code></td>
+                    <td>Converts to uppercase</td>
+                  </tr>
+                  <tr>
+                    <td><code>lower()</code></td>
+                    <td>Converts to lowercase</td>
+                  </tr>
+                  <tr>
+                    <td><code>strip()</code></td>
+                    <td>Removes whitespace from ends</td>
+                  </tr>
+                  <tr>
+                    <td><code>split()</code></td>
+                    <td>Splits string into list</td>
+                  </tr>
+                  <tr>
+                    <td><code>join()</code></td>
+                    <td>Joins list into string</td>
+                  </tr>
+                  <tr>
+                    <td><code>replace()</code></td>
+                    <td>Replaces substring</td>
+                  </tr>
+                  <tr>
+                    <td><code>find()</code></td>
+                    <td>Finds index of substring</td>
+                  </tr>
+                  <tr>
+                    <td><code>count()</code></td>
+                    <td>Counts occurrences</td>
+                  </tr>
+                  <tr>
+                    <td><code>startswith()</code></td>
+                    <td>Checks if starts with substring</td>
+                  </tr>
+                  <tr>
+                    <td><code>endswith()</code></td>
+                    <td>Checks if ends with substring</td>
+                  </tr>
+                </table>
+      
+                <h3>String Operations</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Concatenation
+      first = "Hello"
+      last = "World"
+      greeting = first + ", " + last
+      
+      # Repetition
+      text = "Hi" * 3  # "HiHiHi"
+      
+      # String methods
+      text = "  Hello, World!  "
+      print(text.upper())           # "  HELLO, WORLD!  "
+      print(text.lower())           # "  hello, world!  "
+      print(text.strip())           # "Hello, World!"
+      print(text.replace("World", "Python"))  # "  Hello, Python!  "
+      
+      # Splitting and joining
+      words = "apple,banana,cherry".split(",")
+      result = "-".join(words)  # "apple-banana-cherry"
+      
+      # Finding and counting
+      text = "Hello, World!"
+      print(text.find("World"))     # 7
+      print(text.count("l"))        # 3
+      print(text.startswith("Hello"))  # True
+      print(text.endswith("!"))     # True</code></pre>
+                </div>
+      
+                <h3>String Formatting</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Old style (%)
+      name = "John"
+      age = 30
+      text = "My name is %s and I am %d years old" % (name, age)
+      
+      # .format() method
+      text = "My name is {} and I am {} years old".format(name, age)
+      text = "My name is {0} and I am {1} years old".format(name, age)
+      text = "My name is {n} and I am {a} years old".format(n=name, a=age)
+      
+      # f-strings (Python 3.6+)
+      text = f"My name is {name} and I am {age} years old"
+      text = f"Next year I will be {age + 1} years old"
+      
+      # Formatting numbers
+      pi = 3.14159
+      print(f"Pi is approximately {pi:.2f}")  # Pi is approximately 3.14</code></pre>
+                </div>
+      
+                <h3>Escape Characters</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Common escape characters
+      print("Hello\nWorld")    # Newline
+      print("Hello\tWorld")    # Tab
+      print("Hello\\World")    # Backslash
+      print("Hello\"World\"")  # Double quotes
+      print("Hello\'World\'")  # Single quotes</code></pre>
+                </div>
+      
+                <h3>String Membership</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">text = "Hello, World!"
+      
+      # Check if substring exists
+      print("World" in text)      # True
+      print("Python" not in text) # True</code></pre>
+                </div>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Strings</h3>
+                  <div class="quiz" data-quiz="strings">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What is the output of: "Hello"[1:4]?</p>
+                      <label><input type="radio" name="q1" value="a"> a) "Hel"</label>
+                      <label><input type="radio" name="q1" value="b"> b) "ell"</label>
+                      <label><input type="radio" name="q1" value="c"> c) "ello"</label>
+                      <label><input type="radio" name="q1" value="d"> d) "Hell"</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> What method converts a string to uppercase?</p>
+                      <label><input type="radio" name="q2" value="a"> a) upper()</label>
+                      <label><input type="radio" name="q2" value="b"> b) uppercase()</label>
+                      <label><input type="radio" name="q2" value="c"> c) toUpper()</label>
+                      <label><input type="radio" name="q2" value="d"> d) capitalize()</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> What does "  hello  ".strip() return?</p>
+                      <label><input type="radio" name="q3" value="a"> a) "  hello  "</label>
+                      <label><input type="radio" name="q3" value="b"> b) "hello"</label>
+                      <label><input type="radio" name="q3" value="c"> c) "  hello"</label>
+                      <label><input type="radio" name="q3" value="d"> d) "hello  "</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> What is the output of: "a" + "b" * 2?</p>
+                      <label><input type="radio" name="q4" value="a"> a) "abab"</label>
+                      <label><input type="radio" name="q4" value="b"> b) "abb"</label>
+                      <label><input type="radio" name="q4" value="c"> c) "aab"</label>
+                      <label><input type="radio" name="q4" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> What method splits a string into a list?</p>
+                      <label><input type="radio" name="q5" value="a"> a) split()</label>
+                      <label><input type="radio" name="q5" value="b"> b) divide()</label>
+                      <label><input type="radio" name="q5" value="c"> c) separate()</label>
+                      <label><input type="radio" name="q5" value="d"> d) break()</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> Are strings mutable in Python?</p>
+                      <label><input type="radio" name="q6" value="a"> a) Yes</label>
+                      <label><input type="radio" name="q6" value="b"> b) No</label>
+                      <label><input type="radio" name="q6" value="c"> c) Sometimes</label>
+                      <label><input type="radio" name="q6" value="d"> d) Only in Python 3</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q7:</strong> What is f-string syntax?</p>
+                      <label><input type="radio" name="q7" value="a"> a) f"Text {variable}"</label>
+                      <label><input type="radio" name="q7" value="b"> b) "Text {variable}"</label>
+                      <label><input type="radio" name="q7" value="c"> c) "Text %variable"</label>
+                      <label><input type="radio" name="q7" value="d"> d) "Text $variable"</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q8:</strong> What does "Hello".find("l") return?</p>
+                      <label><input type="radio" name="q8" value="a"> a) 0</label>
+                      <label><input type="radio" name="q8" value="b"> b) 2</label>
+                      <label><input type="radio" name="q8" value="c"> c) 3</label>
+                      <label><input type="radio" name="q8" value="d"> d) -1</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q9:</strong> What is the output of: "-".join(["a", "b", "c"])?</p>
+                      <label><input type="radio" name="q9" value="a"> a) "a-b-c"</label>
+                      <label><input type="radio" name="q9" value="b"> b) "a b c"</label>
+                      <label><input type="radio" name="q9" value="c"> c) "abc"</label>
+                      <label><input type="radio" name="q9" value="d"> d) Error</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q10:</strong> What escape character is used for newline?</p>
+                      <label><input type="radio" name="q10" value="a"> a) \n</label>
+                      <label><input type="radio" name="q10" value="b"> b) \t</label>
+                      <label><input type="radio" name="q10" value="c"> c) \r</label>
+                      <label><input type="radio" name="q10" value="d"> d) \new</label>
+                    </div>
+                    <button class="quiz-submit" onclick="checkQuiz('strings')">Submit Quiz</button>
+                    <div class="quiz-result"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <!-- Object-Oriented Programming -->
+            <section id="oop" class="topic-section">
+              <h2>9. Object-Oriented Programming</h2>
+              <div class="topic-content">
+                <h3>What is OOP?</h3>
+                <p>Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects, which contain data (attributes) and behavior (methods). Python supports OOP principles including classes, objects, inheritance, encapsulation, and polymorphism.</p>
+      
+                <h3>Classes and Objects</h3>
+                <p>A class is a blueprint for creating objects. An object is an instance of a class.</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Defining a class
+      class Person:
+          # Class attribute
+          species = "Homo sapiens"
+          
+          # Constructor (initializer)
+          def __init__(self, name, age):
+              # Instance attributes
+              self.name = name
+              self.age = age
+          
+          # Instance method
+          def introduce(self):
+              return f"Hi, I'm {self.name} and I'm {self.age} years old"
+          
+          # Another method
+          def have_birthday(self):
+              self.age += 1
+              return f"Happy birthday! Now I'm {self.age}"
+      
+      # Creating objects (instances)
+      person1 = Person("Alice", 25)
+      person2 = Person("Bob", 30)
+      
+      # Accessing attributes
+      print(person1.name)  # Alice
+      print(person1.age)   # 25
+      
+      # Calling methods
+      print(person1.introduce())  # Hi, I'm Alice and I'm 25 years old
+      person1.have_birthday()
+      print(person1.age)  # 26</code></pre>
+                </div>
+      
+                <h3>Inheritance</h3>
+                <p>Inheritance allows a class to inherit attributes and methods from another class:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python"># Parent class (base class)
+      class Animal:
+          def __init__(self, name):
+              self.name = name
+          
+          def speak(self):
+              return f"{self.name} makes a sound"
+      
+      # Child class (derived class)
+      class Dog(Animal):
+          def speak(self):
+              return f"{self.name} barks"
+      
+      class Cat(Animal):
+          def speak(self):
+              return f"{self.name} meows"
+      
+      # Using inheritance
+      dog = Dog("Buddy")
+      cat = Cat("Whiskers")
+      
+      print(dog.speak())  # Buddy barks
+      print(cat.speak())  # Whiskers meows</code></pre>
+                </div>
+      
+                <h3>Encapsulation</h3>
+                <p>Encapsulation restricts access to certain components. Python uses naming conventions:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">class BankAccount:
+          def __init__(self, balance):
+              self.balance = balance        # Public
+              self._account_number = 12345   # Protected (convention)
+              self.__pin = 1234             # Private (name mangling)
+          
+          def deposit(self, amount):
+              self.balance += amount
+          
+          def get_balance(self):
+              return self.balance
+          
+          def _internal_method(self):  # Protected method
+              return "Internal"
+          
+          def __private_method(self):  # Private method
+              return "Private"
+      
+      account = BankAccount(1000)
+      print(account.balance)        # Accessible
+      print(account._account_number)  # Accessible (but convention says don't)
+      # print(account.__pin)  # Error (name mangled)</code></pre>
+                </div>
+      
+                <h3>Polymorphism</h3>
+                <p>Polymorphism allows different classes to be used through the same interface:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">class Shape:
+          def area(self):
+              pass
+      
+      class Rectangle(Shape):
+          def __init__(self, width, height):
+              self.width = width
+              self.height = height
+          
+          def area(self):
+              return self.width * self.height
+      
+      class Circle(Shape):
+          def __init__(self, radius):
+              self.radius = radius
+          
+          def area(self):
+              return 3.14159 * self.radius ** 2
+      
+      # Polymorphism in action
+      shapes = [Rectangle(5, 4), Circle(3)]
+      for shape in shapes:
+          print(f"Area: {shape.area()}")</code></pre>
+                </div>
+      
+                <h3>Special Methods (Magic Methods)</h3>
+                <p>Special methods allow you to define how objects behave with built-in operations:</p>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">class Point:
+          def __init__(self, x, y):
+              self.x = x
+              self.y = y
+          
+          def __str__(self):
+              return f"Point({self.x}, {self.y})"
+          
+          def __repr__(self):
+              return f"Point({self.x}, {self.y})"
+          
+          def __add__(self, other):
+              return Point(self.x + other.x, self.y + other.y)
+          
+          def __eq__(self, other):
+              return self.x == other.x and self.y == other.y
+      
+      p1 = Point(1, 2)
+      p2 = Point(3, 4)
+      p3 = p1 + p2
+      print(p3)  # Point(4, 6)
+      print(p1 == p2)  # False</code></pre>
+                </div>
+      
+                <h3>Class Methods and Static Methods</h3>
+                <div class="code-block-wrapper">
+                  <pre><code class="language-python">class MyClass:
+          class_var = 0
+          
+          def __init__(self, value):
+              self.instance_var = value
+          
+          @classmethod
+          def class_method(cls):
+              return f"Class variable: {cls.class_var}"
+          
+          @staticmethod
+          def static_method():
+              return "This is a static method"
+          
+          def instance_method(self):
+              return f"Instance variable: {self.instance_var}"
+      
+      # Using class method
+      print(MyClass.class_method())
+      
+      # Using static method
+      print(MyClass.static_method())
+      
+      # Using instance method
+      obj = MyClass(10)
+      print(obj.instance_method())</code></pre>
+                </div>
+      
+                <div class="quiz-section">
+                  <h3>Quiz: Object-Oriented Programming</h3>
+                  <div class="quiz" data-quiz="oop">
+                    <div class="quiz-question">
+                      <p><strong>Q1:</strong> What keyword is used to define a class in Python?</p>
+                      <label><input type="radio" name="q1" value="a"> a) class</label>
+                      <label><input type="radio" name="q1" value="b"> b) Class</label>
+                      <label><input type="radio" name="q1" value="c"> c) define</label>
+                      <label><input type="radio" name="q1" value="d"> d) struct</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q2:</strong> What is the constructor method called in Python?</p>
+                      <label><input type="radio" name="q2" value="a"> a) constructor()</label>
+                      <label><input type="radio" name="q2" value="b"> b) __init__()</label>
+                      <label><input type="radio" name="q2" value="c"> c) init()</label>
+                      <label><input type="radio" name="q2" value="d"> d) __new__()</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q3:</strong> What does 'self' represent in a class method?</p>
+                      <label><input type="radio" name="q3" value="a"> a) The class itself</label>
+                      <label><input type="radio" name="q3" value="b"> b) The instance of the class</label>
+                      <label><input type="radio" name="q3" value="c"> c) A keyword</label>
+                      <label><input type="radio" name="q3" value="d"> d) The parent class</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q4:</strong> What is inheritance in OOP?</p>
+                      <label><input type="radio" name="q4" value="a"> a) Creating objects</label>
+                      <label><input type="radio" name="q4" value="b"> b) Inheriting attributes from parent class</label>
+                      <label><input type="radio" name="q4" value="c"> c) Hiding data</label>
+                      <label><input type="radio" name="q4" value="d"> d) Polymorphism</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q5:</strong> How do you make a method private in Python?</p>
+                      <label><input type="radio" name="q5" value="a"> a) Use private keyword</label>
+                      <label><input type="radio" name="q5" value="b"> b) Use double underscore prefix</label>
+                      <label><input type="radio" name="q5" value="c"> c) Use single underscore</label>
+                      <label><input type="radio" name="q5" value="d"> d) Cannot be done</label>
+                    </div>
+                    <div class="quiz-question">
+                      <p><strong>Q6:</strong> What is polymorphism?</p>
+                      <label><input type="radio" name="q6" value="a"> a) One interface, multiple implementations</label>
+                      <label><input type="radio" name="q6" value="b"> b) Data hiding</label>
+                      <label><input type
+
+                          
+      <section id="compiler" class="topic-section">
+        <h2>💻 Python Code Compiler</h2>
+        <div class="topic-content">
+          <div class="compiler-container">
+            <div class="compiler-header">
+              <h3>Write and Execute Python Code</h3>
+              <p>Get your free API key from <a href="https://rapidapi.com/judge0-official/api/judge0-ce" target="_blank">Judge0 RapidAPI</a> (Free tier available with 50 requests/day)</p>
+              <div class="api-key-input">
+                <input type="text" id="api-key" placeholder="Enter your RapidAPI Key (X-RapidAPI-Key)" />
+                <button onclick="saveApiKey()">Save Key</button>
+              </div>
+              <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 8px;">
+                Your API key is stored locally in your browser and never shared.
+              </p>
+            </div>
+            <div class="compiler-editor">
+              <div class="editor-header">
+                <span>Editor</span>
+                <button class="run-btn" onclick="runPythonCode()">▶ Run Code</button>
+              </div>
+              <textarea id="code-editor" class="compiler-code-editor" placeholder="Enter your Python code here...">print("Hello, World!")</textarea>
+            </div>
+            <div class="compiler-output">
+              <div class="output-header">
+                <span>Output</span>
+                <button class="clear-btn" onclick="clearOutput()">Clear</button>
+              </div>
+              <div id="output" class="output-content"></div>
+            </div>
+            <div class="compiler-status">
+              <div id="status" class="status-info">Ready</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">📘</div>
+        <h2>Course<span>.com</span></h2>
+        <p>Master programming from beginner to advanced with our curated collection of online courses.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="#">All Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Course.com. Crafted with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+  <!-- Compiler Modal -->
+  <div id="compiler-modal" class="compiler-modal">
+    <div class="compiler-modal-content">
+      <div class="compiler-modal-header">
+        <h2>💻 Code Compiler</h2>
+        <button class="compiler-close-btn" id="close-compiler">&times;</button>
+      </div>
+      <div class="compiler-body">
+        <div class="compiler-toolbar">
+          <div class="compiler-left-tools">
+            <button class="tool-btn" onclick="loadCodeTemplate('hello')" title="Load Hello World">📝 Hello World</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('calculator')" title="Load Calculator">🧮 Calculator</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('list')" title="Load List Example">📊 List Example</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('oop')" title="Load OOP Example">🎯 OOP Example</button>
+            <button class="tool-btn" onclick="clearCompilerCode()" title="Clear Code">🗑️ Clear</button>
+            <button class="tool-btn" onclick="saveCompilerCode()" title="Save Code">💾 Save</button>
+            <button class="tool-btn" onclick="loadCompilerCode()" title="Load Saved Code">📂 Load</button>
+          </div>
+          <div class="compiler-right-tools">
+            <select id="compiler-language" class="compiler-language-selector" onchange="setCompilerLanguage(this.value)">
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python" selected>Python</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+            <input type="text" id="compiler-api-key" placeholder="RapidAPI Key" class="api-key-input-small" />
+            <button class="tool-btn primary" onclick="saveCompilerApiKey()">Save Key</button>
+            <button class="tool-btn run-btn-large" onclick="runCompilerCode()">▶ Run Code</button>
+          </div>
+        </div>
+        <div class="compiler-editor-container">
+          <div class="compiler-editor-section">
+            <div class="editor-tab">
+              <span class="tab-active">Code Editor</span>
+            </div>
+            <textarea id="compiler-code-editor" class="compiler-code-editor" placeholder="Enter your Python code here...">print("Hello, World!")</textarea>
+          </div>
+          <div class="compiler-input-section">
+            <div class="input-label">Input (stdin):</div>
+            <textarea id="compiler-input" class="compiler-input" placeholder="Enter input for your program (optional)"></textarea>
+          </div>
+        </div>
+        <div class="compiler-output-container">
+          <div class="output-header-bar">
+            <span>Output</span>
+            <div class="output-actions">
+              <span id="compiler-status" class="status-badge">Ready</span>
+              <button class="tool-btn-small" onclick="clearCompilerOutput()">Clear Output</button>
+              <button class="tool-btn-small" onclick="downloadCompilerOutput()">Download</button>
+            </div>
+          </div>
+          <div id="compiler-output" class="compiler-output-display"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="c-course.js"></script>
+  <script src="compiler.js"></script>
+  <script>
+    // Python Quiz Answers
+    const pythonQuizAnswers = {
+        'intro': {
+            'q1': 'b', 'q2': 'b', 'q3': 'c', 'q4': 'b', 'q5': 'c',
+            'q6': 'b', 'q7': 'd', 'q8': 'a', 'q9': 'c', 'q10': 'a'
+        },
+        'variables': {
+            'q1': 'c', 'q2': 'b', 'q3': 'b', 'q4': 'b', 'q5': 'a',
+            'q6': 'b', 'q7': 'a', 'q8': 'a', 'q9': 'a', 'q10': 'd'
+        }
+    };
+
+    // Override checkQuiz for Python
+    const originalCheckQuiz = window.checkQuiz;
+    window.checkQuiz = function(quizId) {
+        const quiz = document.querySelector(`[data-quiz="${quizId}"]`);
+        if (!quiz) return;
+        
+        const questions = quiz.querySelectorAll('.quiz-question');
+        const resultDiv = quiz.querySelector('.quiz-result');
+        let correctAnswers = 0;
+        let totalQuestions = questions.length;
+        const answers = pythonQuizAnswers[quizId] || {};
+
+        questions.forEach((question, index) => {
+            const questionNum = `q${index + 1}`;
+            const selectedAnswer = question.querySelector(`input[name="${questionNum}"]:checked`);
+            const correctAnswer = answers[questionNum];
+            const labels = question.querySelectorAll('label');
+
+            if (selectedAnswer && correctAnswer) {
+                if (selectedAnswer.value === correctAnswer) {
+                    correctAnswers++;
+                    labels.forEach(label => {
+                        const radio = label.querySelector('input');
+                        if (radio.value === correctAnswer) {
+                            label.style.background = '#d1fae5';
+                            label.style.color = '#065f46';
+                        }
+                    });
+                } else {
+                    labels.forEach(label => {
+                        const radio = label.querySelector('input');
+                        if (radio.value === correctAnswer) {
+                            label.style.background = '#d1fae5';
+                            label.style.color = '#065f46';
+                        }
+                        if (radio === selectedAnswer) {
+                            label.style.background = '#fee2e2';
+                            label.style.color = '#991b1b';
+                        }
+                    });
+                }
+            } else if (correctAnswer) {
+                labels.forEach(label => {
+                    const radio = label.querySelector('input');
+                    if (radio.value === correctAnswer) {
+                        label.style.background = '#d1fae5';
+                        label.style.color = '#065f46';
+                    }
+                });
+            }
+        });
+
+        const percentage = (correctAnswers / totalQuestions) * 100;
+        resultDiv.className = 'quiz-result';
+        
+        if (percentage === 100) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `🎉 Perfect! You got ${correctAnswers}/${totalQuestions} correct (100%)`;
+        } else if (percentage >= 70) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `Good job! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%)`;
+        } else if (percentage >= 50) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `Not bad! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%). Keep practicing!`;
+        } else {
+            resultDiv.classList.add('incorrect');
+            resultDiv.textContent = `Keep practicing! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%). Try again!`;
+        }
+    };
+
+    // Set Python as default language when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      setCompilerLanguage('python');
+    });
+
+    // Python-specific functions
+    function runPythonCode() {
+      setCompilerLanguage('python');
+      runCompilerCode();
+    }
+  </script>
+</body>
+</html>
+

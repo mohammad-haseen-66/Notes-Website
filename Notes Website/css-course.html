@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS3 Course - Course.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="c-course.css" />
+  <link rel="stylesheet" href="compiler-modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">📘</div>
+        <h1><span>Course</span><span class="dot">.com</span></h1>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch to dark mode">🌙</button>
+        <a href="index.html" class="btn">All Courses →</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="course-header">
+    <div class="course-header-content">
+      <div class="course-badge">CSS3</div>
+      <h1>Complete CSS3 Course</h1>
+      <p>Master CSS3 from basics to advanced concepts with hands-on examples, quizzes, and live preview.</p>
+    </div>
+  </section>
+
+  <div class="course-container">
+    <aside class="course-sidebar">
+      <h3>Course Topics</h3>
+      <nav class="topic-nav" aria-label="Course topics navigation">
+        <a href="#intro" class="topic-link active">1. Introduction to CSS3</a>
+        <a href="#selectors" class="topic-link">2. Selectors</a>
+        <a href="#properties" class="topic-link">3. Properties</a>
+        <a href="#layout" class="topic-link">4. Layout (Flexbox & Grid)</a>
+        <a href="#responsive" class="topic-link">5. Responsive Design</a>
+        <a href="#animations" class="topic-link">6. Animations</a>
+        <a href="#playground" class="topic-link">💻 CSS Playground</a>
+      </nav>
+    </aside>
+
+    <main class="course-content">
+      <section id="intro" class="topic-section">
+        <h2>1. Introduction to CSS3</h2>
+        <div class="topic-content">
+          <h3>What is CSS3?</h3>
+          <p>CSS3 is the latest version of Cascading Style Sheets, used to style and format web pages. It introduces many new features and improvements over CSS2.</p>
+          
+          <h3>Key Features:</h3>
+          <ul>
+            <li><strong>Flexbox:</strong> Flexible box layout</li>
+            <li><strong>Grid:</strong> Two-dimensional layout system</li>
+            <li><strong>Animations:</strong> Keyframe animations</li>
+            <li><strong>Transitions:</strong> Smooth property changes</li>
+            <li><strong>Media Queries:</strong> Responsive design</li>
+          </ul>
+
+          <h3>Basic CSS Syntax</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">selector {
+    property: value;
+    property: value;
+}</code></pre>
+          </div>
+        </div>
+      </section>
+            <!-- Selectors -->
+      <section id="selectors" class="topic-section">
+        <h2>2. CSS Selectors</h2>
+        <div class="topic-content">
+          <h3>What are CSS Selectors?</h3>
+          <p>CSS selectors are patterns used to select and style HTML elements. They define which elements on a page will be styled by the CSS rules. Understanding selectors is fundamental to writing effective CSS.</p>
+
+          <h3>Basic Selectors</h3>
+          
+          <h4>Element Selector</h4>
+          <p>Selects all elements of a specific type:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects all &lt;p&gt; elements */
+p {
+    color: blue;
+    font-size: 16px;
+}
+
+/* Selects all &lt;h1&gt; elements */
+h1 {
+    color: red;
+    text-align: center;
+}</code></pre>
+          </div>
+
+          <h4>ID Selector</h4>
+          <p>Selects an element with a specific ID (unique identifier). Uses the hash symbol (#):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects element with id="header" */
+#header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* HTML: &lt;div id="header"&gt;Header&lt;/div&gt; */</code></pre>
+          </div>
+
+          <h4>Class Selector</h4>
+          <p>Selects elements with a specific class. Uses the dot symbol (.):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects all elements with class="button" */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* HTML: &lt;button class="button"&gt;Click Me&lt;/button&gt; */</code></pre>
+          </div>
+
+          <h4>Universal Selector</h4>
+          <p>Selects all elements on the page. Uses the asterisk (*):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}</code></pre>
+          </div>
+
+          <h3>Combinator Selectors</h3>
+
+          <h4>Descendant Selector (Space)</h4>
+          <p>Selects all elements that are descendants of a specified element:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects all &lt;p&gt; elements inside &lt;div&gt; */
+div p {
+    color: blue;
+}
+
+/* HTML: &lt;div&gt;&lt;p&gt;This is blue&lt;/p&gt;&lt;/div&gt; */</code></pre>
+          </div>
+
+          <h4>Child Selector (>)</h4>
+          <p>Selects direct children of a specified element:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects only direct &lt;li&gt; children of &lt;ul&gt; */
+ul > li {
+    list-style-type: square;
+}
+
+/* HTML: &lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt; */</code></pre>
+          </div>
+
+          <h4>Adjacent Sibling Selector (+)</h4>
+          <p>Selects an element that immediately follows another element:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects &lt;p&gt; that immediately follows &lt;h2&gt; */
+h2 + p {
+    margin-top: 10px;
+    font-weight: bold;
+}</code></pre>
+          </div>
+
+          <h4>General Sibling Selector (~)</h4>
+          <p>Selects all siblings that follow a specified element:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects all &lt;p&gt; elements that are siblings of &lt;h2&gt; */
+h2 ~ p {
+    color: gray;
+}</code></pre>
+          </div>
+
+          <h3>Attribute Selectors</h3>
+          <p>Select elements based on their attributes:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Selects elements with specific attribute */
+input[type="text"] {
+    border: 1px solid #ccc;
+}
+
+/* Selects elements with attribute present */
+a[target] {
+    color: red;
+}
+
+/* Selects elements with attribute containing value */
+a[href*="example"] {
+    font-weight: bold;
+}
+
+/* Selects elements with attribute starting with value */
+a[href^="https"] {
+    color: green;
+}
+
+/* Selects elements with attribute ending with value */
+img[src$=".jpg"] {
+    border: 2px solid blue;
+}</code></pre>
+          </div>
+
+          <h3>Pseudo-class Selectors</h3>
+          <p>Select elements in a specific state:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Link states */
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { color: red; }
+a:active { color: orange; }
+
+/* Form states */
+input:focus {
+    outline: 2px solid blue;
+    border-color: blue;
+}
+
+input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Structural pseudo-classes */
+p:first-child { font-weight: bold; }
+p:last-child { margin-bottom: 0; }
+p:nth-child(2) { color: red; }
+p:nth-child(even) { background: #f0f0f0; }
+p:nth-child(odd) { background: white; }</code></pre>
+          </div>
+
+          <h3>Pseudo-element Selectors</h3>
+          <p>Style specific parts of an element:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* First line of paragraph */
+p::first-line {
+    font-weight: bold;
+    color: blue;
+}
+
+/* First letter of paragraph */
+p::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* Before and after content */
+h1::before {
+    content: "→ ";
+    color: green;
+}
+
+h1::after {
+    content: " ←";
+    color: green;
+}
+
+/* Selection styling */
+::selection {
+    background-color: yellow;
+    color: black;
+}</code></pre>
+          </div>
+
+          <h3>Selector Specificity</h3>
+          <p>When multiple rules apply to the same element, CSS uses specificity to determine which rule takes precedence:</p>
+          <ul>
+            <li><strong>Inline styles:</strong> 1000 points</li>
+            <li><strong>ID selectors:</strong> 100 points</li>
+            <li><strong>Class, attribute, pseudo-class:</strong> 10 points</li>
+            <li><strong>Element, pseudo-element:</strong> 1 point</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: CSS Selectors</h3>
+            <div class="quiz" data-quiz="selectors">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Which symbol is used for ID selectors?</p>
+                <label><input type="radio" name="q1" value="a"> a) . (dot)</label>
+                <label><input type="radio" name="q1" value="b"> b) # (hash)</label>
+                <label><input type="radio" name="q1" value="c"> c) * (asterisk)</label>
+                <label><input type="radio" name="q1" value="d"> d) @ (at)</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does the selector "div p" select?</p>
+                <label><input type="radio" name="q2" value="a"> a) All divs and paragraphs</label>
+                <label><input type="radio" name="q2" value="b"> b) All paragraphs inside divs</label>
+                <label><input type="radio" name="q2" value="c"> c) Direct child paragraphs of divs</label>
+                <label><input type="radio" name="q2" value="d"> d) Only the first paragraph in a div</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does the child selector (>) do?</p>
+                <label><input type="radio" name="q3" value="a"> a) Selects all descendants</label>
+                <label><input type="radio" name="q3" value="b"> b) Selects only direct children</label>
+                <label><input type="radio" name="q3" value="c"> c) Selects siblings</label>
+                <label><input type="radio" name="q3" value="d"> d) Selects parents</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> Which pseudo-class is used for hover state?</p>
+                <label><input type="radio" name="q4" value="a"> a) :active</label>
+                <label><input type="radio" name="q4" value="b"> b) :hover</label>
+                <label><input type="radio" name="q4" value="c"> c) :focus</label>
+                <label><input type="radio" name="q4" value="d"> d) :visited</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does ::before pseudo-element do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Styles the first letter</label>
+                <label><input type="radio" name="q5" value="b"> b) Inserts content before element</label>
+                <label><input type="radio" name="q5" value="c"> c) Styles the first line</label>
+                <label><input type="radio" name="q5" value="d"> d) Styles after element</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Which selector has the highest specificity?</p>
+                <label><input type="radio" name="q6" value="a"> a) Element selector</label>
+                <label><input type="radio" name="q6" value="b"> b) Class selector</label>
+                <label><input type="radio" name="q6" value="c"> c) ID selector</label>
+                <label><input type="radio" name="q6" value="d"> d) Universal selector</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does the attribute selector [href*="example"] select?</p>
+                <label><input type="radio" name="q7" value="a"> a) Links starting with "example"</label>
+                <label><input type="radio" name="q7" value="b"> b) Links containing "example"</label>
+                <label><input type="radio" name="q7" value="c"> c) Links ending with "example"</label>
+                <label><input type="radio" name="q7" value="d"> d) Links exactly matching "example"</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does :nth-child(even) select?</p>
+                <label><input type="radio" name="q8" value="a"> a) First child</label>
+                <label><input type="radio" name="q8" value="b"> b) Even-numbered children</label>
+                <label><input type="radio" name="q8" value="c"> c) Last child</label>
+                <label><input type="radio" name="q8" value="d"> d) All children</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> Which symbol is used for class selectors?</p>
+                <label><input type="radio" name="q9" value="a"> a) #</label>
+                <label><input type="radio" name="q9" value="b"> b) .</label>
+                <label><input type="radio" name="q9" value="c"> c) *</label>
+                <label><input type="radio" name="q9" value="d"> d) :</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does the universal selector (*) select?</p>
+                <label><input type="radio" name="q10" value="a"> a) All elements</label>
+                <label><input type="radio" name="q10" value="b"> b) Only div elements</label>
+                <label><input type="radio" name="q10" value="c"> c) Only class elements</label>
+                <label><input type="radio" name="q10" value="d"> d) Nothing</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('selectors')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Properties -->
+      <section id="properties" class="topic-section">
+        <h2>3. CSS Properties</h2>
+        <div class="topic-content">
+          <h3>What are CSS Properties?</h3>
+          <p>CSS properties define the visual appearance and behavior of HTML elements. Each property has a name and a value, and together they create the styling rules for web pages.</p>
+
+          <h3>Text Properties</h3>
+          
+          <h4>Color</h4>
+          <p>Sets the text color:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Named colors */
+p { color: red; }
+
+/* Hexadecimal */
+h1 { color: #FF5733; }
+
+/* RGB */
+h2 { color: rgb(255, 87, 51); }
+
+/* RGBA (with transparency) */
+h3 { color: rgba(255, 87, 51, 0.5); }</code></pre>
+          </div>
+
+          <h4>Font Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Font family */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Font size */
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+p { font-size: 16px; }
+
+/* Font weight */
+.bold { font-weight: bold; }
+.light { font-weight: 300; }
+
+/* Font style */
+.italic { font-style: italic; }
+
+/* Text alignment */
+.center { text-align: center; }
+.left { text-align: left; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+/* Text decoration */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-decoration { text-decoration: none; }
+
+/* Line height */
+p {
+    line-height: 1.6;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}</code></pre>
+          </div>
+
+          <h3>Box Model Properties</h3>
+          <p>The CSS box model consists of content, padding, border, and margin:</p>
+          
+          <h4>Width and Height</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.box {
+    width: 300px;
+    height: 200px;
+    min-width: 200px;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 400px;
+}</code></pre>
+          </div>
+
+          <h4>Padding</h4>
+          <p>Space between content and border:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Individual sides */
+.element {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+/* Shorthand */
+.element {
+    padding: 10px;              /* all sides */
+    padding: 10px 20px;         /* top/bottom left/right */
+    padding: 10px 20px 15px;    /* top left/right bottom */
+    padding: 10px 20px 15px 25px; /* top right bottom left */
+}</code></pre>
+          </div>
+
+          <h4>Margin</h4>
+          <p>Space outside the border:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Individual sides */
+.element {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+/* Shorthand (same as padding) */
+.element {
+    margin: 10px;
+    margin: 10px 20px;
+    margin: 10px 20px 15px;
+    margin: 10px 20px 15px 25px;
+}
+
+/* Auto for centering */
+.center {
+    margin: 0 auto;
+    width: 500px;
+}</code></pre>
+          </div>
+
+          <h4>Border</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Individual properties */
+.element {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+}
+
+/* Shorthand */
+.element {
+    border: 2px solid #333;
+}
+
+/* Individual sides */
+.element {
+    border-top: 2px solid red;
+    border-right: 3px dashed blue;
+    border-bottom: 1px dotted green;
+    border-left: 4px double orange;
+}
+
+/* Border radius (rounded corners) */
+.rounded {
+    border-radius: 10px;
+}
+.circle {
+    border-radius: 50%;
+}</code></pre>
+          </div>
+
+          <h4>Box-sizing</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Default: content-box (width includes only content) */
+.element {
+    box-sizing: content-box;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    /* Total width = 300 + 40 + 10 = 350px */
+}
+
+/* border-box (width includes padding and border) */
+.element {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    /* Total width = 300px (includes padding and border) */
+}</code></pre>
+          </div>
+
+          <h3>Background Properties</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Background color */
+body {
+    background-color: #f0f0f0;
+}
+
+/* Background image */
+.header {
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Shorthand */
+.header {
+    background: #f0f0f0 url('image.jpg') no-repeat center/cover;
+}
+
+/* Multiple backgrounds */
+.element {
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('image.jpg');
+}</code></pre>
+          </div>
+
+          <h3>Display Property</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Block: takes full width, starts on new line */
+.block {
+    display: block;
+}
+
+/* Inline: only takes needed width, stays in line */
+.inline {
+    display: inline;
+}
+
+/* Inline-block: inline but can have width/height */
+.inline-block {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+
+/* None: element is hidden */
+.hidden {
+    display: none;
+}
+
+/* Flex: enables flexbox layout */
+.flex-container {
+    display: flex;
+}
+
+/* Grid: enables grid layout */
+.grid-container {
+    display: grid;
+}</code></pre>
+          </div>
+
+          <h3>Position Property</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Static: default, normal flow */
+.static {
+    position: static;
+}
+
+/* Relative: relative to normal position */
+.relative {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/* Absolute: relative to nearest positioned parent */
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Fixed: relative to viewport */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Sticky: hybrid of relative and fixed */
+.sticky {
+    position: sticky;
+    top: 0;
+}</code></pre>
+          </div>
+
+          <h3>Z-index</h3>
+          <p>Controls stacking order of positioned elements:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.overlay {
+    position: absolute;
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2000;
+}</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: CSS Properties</h3>
+            <div class="quiz" data-quiz="properties">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What does padding: 10px 20px mean?</p>
+                <label><input type="radio" name="q1" value="a"> a) 10px all sides</label>
+                <label><input type="radio" name="q1" value="b"> b) 10px top/bottom, 20px left/right</label>
+                <label><input type="radio" name="q1" value="c"> c) 20px all sides</label>
+                <label><input type="radio" name="q1" value="d"> d) 10px left/right, 20px top/bottom</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is the default value of box-sizing?</p>
+                <label><input type="radio" name="q2" value="a"> a) border-box</label>
+                <label><input type="radio" name="q2" value="b"> b) content-box</label>
+                <label><input type="radio" name="q2" value="c"> c) padding-box</label>
+                <label><input type="radio" name="q2" value="d"> d) margin-box</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> Which property is used to center a block element horizontally?</p>
+                <label><input type="radio" name="q3" value="a"> a) text-align: center</label>
+                <label><input type="radio" name="q3" value="b"> b) margin: 0 auto</label>
+                <label><input type="radio" name="q3" value="c"> c) align: center</label>
+                <label><input type="radio" name="q3" value="d"> d) position: center</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does position: fixed do?</p>
+                <label><input type="radio" name="q4" value="a"> a) Relative to parent</label>
+                <label><input type="radio" name="q4" value="b"> b) Relative to viewport</label>
+                <label><input type="radio" name="q4" value="c"> c) Relative to document</label>
+                <label><input type="radio" name="q4" value="d"> d) Normal flow</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What property controls text spacing between letters?</p>
+                <label><input type="radio" name="q5" value="a"> a) word-spacing</label>
+                <label><input type="radio" name="q5" value="b"> b) letter-spacing</label>
+                <label><input type="radio" name="q5" value="c"> c) text-spacing</label>
+                <label><input type="radio" name="q5" value="d"> d) character-spacing</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does border-radius: 50% create?</p>
+                <label><input type="radio" name="q6" value="a"> a) Square</label>
+                <label><input type="radio" name="q6" value="b"> b) Circle</label>
+                <label><input type="radio" name="q6" value="c"> c) Rectangle</label>
+                <label><input type="radio" name="q6" value="d"> d) Triangle</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the difference between margin and padding?</p>
+                <label><input type="radio" name="q7" value="a"> a) Margin is inside, padding is outside</label>
+                <label><input type="radio" name="q7" value="b"> b) Padding is inside, margin is outside</label>
+                <label><input type="radio" name="q7" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q7" value="d"> d) Margin is for text, padding for images</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does display: none do?</p>
+                <label><input type="radio" name="q8" value="a"> a) Hides element but keeps space</label>
+                <label><input type="radio" name="q8" value="b"> b) Hides element and removes space</label>
+                <label><input type="radio" name="q8" value="c"> c) Makes element transparent</label>
+                <label><input type="radio" name="q8" value="d"> d) Moves element off-screen</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What property controls stacking order?</p>
+                <label><input type="radio" name="q9" value="a"> a) z-index</label>
+                <label><input type="radio" name="q9" value="b"> b) stack-order</label>
+                <label><input type="radio" name="q9" value="c"> c) layer</label>
+                <label><input type="radio" name="q9" value="d"> d) depth</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does background-size: cover do?</p>
+                <label><input type="radio" name="q10" value="a"> a) Shows full image</label>
+                <label><input type="radio" name="q10" value="b"> b) Covers entire area, may crop</label>
+                <label><input type="radio" name="q10" value="c"> c) Repeats image</label>
+                <label><input type="radio" name="q10" value="d"> d) Centers image</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('properties')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layout (Flexbox & Grid) -->
+      <section id="layout" class="topic-section">
+        <h2>4. Layout (Flexbox & Grid)</h2>
+        <div class="topic-content">
+          <h3>CSS Flexbox</h3>
+          <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns. It provides a flexible way to distribute space and align items.</p>
+
+          <h4>Flex Container Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.flex-container {
+    display: flex;
+    
+    /* Direction */
+    flex-direction: row;        /* default: left to right */
+    flex-direction: row-reverse; /* right to left */
+    flex-direction: column;     /* top to bottom */
+    flex-direction: column-reverse; /* bottom to top */
+    
+    /* Wrapping */
+    flex-wrap: nowrap;          /* default: no wrap */
+    flex-wrap: wrap;            /* wrap to next line */
+    flex-wrap: wrap-reverse;    /* wrap in reverse */
+    
+    /* Shorthand for direction and wrap */
+    flex-flow: row wrap;
+    
+    /* Justify content (main axis) */
+    justify-content: flex-start;    /* default: start */
+    justify-content: flex-end;      /* end */
+    justify-content: center;        /* center */
+    justify-content: space-between;  /* space between items */
+    justify-content: space-around;   /* space around items */
+    justify-content: space-evenly;   /* equal space */
+    
+    /* Align items (cross axis) */
+    align-items: stretch;       /* default: stretch */
+    align-items: flex-start;   /* start */
+    align-items: flex-end;     /* end */
+    align-items: center;       /* center */
+    align-items: baseline;     /* baseline */
+    
+    /* Align content (for multiple lines) */
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: stretch;
+}</code></pre>
+          </div>
+
+          <h4>Flex Item Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.flex-item {
+    /* Grow factor */
+    flex-grow: 0;        /* default: don't grow */
+    flex-grow: 1;        /* grow to fill space */
+    
+    /* Shrink factor */
+    flex-shrink: 1;      /* default: can shrink */
+    flex-shrink: 0;      /* don't shrink */
+    
+    /* Basis */
+    flex-basis: auto;    /* default: auto */
+    flex-basis: 200px;   /* initial size */
+    
+    /* Shorthand */
+    flex: 1;             /* grow: 1, shrink: 1, basis: 0% */
+    flex: 0 1 200px;     /* grow: 0, shrink: 1, basis: 200px */
+    
+    /* Align self */
+    align-self: auto;
+    align-self: flex-start;
+    align-self: flex-end;
+    align-self: center;
+    align-self: stretch;
+    
+    /* Order */
+    order: 0;            /* default: 0 */
+    order: 1;            /* display after items with order 0 */
+}</code></pre>
+          </div>
+
+          <h4>Flexbox Example</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px;  /* grow, shrink, basis */
+    max-width: 400px;
+}</code></pre>
+          </div>
+
+          <h3>CSS Grid</h3>
+          <p>Grid is a two-dimensional layout system that allows you to create complex layouts with rows and columns.</p>
+
+          <h4>Grid Container Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.grid-container {
+    display: grid;
+    
+    /* Define columns */
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;        /* equal fractions */
+    grid-template-columns: repeat(3, 1fr);     /* repeat 3 times */
+    grid-template-columns: 1fr 2fr 1fr;        /* different sizes */
+    grid-template-columns: auto auto auto;     /* auto size */
+    
+    /* Define rows */
+    grid-template-rows: 100px 200px 100px;
+    grid-template-rows: repeat(3, 1fr);
+    
+    /* Shorthand */
+    grid-template: 
+        "header header header" 100px
+        "sidebar main aside" 1fr
+        "footer footer footer" 50px / 200px 1fr 200px;
+    
+    /* Gap between items */
+    gap: 20px;              /* row and column gap */
+    row-gap: 20px;          /* row gap only */
+    column-gap: 20px;       /* column gap only */
+    
+    /* Alignment */
+    justify-items: start;    /* align items horizontally */
+    justify-items: end;
+    justify-items: center;
+    justify-items: stretch;
+    
+    align-items: start;     /* align items vertically */
+    align-items: end;
+    align-items: center;
+    align-items: stretch;
+    
+    /* Content alignment */
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-between;
+    
+    align-content: start;
+    align-content: end;
+    align-content: center;
+    align-content: space-between;
+}</code></pre>
+          </div>
+
+          <h4>Grid Item Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.grid-item {
+    /* Position using line numbers */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+    /* Shorthand */
+    grid-column: 1 / 3;      /* start / end */
+    grid-row: 1 / 2;
+    
+    /* Span */
+    grid-column: 1 / span 2;  /* start at 1, span 2 columns */
+    grid-row: 2 / span 3;     /* start at 2, span 3 rows */
+    
+    /* Using named areas */
+    grid-area: header;
+    
+    /* Alignment */
+    justify-self: start;
+    justify-self: end;
+    justify-self: center;
+    justify-self: stretch;
+    
+    align-self: start;
+    align-self: end;
+    align-self: center;
+    align-self: stretch;
+}</code></pre>
+          </div>
+
+          <h4>Grid Example</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.page-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.aside { grid-area: aside; }
+.footer { grid-area: footer; }</code></pre>
+          </div>
+
+          <h3>Flexbox vs Grid</h3>
+          <table class="data-table">
+            <tr>
+              <th>Feature</th>
+              <th>Flexbox</th>
+              <th>Grid</th>
+            </tr>
+            <tr>
+              <td>Dimension</td>
+              <td>One-dimensional (row or column)</td>
+              <td>Two-dimensional (rows and columns)</td>
+            </tr>
+            <tr>
+              <td>Use Case</td>
+              <td>Component layout, navigation</td>
+              <td>Page layout, complex structures</td>
+            </tr>
+            <tr>
+              <td>Alignment</td>
+              <td>Good for single axis</td>
+              <td>Excellent for both axes</td>
+            </tr>
+            <tr>
+              <td>Complexity</td>
+              <td>Simpler for basic layouts</td>
+              <td>Better for complex layouts</td>
+            </tr>
+          </table>
+
+          <div class="quiz-section">
+            <h3>Quiz: Layout (Flexbox & Grid)</h3>
+            <div class="quiz" data-quiz="layout">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the main difference between Flexbox and Grid?</p>
+                <label><input type="radio" name="q1" value="a"> a) Flexbox is 2D, Grid is 1D</label>
+                <label><input type="radio" name="q1" value="b"> b) Flexbox is 1D, Grid is 2D</label>
+                <label><input type="radio" name="q1" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q1" value="d"> d) Flexbox is newer</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does justify-content: space-between do in Flexbox?</p>
+                <label><input type="radio" name="q2" value="a"> a) Centers items</label>
+                <label><input type="radio" name="q2" value="b"> b) Spaces items with space between them</label>
+                <label><input type="radio" name="q2" value="c"> c) Spaces items evenly</label>
+                <label><input type="radio" name="q2" value="d"> d) Aligns items to start</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does flex: 1 mean?</p>
+                <label><input type="radio" name="q3" value="a"> a) Item cannot grow</label>
+                <label><input type="radio" name="q3" value="b"> b) Item can grow to fill space</label>
+                <label><input type="radio" name="q3" value="c"> c) Item is fixed size</label>
+                <label><input type="radio" name="q3" value="d"> d) Item is hidden</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does grid-template-columns: repeat(3, 1fr) create?</p>
+                <label><input type="radio" name="q4" value="a"> a) 3 columns of equal width</label>
+                <label><input type="radio" name="q4" value="b"> b) 3 rows of equal height</label>
+                <label><input type="radio" name="q4" value="c"> c) 1 column with 3 items</label>
+                <label><input type="radio" name="q4" value="d"> d) 3 rows with 1 item each</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does align-items control in Flexbox?</p>
+                <label><input type="radio" name="q5" value="a"> a) Main axis alignment</label>
+                <label><input type="radio" name="q5" value="b"> b) Cross axis alignment</label>
+                <label><input type="radio" name="q5" value="c"> c) Both axes</label>
+                <label><input type="radio" name="q5" value="d"> d) Item order</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does grid-column: 1 / span 2 mean?</p>
+                <label><input type="radio" name="q6" value="a"> a) Starts at column 1, spans 2 columns</label>
+                <label><input type="radio" name="q6" value="b"> b) Starts at column 2, spans 1 column</label>
+                <label><input type="radio" name="q6" value="c"> c) Starts at row 1, spans 2 rows</label>
+                <label><input type="radio" name="q6" value="d"> d) Error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the default flex-direction in Flexbox?</p>
+                <label><input type="radio" name="q7" value="a"> a) column</label>
+                <label><input type="radio" name="q7" value="b"> b) row</label>
+                <label><input type="radio" name="q7" value="c"> c) row-reverse</label>
+                <label><input type="radio" name="q7" value="d"> d) column-reverse</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does gap: 20px do in Grid?</p>
+                <label><input type="radio" name="q8" value="a"> a) Sets row gap only</label>
+                <label><input type="radio" name="q8" value="b"> b) Sets column gap only</label>
+                <label><input type="radio" name="q8" value="c"> c) Sets both row and column gap</label>
+                <label><input type="radio" name="q8" value="d"> d) Sets margin</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does flex-wrap: wrap do?</p>
+                <label><input type="radio" name="q9" value="a"> a) Prevents wrapping</label>
+                <label><input type="radio" name="q9" value="b"> b) Allows items to wrap to next line</label>
+                <label><input type="radio" name="q9" value="c"> c) Reverses order</label>
+                <label><input type="radio" name="q9" value="d"> d) Centers items</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does 1fr mean in Grid?</p>
+                <label><input type="radio" name="q10" value="a"> a) 1 pixel</label>
+                <label><input type="radio" name="q10" value="b"> b) 1 fraction of available space</label>
+                <label><input type="radio" name="q10" value="c"> c) 1 percent</label>
+                <label><input type="radio" name="q10" value="d"> d) Fixed size</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('layout')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive Design -->
+      <section id="responsive" class="topic-section">
+        <h2>5. Responsive Design</h2>
+        <div class="topic-content">
+          <h3>What is Responsive Design?</h3>
+          <p>Responsive design ensures that web pages look good and function well on all devices and screen sizes. It uses flexible layouts, flexible images, and CSS media queries to adapt to different viewport sizes.</p>
+
+          <h3>Viewport Meta Tag</h3>
+          <p>Essential for responsive design - must be included in HTML head:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+          </div>
+
+          <h3>Media Queries</h3>
+          <p>Media queries allow you to apply CSS rules based on device characteristics like screen width, height, orientation, etc.</p>
+
+          <h4>Basic Media Query Syntax</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Apply styles when screen width is at least 768px */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Apply styles when screen width is at most 767px */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Range of screen sizes */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+/* Orientation */
+@media (orientation: landscape) {
+    .sidebar {
+        width: 300px;
+    }
+}
+
+@media (orientation: portrait) {
+    .sidebar {
+        width: 100%;
+    }
+}</code></pre>
+          </div>
+
+          <h4>Common Breakpoints</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Mobile First Approach */
+/* Base styles for mobile */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        padding: 20px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}</code></pre>
+          </div>
+
+          <h3>Flexible Units</h3>
+          <p>Using relative units instead of fixed pixels:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Percentage - relative to parent */
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Viewport units */
+.header {
+    height: 100vh;        /* 100% of viewport height */
+    width: 100vw;        /* 100% of viewport width */
+}
+
+.title {
+    font-size: 5vw;     /* 5% of viewport width */
+}
+
+/* Relative units */
+.text {
+    font-size: 1rem;    /* relative to root */
+    padding: 1em;       /* relative to parent font-size */
+}
+
+/* Flexible images */
+img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+          </div>
+
+          <h3>Responsive Typography</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Fluid typography using clamp */
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    /* min: 2rem, preferred: 5vw, max: 4rem */
+}
+
+/* Responsive with media queries */
+body {
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}</code></pre>
+          </div>
+
+          <h3>Responsive Grid and Flexbox</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Mobile: single column */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Flexbox responsive */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+    }
+}</code></pre>
+          </div>
+
+          <h3>Responsive Navigation</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Mobile: hamburger menu */
+.nav {
+    display: none;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+/* Desktop: horizontal menu */
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+}</code></pre>
+          </div>
+
+          <h3>Mobile-First vs Desktop-First</h3>
+          <table class="data-table">
+            <tr>
+              <th>Approach</th>
+              <th>Method</th>
+              <th>Media Query</th>
+            </tr>
+            <tr>
+              <td>Mobile-First</td>
+              <td>Start with mobile styles, add desktop styles</td>
+              <td>min-width</td>
+            </tr>
+            <tr>
+              <td>Desktop-First</td>
+              <td>Start with desktop styles, override for mobile</td>
+              <td>max-width</td>
+            </tr>
+          </table>
+
+          <div class="quiz-section">
+            <h3>Quiz: Responsive Design</h3>
+            <div class="quiz" data-quiz="responsive">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the viewport meta tag used for?</p>
+                <label><input type="radio" name="q1" value="a"> a) SEO optimization</label>
+                <label><input type="radio" name="q1" value="b"> b) Making pages responsive on mobile</label>
+                <label><input type="radio" name="q1" value="c"> c) Adding metadata</label>
+                <label><input type="radio" name="q1" value="d"> d) Linking CSS files</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does @media (min-width: 768px) mean?</p>
+                <label><input type="radio" name="q2" value="a"> a) Screen width exactly 768px</label>
+                <label><input type="radio" name="q2" value="b"> b) Screen width at least 768px</label>
+                <label><input type="radio" name="q2" value="c"> c) Screen width at most 768px</label>
+                <label><input type="radio" name="q2" value="d"> d) Screen width between 768px and 1024px</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does 100vh mean?</p>
+                <label><input type="radio" name="q3" value="a"> a) 100 pixels</label>
+                <label><input type="radio" name="q3" value="b"> b) 100% of viewport height</label>
+                <label><input type="radio" name="q3" value="c"> c) 100% of parent height</label>
+                <label><input type="radio" name="q3" value="d"> d) 100% of screen width</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is the mobile-first approach?</p>
+                <label><input type="radio" name="q4" value="a"> a) Design for desktop first</label>
+                <label><input type="radio" name="q4" value="b"> b) Design for mobile first, then add desktop styles</label>
+                <label><input type="radio" name="q4" value="c"> c) Design only for mobile</label>
+                <label><input type="radio" name="q4" value="d"> d) Use mobile units only</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does max-width: 100% do for images?</p>
+                <label><input type="radio" name="q5" value="a"> a) Makes images larger</label>
+                <label><input type="radio" name="q5" value="b"> b) Prevents images from overflowing container</label>
+                <label><input type="radio" name="q5" value="c"> c) Sets fixed width</label>
+                <label><input type="radio" name="q5" value="d"> d) Hides images</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does clamp() function do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Sets fixed value</label>
+                <label><input type="radio" name="q6" value="b"> b) Creates fluid value between min and max</label>
+                <label><input type="radio" name="q6" value="c"> c) Clamps elements together</label>
+                <label><input type="radio" name="q6" value="d"> d) Hides elements</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What media query checks for landscape orientation?</p>
+                <label><input type="radio" name="q7" value="a"> a) @media (orientation: landscape)</label>
+                <label><input type="radio" name="q7" value="b"> b) @media (landscape)</label>
+                <label><input type="radio" name="q7" value="c"> c) @media (mode: landscape)</label>
+                <label><input type="radio" name="q7" value="d"> d) @media (screen: landscape)</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is 1rem equal to?</p>
+                <label><input type="radio" name="q8" value="a"> a) 1 pixel</label>
+                <label><input type="radio" name="q8" value="b"> b) Root element font-size</label>
+                <label><input type="radio" name="q8" value="c"> c) Parent font-size</label>
+                <label><input type="radio" name="q8" value="d"> d) 16 pixels always</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does @media (max-width: 767px) target?</p>
+                <label><input type="radio" name="q9" value="a"> a) Screens wider than 767px</label>
+                <label><input type="radio" name="q9" value="b"> b) Screens 767px or narrower</label>
+                <label><input type="radio" name="q9" value="c"> c) Screens exactly 767px</label>
+                <label><input type="radio" name="q9" value="d"> d) All screens</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> Which unit is relative to viewport width?</p>
+                <label><input type="radio" name="q10" value="a"> a) px</label>
+                <label><input type="radio" name="q10" value="b"> b) em</label>
+                <label><input type="radio" name="q10" value="c"> c) vw</label>
+                <label><input type="radio" name="q10" value="d"> d) rem</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('responsive')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Animations -->
+      <section id="animations" class="topic-section">
+        <h2>6. Animations</h2>
+        <div class="topic-content">
+          <h3>CSS Transitions</h3>
+          <p>Transitions allow you to change property values smoothly over a specified duration.</p>
+
+          <h4>Transition Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.element {
+    /* Property to transition */
+    transition-property: background-color;
+    
+    /* Duration */
+    transition-duration: 0.3s;
+    
+    /* Timing function */
+    transition-timing-function: ease;
+    
+    /* Delay */
+    transition-delay: 0.1s;
+    
+    /* Shorthand */
+    transition: background-color 0.3s ease 0.1s;
+    
+    /* Multiple properties */
+    transition: 
+        background-color 0.3s ease,
+        transform 0.5s ease-in-out,
+        opacity 0.2s linear;
+    
+    /* All properties */
+    transition: all 0.3s ease;
+}
+
+/* Trigger on hover */
+.button {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: red;
+}</code></pre>
+          </div>
+
+          <h4>Timing Functions</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.element {
+    /* Ease (default) - slow start, fast middle, slow end */
+    transition-timing-function: ease;
+    
+    /* Linear - constant speed */
+    transition-timing-function: linear;
+    
+    /* Ease-in - slow start */
+    transition-timing-function: ease-in;
+    
+    /* Ease-out - slow end */
+    transition-timing-function: ease-out;
+    
+    /* Ease-in-out - slow start and end */
+    transition-timing-function: ease-in-out;
+    
+    /* Cubic bezier - custom curve */
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+    /* Steps - discrete steps */
+    transition-timing-function: steps(4);
+}</code></pre>
+          </div>
+
+          <h3>CSS Animations</h3>
+          <p>Animations are more powerful than transitions and allow you to create complex animations with keyframes.</p>
+
+          <h4>Keyframes</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Define animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Using percentages */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Multiple keyframes */
+@keyframes colorChange {
+    0% { background-color: red; }
+    33% { background-color: yellow; }
+    66% { background-color: blue; }
+    100% { background-color: green; }
+}</code></pre>
+          </div>
+
+          <h4>Animation Properties</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.animated-element {
+    /* Animation name */
+    animation-name: slideIn;
+    
+    /* Duration */
+    animation-duration: 1s;
+    
+    /* Timing function */
+    animation-timing-function: ease;
+    
+    /* Delay */
+    animation-delay: 0.5s;
+    
+    /* Iteration count */
+    animation-iteration-count: 3;      /* number of times */
+    animation-iteration-count: infinite; /* forever */
+    
+    /* Direction */
+    animation-direction: normal;       /* forward */
+    animation-direction: reverse;       /* backward */
+    animation-direction: alternate;     /* forward then backward */
+    animation-direction: alternate-reverse; /* backward then forward */
+    
+    /* Fill mode */
+    animation-fill-mode: none;           /* default */
+    animation-fill-mode: forwards;       /* keep end state */
+    animation-fill-mode: backwards;     /* keep start state */
+    animation-fill-mode: both;          /* keep both states */
+    
+    /* Play state */
+    animation-play-state: running;      /* playing */
+    animation-play-state: paused;       /* paused */
+    
+    /* Shorthand */
+    animation: slideIn 1s ease 0.5s 3 alternate forwards;
+    /* name duration timing-function delay iteration-count direction fill-mode */
+}</code></pre>
+          </div>
+
+          <h4>Common Animation Examples</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+/* Rotate */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Scale */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}</code></pre>
+          </div>
+
+          <h3>Transform Property</h3>
+          <p>Transform allows you to rotate, scale, skew, or translate elements:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">.element {
+    /* Translate (move) */
+    transform: translateX(50px);      /* move right */
+    transform: translateY(50px);      /* move down */
+    transform: translate(50px, 50px); /* move both */
+    
+    /* Rotate */
+    transform: rotate(45deg);         /* rotate 45 degrees */
+    transform: rotateZ(90deg);        /* rotate on Z axis */
+    
+    /* Scale */
+    transform: scale(1.5);            /* 1.5x larger */
+    transform: scaleX(2);             /* 2x width */
+    transform: scaleY(0.5);           /* 0.5x height */
+    transform: scale(2, 0.5);         /* width 2x, height 0.5x */
+    
+    /* Skew */
+    transform: skewX(20deg);         /* skew horizontally */
+    transform: skewY(10deg);         /* skew vertically */
+    transform: skew(20deg, 10deg);   /* skew both */
+    
+    /* Multiple transforms */
+    transform: translate(50px, 50px) rotate(45deg) scale(1.2);
+    
+    /* 3D transforms */
+    transform: perspective(1000px) rotateY(45deg);
+    transform-style: preserve-3d;
+}</code></pre>
+          </div>
+
+          <h3>Hover Effects</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-css">/* Button hover effect */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Card hover effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Image zoom on hover */
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Animations</h3>
+            <div class="quiz" data-quiz="animations">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the difference between transition and animation?</p>
+                <label><input type="radio" name="q1" value="a"> a) They are the same</label>
+                <label><input type="radio" name="q1" value="b"> b) Transitions are simpler, animations use keyframes</label>
+                <label><input type="radio" name="q1" value="c"> c) Transitions are for colors only</label>
+                <label><input type="radio" name="q1" value="d"> d) Animations are deprecated</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does animation-iteration-count: infinite do?</p>
+                <label><input type="radio" name="q2" value="a"> a) Plays once</label>
+                <label><input type="radio" name="q2" value="b"> b) Plays forever</label>
+                <label><input type="radio" name="q2" value="c"> c) Plays twice</label>
+                <label><input type="radio" name="q2" value="d"> d) Doesn't play</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does transform: translateX(50px) do?</p>
+                <label><input type="radio" name="q3" value="a"> a) Moves element 50px right</label>
+                <label><input type="radio" name="q3" value="b"> b) Moves element 50px left</label>
+                <label><input type="radio" name="q3" value="c"> c) Rotates element 50 degrees</label>
+                <label><input type="radio" name="q3" value="d"> d) Scales element 50x</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does @keyframes define?</p>
+                <label><input type="radio" name="q4" value="a"> a) Animation name</label>
+                <label><input type="radio" name="q4" value="b"> b) Animation steps and states</label>
+                <label><input type="radio" name="q4" value="c"> c) Animation duration</label>
+                <label><input type="radio" name="q4" value="d"> d) Animation delay</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does animation-fill-mode: forwards do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Keeps start state</label>
+                <label><input type="radio" name="q5" value="b"> b) Keeps end state</label>
+                <label><input type="radio" name="q5" value="c"> c) Resets to original</label>
+                <label><input type="radio" name="q5" value="d"> d) Pauses animation</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does transform: scale(2) do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Moves element 2px</label>
+                <label><input type="radio" name="q6" value="b"> b) Makes element 2x larger</label>
+                <label><input type="radio" name="q6" value="c"> c) Rotates 2 degrees</label>
+                <label><input type="radio" name="q6" value="d"> d) Skews 2 degrees</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the default timing function for transitions?</p>
+                <label><input type="radio" name="q7" value="a"> a) linear</label>
+                <label><input type="radio" name="q7" value="b"> b) ease</label>
+                <label><input type="radio" name="q7" value="c"> c) ease-in</label>
+                <label><input type="radio" name="q7" value="d"> d) ease-out</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does animation-direction: alternate do?</p>
+                <label><input type="radio" name="q8" value="a"> a) Plays forward only</label>
+                <label><input type="radio" name="q8" value="b"> b) Plays forward then backward</label>
+                <label><input type="radio" name="q8" value="c"> c) Plays backward only</label>
+                <label><input type="radio" name="q8" value="d"> d) Doesn't play</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does transform: rotate(45deg) do?</p>
+                <label><input type="radio" name="q9" value="a"> a) Moves element 45px</label>
+                <label><input type="radio" name="q9" value="b"> b) Rotates element 45 degrees</label>
+                <label><input type="radio" name="q9" value="c"> c) Scales element 45x</label>
+                <label><input type="radio" name="q9" value="d"> d) Skews element 45 degrees</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is transition-delay used for?</p>
+                <label><input type="radio" name="q10" value="a"> a) Duration of transition</label>
+                <label><input type="radio" name="q10" value="b"> b) Wait time before transition starts</label>
+                <label><input type="radio" name="q10" value="c"> c) Speed of transition</label>
+                <label><input type="radio" name="q10" value="d"> d) Property to transition</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('animations')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="playground" class="topic-section">
+        <h2>💻 CSS Playground</h2>
+        <div class="topic-content">
+          <div class="compiler-container">
+            <div class="compiler-header">
+              <h3>Write and Preview CSS Code</h3>
+              <p>Write your CSS code and see the live preview instantly!</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+              <div>
+                <div class="editor-header">
+                  <span>CSS Editor</span>
+                  <button class="run-btn" onclick="updateCSSPreview()">▶ Run</button>
+                </div>
+                <textarea id="css-editor" class="compiler-code-editor" style="min-height: 400px;" placeholder="Enter your CSS code here...">body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}</textarea>
+              </div>
+              <div>
+                <div class="editor-header">
+                  <span>Live Preview</span>
+                </div>
+                <iframe id="css-preview" style="width: 100%; height: 400px; border: 1px solid #334155; background: white; border-radius: 0 0 8px 8px;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">📘</div>
+        <h2>Course<span>.com</span></h2>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Course.com. Crafted with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+  <script src="c-course.js"></script>
+ 
+</body>
+</html>
+

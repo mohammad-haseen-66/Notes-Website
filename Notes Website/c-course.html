@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming Course - notes.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="c-course.css" />
+  <link rel="stylesheet" href="compiler-modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">📘</div>
+        <h1><span>not</span><span class="dot">es</span></h1>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <button id="compiler-btn" class="compiler-nav-btn" title="Open C Compiler">💻 Compiler</button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch to dark mode">🌙</button>
+        <a href="index.html" class="btn">All Courses →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Course Header -->
+  <section class="course-header">
+    <div class="course-header-content">
+      <div class="course-badge">C Programming</div>
+      <h1>Complete C Programming Course</h1>
+      <p>Master the fundamentals of C programming from basics to advanced concepts with hands-on examples and quizzes.</p>
+    </div>
+  </section>
+
+  <!-- Sidebar Navigation -->
+  <div class="course-container">
+    <aside class="course-sidebar">
+      <h3>Course Topics</h3>
+      <nav class="topic-nav" aria-label="Course topics navigation">
+        <a href="#intro" class="topic-link active">1. Introduction to C</a>
+        <a href="#variables" class="topic-link">2. Variables & Data Types</a>
+        <a href="#operators" class="topic-link">3. Operators</a>
+        <a href="#control-flow" class="topic-link">4. Control Flow</a>
+        <a href="#functions" class="topic-link">5. Functions</a>
+        <a href="#arrays" class="topic-link">6. Arrays</a>
+        <a href="#pointers" class="topic-link">7. Pointers</a>
+        <a href="#strings" class="topic-link">8. Strings</a>
+        <a href="#structures" class="topic-link">9. Structures</a>
+        <a href="#file-handling" class="topic-link">10. File Handling</a>
+        <!-- <a href="#compiler" class="topic-link">💻 Code Compiler</a> -->
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="course-content">
+      <!-- Introduction -->
+      <section id="intro" class="topic-section">
+        <h2>1. Introduction to C</h2>
+        <div class="topic-content">
+          <h3>What is C?</h3>
+          <p>C is a general-purpose, procedural programming language developed by Dennis Ritchie at Bell Labs in 1972. It was created as an evolution of the B programming language and was designed to be a system programming language for the UNIX operating system. C is one of the most widely used programming languages and serves as the foundation for many other languages like C++, Java, Python, and JavaScript.</p>
+          
+          <p>C is a <strong>compiled language</strong>, meaning that source code is translated into machine code by a compiler before execution. This makes C programs extremely fast and efficient. The language provides low-level access to memory through pointers, while still maintaining high-level features like structured programming constructs.</p>
+
+          <h3>Key Characteristics of C:</h3>
+          <ul>
+            <li><strong>Procedural Language:</strong> C follows a procedural programming paradigm where programs are organized as a sequence of procedures or functions</li>
+            <li><strong>Statically Typed:</strong> Variable types must be declared before use and cannot be changed during runtime</li>
+            <li><strong>Compiled Language:</strong> Source code is compiled to machine code, resulting in efficient execution</li>
+            <li><strong>Low-level Access:</strong> Provides direct access to memory through pointers, allowing fine-grained control</li>
+            <li><strong>Portable:</strong> C code can be compiled and run on different platforms with minimal modifications</li>
+            <li><strong>Modular:</strong> Supports function-based modular programming for code organization</li>
+          </ul>
+          
+          <h3>Why Learn C?</h3>
+          <ul>
+            <li><strong>Foundation of Modern Programming:</strong> Understanding C helps you understand how computers work at a low level. Many modern languages are built on concepts from C</li>
+            <li><strong>Performance:</strong> C is fast and efficient, making it ideal for system programming, embedded systems, and performance-critical applications</li>
+            <li><strong>Portability:</strong> C programs can run on different platforms (Windows, Linux, macOS) with minimal changes, making it highly portable</li>
+            <li><strong>Industry Standard:</strong> Many operating systems (Linux, Windows kernel components), databases, compilers, and applications are written in C</li>
+            <li><strong>Memory Management:</strong> Learning C teaches you manual memory management, which is crucial for understanding how programs use memory</li>
+            <li><strong>Career Opportunities:</strong> Knowledge of C opens doors to system programming, embedded systems, game development, and performance optimization roles</li>
+            <li><strong>Understanding Other Languages:</strong> Many concepts in C++, Java, and other languages become easier to understand once you know C</li>
+          </ul>
+
+          <h3>Your First C Program</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
+
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>#include &lt;stdio.h&gt;</code> - Includes standard input/output library</li>
+            <li><code>int main()</code> - Main function where program execution begins</li>
+            <li><code>printf()</code> - Function to print text to console</li>
+            <li><code>return 0;</code> - Indicates successful program execution</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Introduction to C</h3>
+            <div class="quiz" data-quiz="intro">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Who developed the C programming language?</p>
+                <label><input type="radio" name="q1" value="a"> a) Bjarne Stroustrup</label>
+                <label><input type="radio" name="q1" value="b"> b) Dennis Ritchie</label>
+                <label><input type="radio" name="q1" value="c"> c) James Gosling</label>
+                <label><input type="radio" name="q1" value="d"> d) Guido van Rossum</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does the main() function return in C?</p>
+                <label><input type="radio" name="q2" value="a"> a) void</label>
+                <label><input type="radio" name="q2" value="b"> b) int</label>
+                <label><input type="radio" name="q2" value="c"> c) char</label>
+                <label><input type="radio" name="q2" value="d"> d) float</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('intro')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Variables & Data Types -->
+      <section id="variables" class="topic-section">
+        <h2>2. Variables & Data Types</h2>
+        <div class="topic-content">
+          <h3>What are Variables?</h3>
+          <p>Variables are containers that store data values. In C, you must declare a variable before using it, specifying its data type.</p>
+
+          <h3>Basic Data Types in C</h3>
+          <table class="data-table">
+            <tr>
+              <th>Data Type</th>
+              <th>Size (bytes)</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>int</code></td>
+              <td>4</td>
+              <td>Stores integers (whole numbers)</td>
+            </tr>
+            <tr>
+              <td><code>float</code></td>
+              <td>4</td>
+              <td>Stores floating-point numbers (decimals)</td>
+            </tr>
+            <tr>
+              <td><code>double</code></td>
+              <td>8</td>
+              <td>Stores large floating-point numbers</td>
+            </tr>
+            <tr>
+              <td><code>char</code></td>
+              <td>1</td>
+              <td>Stores single character</td>
+            </tr>
+          </table>
+
+          <h3>Example: Declaring Variables</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    // Integer variable
+    int age = 25;
+    
+    // Floating-point variable
+    float height = 5.9;
+    
+    // Character variable
+    char grade = 'A';
+    
+    // Double variable
+    double salary = 50000.50;
+    
+    // Displaying variables
+    printf("Age: %d\n", age);
+    printf("Height: %.2f\n", height);
+    printf("Grade: %c\n", grade);
+    printf("Salary: %.2lf\n", salary);
+    
+    return 0;
+}</code></pre>
+
+          <h3>Format Specifiers</h3>
+          <ul>
+            <li><code>%d</code> - for integers</li>
+            <li><code>%f</code> - for floats</li>
+            <li><code>%lf</code> - for doubles</li>
+            <li><code>%c</code> - for characters</li>
+            <li><code>%s</code> - for strings</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Variables & Data Types</h3>
+            <div class="quiz" data-quiz="variables">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the size of an int in C (typically)?</p>
+                <label><input type="radio" name="q1" value="a"> a) 2 bytes</label>
+                <label><input type="radio" name="q1" value="b"> b) 4 bytes</label>
+                <label><input type="radio" name="q1" value="c"> c) 8 bytes</label>
+                <label><input type="radio" name="q1" value="d"> d) 1 byte</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which format specifier is used for float?</p>
+                <label><input type="radio" name="q2" value="a"> a) %d</label>
+                <label><input type="radio" name="q2" value="b"> b) %f</label>
+                <label><input type="radio" name="q2" value="c"> c) %c</label>
+                <label><input type="radio" name="q2" value="d"> d) %s</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('variables')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operators -->
+      <section id="operators" class="topic-section">
+        <h2>3. Operators</h2>
+        <div class="topic-content">
+          <h3>Types of Operators</h3>
+          
+          <h4>1. Arithmetic Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td><code>+</code></td>
+              <td>Addition</td>
+              <td><code>a + b</code></td>
+            </tr>
+            <tr>
+              <td><code>-</code></td>
+              <td>Subtraction</td>
+              <td><code>a - b</code></td>
+            </tr>
+            <tr>
+              <td><code>*</code></td>
+              <td>Multiplication</td>
+              <td><code>a * b</code></td>
+            </tr>
+            <tr>
+              <td><code>/</code></td>
+              <td>Division</td>
+              <td><code>a / b</code></td>
+            </tr>
+            <tr>
+              <td><code>%</code></td>
+              <td>Modulus (remainder)</td>
+              <td><code>a % b</code></td>
+            </tr>
+          </table>
+
+          <h4>2. Relational Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>==</code></td>
+              <td>Equal to</td>
+            </tr>
+            <tr>
+              <td><code>!=</code></td>
+              <td>Not equal to</td>
+            </tr>
+            <tr>
+              <td><code>&lt;</code></td>
+              <td>Less than</td>
+            </tr>
+            <tr>
+              <td><code>&gt;</code></td>
+              <td>Greater than</td>
+            </tr>
+            <tr>
+              <td><code>&lt;=</code></td>
+              <td>Less than or equal to</td>
+            </tr>
+            <tr>
+              <td><code>&gt;=</code></td>
+              <td>Greater than or equal to</td>
+            </tr>
+          </table>
+
+          <h4>3. Logical Operators</h4>
+          <table class="data-table">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>&&</code></td>
+              <td>Logical AND</td>
+            </tr>
+            <tr>
+              <td><code>||</code></td>
+              <td>Logical OR</td>
+            </tr>
+            <tr>
+              <td><code>!</code></td>
+              <td>Logical NOT</td>
+            </tr>
+          </table>
+
+          <h3>Example: Using Operators</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10, b = 5;
+    
+    // Arithmetic operations
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+    printf("Division: %d\n", a / b);
+    printf("Modulus: %d\n", a % b);
+    
+    // Relational operations
+    printf("a > b: %d\n", a > b);
+    printf("a == b: %d\n", a == b);
+    
+    // Logical operations
+    printf("a > 5 && b < 10: %d\n", a > 5 && b < 10);
+    
+    return 0;
+}</code></pre>
+
+          <div class="quiz-section">
+            <h3>Quiz: Operators</h3>
+            <div class="quiz" data-quiz="operators">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the result of 10 % 3?</p>
+                <label><input type="radio" name="q1" value="a"> a) 3</label>
+                <label><input type="radio" name="q1" value="b"> b) 1</label>
+                <label><input type="radio" name="q1" value="c"> c) 0</label>
+                <label><input type="radio" name="q1" value="d"> d) 10</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which operator is used for logical AND?</p>
+                <label><input type="radio" name="q2" value="a"> a) &&</label>
+                <label><input type="radio" name="q2" value="b"> b) ||</label>
+                <label><input type="radio" name="q2" value="c"> c) !</label>
+                <label><input type="radio" name="q2" value="d"> d) &</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('operators')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Control Flow -->
+      <section id="control-flow" class="topic-section">
+        <h2>4. Control Flow</h2>
+        <div class="topic-content">
+          <h3>If-Else Statement</h3>
+          <p>The if-else statement allows you to execute different code blocks based on conditions.</p>
+          
+          <h3>Example: If-Else</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 10;
+    
+    if (number > 0) {
+        printf("Number is positive\n");
+    } else if (number < 0) {
+        printf("Number is negative\n");
+    } else {
+        printf("Number is zero\n");
+    }
+    
+    return 0;
+}</code></pre>
+
+          <h3>Switch Statement</h3>
+          <p>The switch statement allows you to select one of many code blocks to execute.</p>
+          
+          <h3>Example: Switch</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int day = 3;
+    
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+    }
+    
+    return 0;
+}</code></pre>
+
+          <h3>Loops</h3>
+          
+          <h4>1. For Loop</h4>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+    for (i = 1; i <= 5; i++) {
+        printf("%d ", i);
+    }
+    return 0;
+}</code></pre>
+
+          <h4>2. While Loop</h4>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    while (i <= 5) {
+        printf("%d ", i);
+        i++;
+    }
+    return 0;
+}</code></pre>
+
+          <h4>3. Do-While Loop</h4>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    do {
+        printf("%d ", i);
+        i++;
+    } while (i <= 5);
+    return 0;
+}</code></pre>
+
+          <div class="quiz-section">
+            <h3>Quiz: Control Flow</h3>
+            <div class="quiz" data-quiz="control-flow">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Which loop executes at least once?</p>
+                <label><input type="radio" name="q1" value="a"> a) for loop</label>
+                <label><input type="radio" name="q1" value="b"> b) while loop</label>
+                <label><input type="radio" name="q1" value="c"> c) do-while loop</label>
+                <label><input type="radio" name="q1" value="d"> d) if-else</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What keyword is used to exit a switch case?</p>
+                <label><input type="radio" name="q2" value="a"> a) exit</label>
+                <label><input type="radio" name="q2" value="b"> b) break</label>
+                <label><input type="radio" name="q2" value="c"> c) continue</label>
+                <label><input type="radio" name="q2" value="d"> d) return</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('control-flow')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Functions -->
+      <section id="functions" class="topic-section">
+        <h2>5. Functions</h2>
+        <div class="topic-content">
+          <h3>What are Functions?</h3>
+          <p>Functions are blocks of code that perform a specific task. They help in code reusability and organization.</p>
+
+          <h3>Function Syntax</h3>
+          <pre><code class="language-c">return_type function_name(parameters) {
+    // function body
+    return value;
+}</code></pre>
+
+          <h3>Example: Simple Function</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+// Function declaration
+int add(int a, int b);
+
+int main() {
+    int result = add(5, 3);
+    printf("Sum: %d\n", result);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+          <h3>Types of Functions</h3>
+          <ul>
+            <li><strong>Library Functions:</strong> Predefined functions (e.g., printf, scanf)</li>
+            <li><strong>User-defined Functions:</strong> Functions created by the programmer</li>
+          </ul>
+
+          <h3>Example: Function with No Return Value</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    greet();
+    return 0;
+}</code></pre>
+
+          <div class="quiz-section">
+            <h3>Quiz: Functions</h3>
+            <div class="quiz" data-quiz="functions">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What keyword is used for functions that don't return a value?</p>
+                <label><input type="radio" name="q1" value="a"> a) int</label>
+                <label><input type="radio" name="q1" value="b"> b) void</label>
+                <label><input type="radio" name="q1" value="c"> c) char</label>
+                <label><input type="radio" name="q1" value="d"> d) float</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Can a function return multiple values in C?</p>
+                <label><input type="radio" name="q2" value="a"> a) Yes, always</label>
+                <label><input type="radio" name="q2" value="b"> b) No, only one value</label>
+                <label><input type="radio" name="q2" value="c"> c) Yes, using arrays</label>
+                <label><input type="radio" name="q2" value="d"> d) Depends on compiler</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('functions')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Arrays -->
+      <section id="arrays" class="topic-section">
+        <h2>6. Arrays</h2>
+        <div class="topic-content">
+          <h3>What are Arrays?</h3>
+          <p>An array is a collection of elements of the same data type stored in contiguous memory locations.</p>
+
+          <h3>Declaring Arrays</h3>
+          <pre><code class="language-c">data_type array_name[size];</code></pre>
+
+          <h3>Example: Array Declaration and Usage</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5};
+    int i;
+    
+    // Accessing array elements
+    for (i = 0; i < 5; i++) {
+        printf("numbers[%d] = %d\n", i, numbers[i]);
+    }
+    
+    return 0;
+}</code></pre>
+
+          <h3>Multi-dimensional Arrays</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}</code></pre>
+
+          <div class="quiz-section">
+            <h3>Quiz: Arrays</h3>
+            <div class="quiz" data-quiz="arrays">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the index of the first element in an array?</p>
+                <label><input type="radio" name="q1" value="a"> a) 1</label>
+                <label><input type="radio" name="q1" value="b"> b) 0</label>
+                <label><input type="radio" name="q1" value="c"> c) -1</label>
+                <label><input type="radio" name="q1" value="d"> d) Depends on declaration</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Can arrays store different data types?</p>
+                <label><input type="radio" name="q2" value="a"> a) Yes</label>
+                <label><input type="radio" name="q2" value="b"> b) No</label>
+                <label><input type="radio" name="q2" value="c"> c) Only in C++</label>
+                <label><input type="radio" name="q2" value="d"> d) Using structures</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('arrays')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pointers -->
+      <section id="pointers" class="topic-section">
+        <h2>7. Pointers</h2>
+        <div class="topic-content">
+          <h3>What are Pointers?</h3>
+          <p>A pointer is a variable that stores the memory address of another variable. Pointers are one of the most powerful features of C.</p>
+
+          <h3>Pointer Syntax</h3>
+          <pre><code class="language-c">data_type *pointer_name;</code></pre>
+
+          <h3>Example: Basic Pointer Usage</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    int *ptr = &num;  // ptr stores address of num
+    
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num);
+    printf("Value of ptr: %p\n", ptr);
+    printf("Value pointed by ptr: %d\n", *ptr);
+    
+    return 0;
+}</code></pre>
+
+          <h3>Pointer Operators</h3>
+          <ul>
+            <li><code>&</code> - Address operator (returns address of variable)</li>
+            <li><code>*</code> - Dereference operator (returns value at address)</li>
+          </ul>
+
+          <h3>Example: Pointer Arithmetic</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr;
+    
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("arr[%d] = %d\n", i, *(ptr + i));
+    }
+    
+    return 0;
+}</code></pre>
+
+          <div class="quiz-section">
+            <h3>Quiz: Pointers</h3>
+            <div class="quiz" data-quiz="pointers">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What operator is used to get the address of a variable?</p>
+                <label><input type="radio" name="q1" value="a"> a) *</label>
+                <label><input type="radio" name="q1" value="b"> b) &</label>
+                <label><input type="radio" name="q1" value="c"> c) -></label>
+                <label><input type="radio" name="q1" value="d"> d) .</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is the size of a pointer on a 64-bit system?</p>
+                <label><input type="radio" name="q2" value="a"> a) 4 bytes</label>
+                <label><input type="radio" name="q2" value="b"> b) 8 bytes</label>
+                <label><input type="radio" name="q2" value="c"> c) 2 bytes</label>
+                <label><input type="radio" name="q2" value="d"> d) Depends on data type</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('pointers')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strings -->
+      <section id="strings" class="topic-section">
+        <h2>8. Strings</h2>
+        <div class="topic-content">
+          <h3>What are Strings?</h3>
+          <p>In C, a string is an array of characters terminated by a null character ('\0').</p>
+
+          <h3>String Declaration</h3>
+          <pre><code class="language-c">char string_name[size];</code></pre>
+
+          <h3>Example: String Operations</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char name[50] = "Hello";
+    char greeting[50];
+    
+    // String length
+    printf("Length: %lu\n", strlen(name));
+    
+    // String copy
+    strcpy(greeting, name);
+    printf("Copied string: %s\n", greeting);
+    
+    // String concatenation
+    strcat(greeting, " World");
+    printf("Concatenated: %s\n", greeting);
+    
+    // String comparison
+    if (strcmp(name, greeting) == 0) {
+        printf("Strings are equal\n");
+    } else {
+        printf("Strings are not equal\n");
+    }
+    
+    return 0;
+}</code></pre>
+
+          <h3>Common String Functions</h3>
+          <ul>
+            <li><code>strlen()</code> - Returns length of string</li>
+            <li><code>strcpy()</code> - Copies one string to another</li>
+            <li><code>strcat()</code> - Concatenates two strings</li>
+            <li><code>strcmp()</code> - Compares two strings</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: Strings</h3>
+            <div class="quiz" data-quiz="strings">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What character marks the end of a string in C?</p>
+                <label><input type="radio" name="q1" value="a"> a) '\n'</label>
+                <label><input type="radio" name="q1" value="b"> b) '\0'</label>
+                <label><input type="radio" name="q1" value="c"> c) ' '</label>
+                <label><input type="radio" name="q1" value="d"> d) None</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Which header file is needed for string functions?</p>
+                <label><input type="radio" name="q2" value="a"> a) stdio.h</label>
+                <label><input type="radio" name="q2" value="b"> b) string.h</label>
+                <label><input type="radio" name="q2" value="c"> c) stdlib.h</label>
+                <label><input type="radio" name="q2" value="d"> d) math.h</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('strings')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Structures -->
+      <section id="structures" class="topic-section">
+        <h2>9. Structures</h2>
+        <div class="topic-content">
+          <h3>What are Structures?</h3>
+          <p>A structure is a user-defined data type that allows you to combine different data types under a single name.</p>
+
+          <h3>Structure Syntax</h3>
+          <pre><code class="language-c">struct structure_name {
+    data_type member1;
+    data_type member2;
+    // ...
+};</code></pre>
+
+          <h3>Example: Structure Usage</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1;
+    
+    s1.id = 1;
+    strcpy(s1.name, "John Doe");
+    s1.marks = 85.5;
+    
+    printf("Student ID: %d\n", s1.id);
+    printf("Student Name: %s\n", s1.name);
+    printf("Marks: %.2f\n", s1.marks);
+    
+    return 0;
+}</code></pre>
+
+          <h3>Array of Structures</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student students[3];
+    int i;
+    
+    for (i = 0; i < 3; i++) {
+        students[i].id = i + 1;
+        printf("Enter name for student %d: ", i + 1);
+        scanf("%s", students[i].name);
+        printf("Enter marks: ");
+        scanf("%f", &students[i].marks);
+    }
+    
+    return 0;
+}</code></pre>
+
+          <div class="quiz-section">
+            <h3>Quiz: Structures</h3>
+            <div class="quiz" data-quiz="structures">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What keyword is used to define a structure?</p>
+                <label><input type="radio" name="q1" value="a"> a) class</label>
+                <label><input type="radio" name="q1" value="b"> b) struct</label>
+                <label><input type="radio" name="q1" value="c"> c) union</label>
+                <label><input type="radio" name="q1" value="d"> d) typedef</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Can structures contain functions in C?</p>
+                <label><input type="radio" name="q2" value="a"> a) Yes</label>
+                <label><input type="radio" name="q2" value="b"> b) No</label>
+                <label><input type="radio" name="q2" value="c"> c) Only in C++</label>
+                <label><input type="radio" name="q2" value="d"> d) Using function pointers</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('structures')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- File Handling -->
+      <section id="file-handling" class="topic-section">
+        <h2>10. File Handling</h2>
+        <div class="topic-content">
+          <h3>File Operations in C</h3>
+          <p>C provides functions to perform operations on files: creating, reading, writing, and closing files.</p>
+
+          <h3>File Modes</h3>
+          <ul>
+            <li><code>"r"</code> - Read mode</li>
+            <li><code>"w"</code> - Write mode (creates new file or overwrites existing)</li>
+            <li><code>"a"</code> - Append mode</li>
+            <li><code>"r+"</code> - Read and write mode</li>
+          </ul>
+
+          <h3>Example: Writing to a File</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    file = fopen("example.txt", "w");
+    
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    
+    fprintf(file, "Hello, World!\n");
+    fprintf(file, "This is a test file.\n");
+    
+    fclose(file);
+    printf("File written successfully!\n");
+    
+    return 0;
+}</code></pre>
+
+          <h3>Example: Reading from a File</h3>
+          <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    char ch;
+    
+    file = fopen("example.txt", "r");
+    
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    
+    printf("File contents:\n");
+    while ((ch = fgetc(file)) != EOF) {
+        printf("%c", ch);
+    }
+    
+    fclose(file);
+    return 0;
+}</code></pre>
+
+          <h3>Common File Functions</h3>
+          <ul>
+            <li><code>fopen()</code> - Opens a file</li>
+            <li><code>fclose()</code> - Closes a file</li>
+            <li><code>fprintf()</code> - Writes formatted data to file</li>
+            <li><code>fscanf()</code> - Reads formatted data from file</li>
+            <li><code>fgetc()</code> - Reads a character from file</li>
+            <li><code>fputc()</code> - Writes a character to file</li>
+          </ul>
+
+          <div class="quiz-section">
+            <h3>Quiz: File Handling</h3>
+            <div class="quiz" data-quiz="file-handling">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What mode opens a file for writing and creates a new file if it doesn't exist?</p>
+                <label><input type="radio" name="q1" value="a"> a) "r"</label>
+                <label><input type="radio" name="q1" value="b"> b) "w"</label>
+                <label><input type="radio" name="q1" value="c"> c) "a"</label>
+                <label><input type="radio" name="q1" value="d"> d) "r+"</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What function is used to close a file?</p>
+                <label><input type="radio" name="q2" value="a"> a) close()</label>
+                <label><input type="radio" name="q2" value="b"> b) fclose()</label>
+                <label><input type="radio" name="q2" value="c"> c) endfile()</label>
+                <label><input type="radio" name="q2" value="d"> d) fileclose()</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('file-handling')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compiler Section -->
+      <!-- <section id="compiler" class="topic-section">
+        <h2>💻 C Code Compiler</h2>
+        <div class="topic-content">
+          <div class="compiler-container">
+            <div class="compiler-header">
+              <h3>Write and Execute C Code</h3>
+              <p>Get your free API key from <a href="https://rapidapi.com/judge0-official/api/judge0-ce" target="_blank">Judge0 RapidAPI</a> (Free tier available with 50 requests/day)</p>
+              <div class="api-key-input">
+                <input type="text" id="api-key" placeholder="Enter your RapidAPI Key (X-RapidAPI-Key)" />
+                <button onclick="saveApiKey()">Save Key</button>
+              </div>
+              <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 8px;">
+                Your API key is stored locally in your browser and never shared.
+              </p>
+            </div>
+            <div class="compiler-editor">
+              <div class="editor-header">
+                <span>Editor</span>
+                <button class="run-btn" onclick="runCode()">▶ Run Code</button>
+              </div>
+              <textarea id="code-editor" placeholder="Enter your C code here...">#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</textarea>
+            </div>
+            <div class="compiler-output">
+              <div class="output-header">
+                <span>Output</span>
+                <button class="clear-btn" onclick="clearOutput()">Clear</button>
+              </div>
+              <div id="output" class="output-content"></div>
+            </div>
+            <div class="compiler-status">
+              <div id="status" class="status-info">Ready</div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">📘</div>
+        <h2>Course<span>.com</span></h2>
+        <p>Master programming from beginner to advanced with our curated collection of online courses.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="#">All Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Course.com. Crafted with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+  <!-- Compiler Modal -->
+  <div id="compiler-modal" class="compiler-modal">
+    <div class="compiler-modal-content">
+      <div class="compiler-modal-header">
+        <h2>💻 C Code Compiler</h2>
+        <button class="compiler-close-btn" id="close-compiler">&times;</button>
+      </div>
+      <div class="compiler-body">
+        <div class="compiler-toolbar">
+          <div class="compiler-left-tools">
+            <button class="tool-btn" onclick="loadCodeTemplate('hello')" title="Load Hello World">📝 Hello World</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('calculator')" title="Load Calculator">🧮 Calculator</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('array')" title="Load Array Example">📊 Array Example</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('pointer')" title="Load Pointer Example">🔗 Pointer Example</button>
+            <button class="tool-btn" onclick="clearCompilerCode()" title="Clear Code">🗑️ Clear</button>
+            <button class="tool-btn" onclick="saveCompilerCode()" title="Save Code">💾 Save</button>
+            <button class="tool-btn" onclick="loadCompilerCode()" title="Load Saved Code">📂 Load</button>
+          </div>
+          <div class="compiler-right-tools">
+            <select id="compiler-language" class="compiler-language-selector" onchange="setCompilerLanguage(this.value)">
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+            <input type="text" id="compiler-api-key" placeholder="RapidAPI Key" class="api-key-input-small" />
+            <button class="tool-btn primary" onclick="saveCompilerApiKey()">Save Key</button>
+            <button class="tool-btn run-btn-large" onclick="runCompilerCode()">▶ Run Code</button>
+          </div>
+        </div>
+        <div class="compiler-editor-container">
+          <div class="compiler-editor-section">
+            <div class="editor-tab">
+              <span class="tab-active">Code Editor</span>
+            </div>
+            <textarea id="compiler-code-editor" class="compiler-code-editor" placeholder="Enter your C code here...">#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</textarea>
+          </div>
+          <div class="compiler-input-section">
+            <div class="input-label">Input (stdin):</div>
+            <textarea id="compiler-input" class="compiler-input" placeholder="Enter input for your program (optional)"></textarea>
+          </div>
+        </div>
+        <div class="compiler-output-container">
+          <div class="output-header-bar">
+            <span>Output</span>
+            <div class="output-actions">
+              <span id="compiler-status" class="status-badge">Ready</span>
+              <button class="tool-btn-small" onclick="clearCompilerOutput()">Clear Output</button>
+              <button class="tool-btn-small" onclick="downloadCompilerOutput()">Download</button>
+            </div>
+          </div>
+          <div id="compiler-output" class="compiler-output-display"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="c-course.js"></script>
+  <script src="compiler.js"></script>
+</body>
+</html>
+

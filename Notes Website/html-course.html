@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML5 Course - Course.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="c-course.css" />
+  <link rel="stylesheet" href="compiler-modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">📘</div>
+        <h1><span>Course</span><span class="dot">.com</span></h1>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch to dark mode">🌙</button>
+        <a href="index.html" class="btn">All Courses →</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="course-header">
+    <div class="course-header-content">
+      <div class="course-badge">HTML5</div>
+      <h1>Complete HTML5 Course</h1>
+      <p>Master HTML5 from basics to advanced concepts with hands-on examples, quizzes, and live preview.</p>
+    </div>
+  </section>
+
+  <div class="course-container">
+    <aside class="course-sidebar">
+      <h3>Course Topics</h3>
+      <nav class="topic-nav" aria-label="Course topics navigation">
+        <a href="#intro" class="topic-link active">1. Introduction to HTML5</a>
+        <a href="#elements" class="topic-link">2. HTML Elements</a>
+        <a href="#attributes" class="topic-link">3. Attributes</a>
+        <a href="#forms" class="topic-link">4. Forms</a>
+        <a href="#semantic" class="topic-link">5. Semantic HTML</a>
+        <a href="#media" class="topic-link">6. Media Elements</a>
+        <a href="#playground" class="topic-link">💻 HTML Playground</a>
+      </nav>
+    </aside>
+
+    <main class="course-content">
+      <section id="intro" class="topic-section">
+        <h2>1. Introduction to HTML5</h2>
+        <div class="topic-content">
+          <h3>What is HTML5?</h3>
+          <p>HTML5 is the fifth and current version of the HyperText Markup Language, the standard markup language for creating web pages and web applications.</p>
+          
+          <h3>Key Features:</h3>
+          <ul>
+            <li><strong>Semantic Elements:</strong> Better structure with semantic tags</li>
+            <li><strong>Media Support:</strong> Built-in audio and video support</li>
+            <li><strong>Canvas:</strong> 2D graphics and animations</li>
+            <li><strong>Local Storage:</strong> Store data in the browser</li>
+            <li><strong>Offline Support:</strong> Work offline with web apps</li>
+          </ul>
+
+          <h3>Basic HTML5 Structure</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+            <!-- HTML Elements -->
+      <section id="elements" class="topic-section">
+        <h2>2. HTML Elements</h2>
+        <div class="topic-content">
+          <h3>What are HTML Elements?</h3>
+          <p>HTML elements are the building blocks of web pages. An HTML element consists of a start tag, content, and an end tag. Some elements are self-closing and don't require an end tag.</p>
+
+          <h3>Basic Structure of an HTML Element</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;tagname&gt;Content goes here&lt;/tagname&gt;
+
+/* Example */
+&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
+          </div>
+
+          <h3>Heading Elements</h3>
+          <p>Headings define the structure and hierarchy of your content. HTML provides six levels of headings:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;h1&gt;Heading 1 - Most Important&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6 - Least Important&lt;/h6&gt;</code></pre>
+          </div>
+
+          <h3>Paragraph and Text Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Paragraph --&gt;
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+
+&lt;!-- Line break --&gt;
+&lt;p&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+
+&lt;!-- Horizontal rule --&gt;
+&lt;hr&gt;
+
+&lt;!-- Bold text --&gt;
+&lt;b&gt;Bold text&lt;/b&gt; or &lt;strong&gt;Strong text&lt;/strong&gt;
+
+&lt;!-- Italic text --&gt;
+&lt;i&gt;Italic text&lt;/i&gt; or &lt;em&gt;Emphasized text&lt;/em&gt;
+
+&lt;!-- Underline --&gt;
+&lt;u&gt;Underlined text&lt;/u&gt;
+
+&lt;!-- Strikethrough --&gt;
+&lt;s&gt;Strikethrough text&lt;/s&gt; or &lt;del&gt;Deleted text&lt;/del&gt;
+
+&lt;!-- Subscript and Superscript --&gt;
+&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+&lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;!-- Marked text --&gt;
+&lt;mark&gt;Highlighted text&lt;/mark&gt;
+
+&lt;!-- Small text --&gt;
+&lt;small&gt;Small text&lt;/small&gt;</code></pre>
+          </div>
+
+          <h3>List Elements</h3>
+          
+          <h4>Unordered Lists</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </div>
+
+          <h4>Ordered Lists</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- With different numbering --&gt;
+&lt;ol type="A"&gt;
+    &lt;li&gt;Item A&lt;/li&gt;
+    &lt;li&gt;Item B&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="i" start="5"&gt;
+    &lt;li&gt;Item v&lt;/li&gt;
+    &lt;li&gt;Item vi&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </div>
+
+          <h4>Description Lists</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;dl&gt;
+    &lt;dt&gt;Term 1&lt;/dt&gt;
+    &lt;dd&gt;Description of term 1&lt;/dd&gt;
+    &lt;dt&gt;Term 2&lt;/dt&gt;
+    &lt;dd&gt;Description of term 2&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+          </div>
+
+          <h3>Link Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- External link --&gt;
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Link to another page --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+
+&lt;!-- Link to section on same page --&gt;
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
+
+&lt;!-- Link that opens in new tab --&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Open in New Tab&lt;/a&gt;
+
+&lt;!-- Email link --&gt;
+&lt;a href="mailto:email@example.com"&gt;Send Email&lt;/a&gt;
+
+&lt;!-- Phone link --&gt;
+&lt;a href="tel:+1234567890"&gt;Call Us&lt;/a&gt;</code></pre>
+          </div>
+
+          <h3>Image Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Basic image --&gt;
+&lt;img src="image.jpg" alt="Description of image"&gt;
+
+&lt;!-- Image with width and height --&gt;
+&lt;img src="image.jpg" alt="Description" width="300" height="200"&gt;
+
+&lt;!-- Image as link --&gt;
+&lt;a href="page.html"&gt;
+    &lt;img src="image.jpg" alt="Clickable image"&gt;
+&lt;/a&gt;
+
+&lt;!-- Responsive image --&gt;
+&lt;img src="image.jpg" alt="Description" style="max-width: 100%; height: auto;"&gt;</code></pre>
+          </div>
+
+          <h3>Table Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+            &lt;th&gt;Header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+            &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 1, Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+            &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 2, Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;Footer content&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;!-- Table with rowspan and colspan --&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Spans 2 rows&lt;/td&gt;
+        &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;Spans 2 columns&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+
+          <h3>Block and Inline Elements</h3>
+          <p><strong>Block elements</strong> take up the full width available and start on a new line:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;div&gt;Block element&lt;/div&gt;
+&lt;p&gt;Paragraph is block&lt;/p&gt;
+&lt;h1&gt;Heading is block&lt;/h1&gt;
+&lt;ul&gt;List is block&lt;/ul&gt;</code></pre>
+          </div>
+
+          <p><strong>Inline elements</strong> only take up as much width as needed and don't start on a new line:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;span&gt;Inline element&lt;/span&gt;
+&lt;a href="#"&gt;Link is inline&lt;/a&gt;
+&lt;strong&gt;Strong is inline&lt;/strong&gt;
+&lt;img src="image.jpg" alt="Image is inline"&gt;</code></pre>
+          </div>
+
+          <h3>Div and Span Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Div: block-level container --&gt;
+&lt;div class="container"&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Span: inline container --&gt;
+&lt;p&gt;This is a &lt;span class="highlight"&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: HTML Elements</h3>
+            <div class="quiz" data-quiz="elements">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> Which heading tag is the most important?</p>
+                <label><input type="radio" name="q1" value="a"> a) &lt;h6&gt;</label>
+                <label><input type="radio" name="q1" value="b"> b) &lt;h1&gt;</label>
+                <label><input type="radio" name="q1" value="c"> c) &lt;h3&gt;</label>
+                <label><input type="radio" name="q1" value="d"> d) &lt;heading&gt;</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is the correct syntax for a line break?</p>
+                <label><input type="radio" name="q2" value="a"> a) &lt;break&gt;</label>
+                <label><input type="radio" name="q2" value="b"> b) &lt;br&gt;</label>
+                <label><input type="radio" name="q2" value="c"> c) &lt;lb&gt;</label>
+                <label><input type="radio" name="q2" value="d"> d) &lt;newline&gt;</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> Which tag is used for bold text?</p>
+                <label><input type="radio" name="q3" value="a"> a) &lt;bold&gt;</label>
+                <label><input type="radio" name="q3" value="b"> b) &lt;b&gt; or &lt;strong&gt;</label>
+                <label><input type="radio" name="q3" value="c"> c) &lt;heavy&gt;</label>
+                <label><input type="radio" name="q3" value="d"> d) &lt;weight&gt;</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does the &lt;ol&gt; tag create?</p>
+                <label><input type="radio" name="q4" value="a"> a) Unordered list</label>
+                <label><input type="radio" name="q4" value="b"> b) Ordered list</label>
+                <label><input type="radio" name="q4" value="c"> c) Description list</label>
+                <label><input type="radio" name="q4" value="d"> d) Nested list</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What attribute is required for the &lt;img&gt; tag?</p>
+                <label><input type="radio" name="q5" value="a"> a) src</label>
+                <label><input type="radio" name="q5" value="b"> b) href</label>
+                <label><input type="radio" name="q5" value="c"> c) link</label>
+                <label><input type="radio" name="q5" value="d"> d) url</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does &lt;td colspan="2"&gt; do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Spans 2 rows</label>
+                <label><input type="radio" name="q6" value="b"> b) Spans 2 columns</label>
+                <label><input type="radio" name="q6" value="c"> c) Creates 2 cells</label>
+                <label><input type="radio" name="q6" value="d"> d) Merges 2 tables</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the difference between &lt;div&gt; and &lt;span&gt;?</p>
+                <label><input type="radio" name="q7" value="a"> a) Div is block, span is inline</label>
+                <label><input type="radio" name="q7" value="b"> b) Div is inline, span is block</label>
+                <label><input type="radio" name="q7" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q7" value="d"> d) Div is for text, span for images</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What tag is used to create a hyperlink?</p>
+                <label><input type="radio" name="q8" value="a"> a) &lt;link&gt;</label>
+                <label><input type="radio" name="q8" value="b"> b) &lt;a&gt;</label>
+                <label><input type="radio" name="q8" value="c"> c) &lt;href&gt;</label>
+                <label><input type="radio" name="q8" value="d"> d) &lt;url&gt;</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does the &lt;mark&gt; tag do?</p>
+                <label><input type="radio" name="q9" value="a"> a) Creates a bookmark</label>
+                <label><input type="radio" name="q9" value="b"> b) Highlights text</label>
+                <label><input type="radio" name="q9" value="c"> c) Marks text as important</label>
+                <label><input type="radio" name="q9" value="d"> d) Creates a marker</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the correct syntax for subscript?</p>
+                <label><input type="radio" name="q10" value="a"> a) &lt;sub&gt;</label>
+                <label><input type="radio" name="q10" value="b"> b) &lt;subscript&gt;</label>
+                <label><input type="radio" name="q10" value="c"> c) &lt;subtext&gt;</label>
+                <label><input type="radio" name="q10" value="d"> d) &lt;below&gt;</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('elements')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Attributes -->
+      <section id="attributes" class="topic-section">
+        <h2>3. HTML Attributes</h2>
+        <div class="topic-content">
+          <h3>What are HTML Attributes?</h3>
+          <p>HTML attributes provide additional information about HTML elements. They are always specified in the start tag and usually come in name/value pairs like: name="value".</p>
+
+          <h3>Common Global Attributes</h3>
+          <p>These attributes can be used on any HTML element:</p>
+
+          <h4>id Attribute</h4>
+          <p>Specifies a unique identifier for an element:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;div id="header"&gt;Header content&lt;/div&gt;
+&lt;div id="main-content"&gt;Main content&lt;/div&gt;
+&lt;div id="footer"&gt;Footer content&lt;/div&gt;</code></pre>
+          </div>
+
+          <h4>class Attribute</h4>
+          <p>Specifies one or more class names for an element (used for CSS styling):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;p class="intro"&gt;Introduction paragraph&lt;/p&gt;
+&lt;p class="highlight important"&gt;Multiple classes&lt;/p&gt;
+&lt;div class="container"&gt;Container div&lt;/div&gt;</code></pre>
+          </div>
+
+          <h4>style Attribute</h4>
+          <p>Allows inline CSS styling:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;p style="color: red; font-size: 20px;"&gt;Styled paragraph&lt;/p&gt;
+&lt;div style="background-color: blue; padding: 10px;"&gt;Styled div&lt;/div&gt;</code></pre>
+          </div>
+
+          <h4>title Attribute</h4>
+          <p>Provides additional information about an element (shown as tooltip):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;p title="This is a tooltip"&gt;Hover over me&lt;/p&gt;
+&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+          </div>
+
+          <h4>lang Attribute</h4>
+          <p>Specifies the language of the element's content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;html lang="en"&gt;
+&lt;p lang="fr"&gt;Bonjour le monde&lt;/p&gt;
+&lt;p lang="es"&gt;Hola mundo&lt;/p&gt;</code></pre>
+          </div>
+
+          <h4>data-* Attributes</h4>
+          <p>Custom data attributes for storing extra information:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;div data-user-id="123" data-role="admin"&gt;User content&lt;/div&gt;
+&lt;button data-action="delete" data-item-id="456"&gt;Delete&lt;/button&gt;</code></pre>
+          </div>
+
+          <h3>Element-Specific Attributes</h3>
+
+          <h4>Anchor Tag Attributes</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- href: specifies the URL --&gt;
+&lt;a href="https://example.com"&gt;Link&lt;/a&gt;
+
+&lt;!-- target: where to open the link --&gt;
+&lt;a href="page.html" target="_blank"&gt;Open in new tab&lt;/a&gt;
+&lt;a href="page.html" target="_self"&gt;Open in same tab&lt;/a&gt;
+
+&lt;!-- rel: relationship between current and linked document --&gt;
+&lt;a href="external.html" rel="noopener noreferrer"&gt;External link&lt;/a&gt;
+
+&lt;!-- download: downloads the file --&gt;
+&lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;</code></pre>
+          </div>
+
+          <h4>Image Tag Attributes</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- src: image source URL --&gt;
+&lt;img src="image.jpg" alt="Description"&gt;
+
+&lt;!-- alt: alternative text (required for accessibility) --&gt;
+&lt;img src="photo.jpg" alt="A beautiful sunset"&gt;
+
+&lt;!-- width and height: image dimensions --&gt;
+&lt;img src="image.jpg" alt="Description" width="300" height="200"&gt;
+
+&lt;!-- loading: lazy loading --&gt;
+&lt;img src="image.jpg" alt="Description" loading="lazy"&gt;
+
+&lt;!-- srcset: responsive images --&gt;
+&lt;img src="small.jpg" 
+     srcset="small.jpg 300w, medium.jpg 600w, large.jpg 1200w"
+     sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px"
+     alt="Responsive image"&gt;</code></pre>
+          </div>
+
+          <h4>Input Tag Attributes</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- type: input type --&gt;
+&lt;input type="text" name="username"&gt;
+&lt;input type="email" name="email"&gt;
+&lt;input type="password" name="password"&gt;
+&lt;input type="number" name="age"&gt;
+&lt;input type="date" name="birthday"&gt;
+&lt;input type="checkbox" name="agree"&gt;
+&lt;input type="radio" name="gender"&gt;
+
+&lt;!-- placeholder: hint text --&gt;
+&lt;input type="text" placeholder="Enter your name"&gt;
+
+&lt;!-- required: makes field mandatory --&gt;
+&lt;input type="email" required&gt;
+
+&lt;!-- disabled: disables the input --&gt;
+&lt;input type="text" disabled&gt;
+
+&lt;!-- readonly: makes input read-only --&gt;
+&lt;input type="text" readonly value="Cannot edit"&gt;
+
+&lt;!-- maxlength: maximum characters --&gt;
+&lt;input type="text" maxlength="50"&gt;
+
+&lt;!-- min and max: for number/date inputs --&gt;
+&lt;input type="number" min="0" max="100"&gt;
+&lt;input type="date" min="2020-01-01" max="2025-12-31"&gt;</code></pre>
+          </div>
+
+          <h4>Table Tag Attributes</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;Spans 2 columns&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Spans 2 rows&lt;/td&gt;
+        &lt;td&gt;Cell&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+
+          <h4>Meta Tag Attributes</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Character encoding --&gt;
+&lt;meta charset="UTF-8"&gt;
+
+&lt;!-- Viewport for responsive design --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;!-- Description for SEO --&gt;
+&lt;meta name="description" content="Page description"&gt;
+
+&lt;!-- Keywords (less important now) --&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+
+&lt;!-- Author --&gt;
+&lt;meta name="author" content="Your Name"&gt;
+
+&lt;!-- Open Graph for social media --&gt;
+&lt;meta property="og:title" content="Page Title"&gt;
+&lt;meta property="og:description" content="Page Description"&gt;
+&lt;meta property="og:image" content="image.jpg"&gt;</code></pre>
+          </div>
+
+          <h3>Boolean Attributes</h3>
+          <p>Some attributes don't need a value - their presence alone indicates true:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="checkbox" checked&gt;
+&lt;input type="text" disabled&gt;
+&lt;input type="text" readonly&gt;
+&lt;option selected&gt;Selected option&lt;/option&gt;
+&lt;video controls&gt;Video content&lt;/video&gt;
+&lt;details open&gt;Open details&lt;/details&gt;</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: HTML Attributes</h3>
+            <div class="quiz" data-quiz="attributes">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What does the id attribute do?</p>
+                <label><input type="radio" name="q1" value="a"> a) Adds styling</label>
+                <label><input type="radio" name="q1" value="b"> b) Provides unique identifier</label>
+                <label><input type="radio" name="q1" value="c"> c) Links to external file</label>
+                <label><input type="radio" name="q1" value="d"> d) Creates a class</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> Can an element have multiple classes?</p>
+                <label><input type="radio" name="q2" value="a"> a) No</label>
+                <label><input type="radio" name="q2" value="b"> b) Yes, separated by spaces</label>
+                <label><input type="radio" name="q2" value="c"> c) Yes, separated by commas</label>
+                <label><input type="radio" name="q2" value="d"> d) Only in HTML5</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does target="_blank" do in an anchor tag?</p>
+                <label><input type="radio" name="q3" value="a"> a) Opens in same tab</label>
+                <label><input type="radio" name="q3" value="b"> b) Opens in new tab</label>
+                <label><input type="radio" name="q3" value="c"> c) Opens in parent frame</label>
+                <label><input type="radio" name="q3" value="d"> d) Closes current tab</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is the alt attribute used for in images?</p>
+                <label><input type="radio" name="q4" value="a"> a) Alternative source</label>
+                <label><input type="radio" name="q4" value="b"> b) Alternative text for accessibility</label>
+                <label><input type="radio" name="q4" value="c"> c) Alternative size</label>
+                <label><input type="radio" name="q4" value="d"> d) Alternative format</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does the required attribute do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Makes field optional</label>
+                <label><input type="radio" name="q5" value="b"> b) Makes field mandatory</label>
+                <label><input type="radio" name="q5" value="c"> c) Hides the field</label>
+                <label><input type="radio" name="q5" value="d"> d) Disables the field</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does the placeholder attribute do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Sets default value</label>
+                <label><input type="radio" name="q6" value="b"> b) Shows hint text</label>
+                <label><input type="radio" name="q6" value="c"> c) Sets maximum length</label>
+                <label><input type="radio" name="q6" value="d"> d) Validates input</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is a boolean attribute?</p>
+                <label><input type="radio" name="q7" value="a"> a) An attribute with true/false value</label>
+                <label><input type="radio" name="q7" value="b"> b) An attribute that doesn't need a value</label>
+                <label><input type="radio" name="q7" value="c"> c) An attribute with numeric value</label>
+                <label><input type="radio" name="q7" value="d"> d) An attribute with text value</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does the title attribute do?</p>
+                <label><input type="radio" name="q8" value="a"> a) Sets page title</label>
+                <label><input type="radio" name="q8" value="b"> b) Shows tooltip on hover</label>
+                <label><input type="radio" name="q8" value="c"> c) Links to title page</label>
+                <label><input type="radio" name="q8" value="d"> d) Creates a heading</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does data-* attribute do?</p>
+                <label><input type="radio" name="q9" value="a"> a) Links to data file</label>
+                <label><input type="radio" name="q9" value="b"> b) Stores custom data</label>
+                <label><input type="radio" name="q9" value="c"> c) Validates data</label>
+                <label><input type="radio" name="q9" value="d"> d) Formats data</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does the lang attribute specify?</p>
+                <label><input type="radio" name="q10" value="a"> a) Language of element content</label>
+                <label><input type="radio" name="q10" value="b"> b) Language of page</label>
+                <label><input type="radio" name="q10" value="c"> c) Language of browser</label>
+                <label><input type="radio" name="q10" value="d"> d) Language of server</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('attributes')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forms -->
+      <section id="forms" class="topic-section">
+        <h2>4. Forms</h2>
+        <div class="topic-content">
+          <h3>What are HTML Forms?</h3>
+          <p>HTML forms are used to collect user input. Forms contain form elements like text fields, checkboxes, radio buttons, submit buttons, etc. The data collected is usually sent to a server for processing.</p>
+
+          <h3>Form Element</h3>
+          <p>The &lt;form&gt; element is a container for form elements:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;form action="/submit" method="POST"&gt;
+    &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;</code></pre>
+          </div>
+
+          <h4>Form Attributes</h4>
+          <ul>
+            <li><strong>action:</strong> Specifies where to send form data</li>
+            <li><strong>method:</strong> Specifies HTTP method (GET or POST)</li>
+            <li><strong>enctype:</strong> Specifies how form data should be encoded</li>
+            <li><strong>target:</strong> Specifies where to display response</li>
+            <li><strong>novalidate:</strong> Disables validation</li>
+          </ul>
+
+          <h3>Input Elements</h3>
+          <p>The &lt;input&gt; element is the most important form element. It can be displayed in many ways depending on the type attribute:</p>
+
+          <h4>Text Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="text" name="username" placeholder="Enter username"&gt;
+&lt;input type="text" name="fullname" value="John Doe"&gt;
+&lt;input type="text" name="email" required&gt;
+&lt;input type="text" name="phone" maxlength="10"&gt;</code></pre>
+          </div>
+
+          <h4>Password Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="password" name="password" placeholder="Enter password"&gt;</code></pre>
+          </div>
+
+          <h4>Email Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="email" name="email" placeholder="Enter email"&gt;</code></pre>
+          </div>
+
+          <h4>Number Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="number" name="age" min="0" max="120" step="1"&gt;
+&lt;input type="number" name="price" min="0" step="0.01"&gt;</code></pre>
+          </div>
+
+          <h4>Date and Time Inputs</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="date" name="birthday"&gt;
+&lt;input type="time" name="appointment"&gt;
+&lt;input type="datetime-local" name="event"&gt;
+&lt;input type="month" name="month"&gt;
+&lt;input type="week" name="week"&gt;</code></pre>
+          </div>
+
+          <h4>Checkbox</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="checkbox" name="hobby" value="reading" id="reading"&gt;
+&lt;label for="reading"&gt;Reading&lt;/label&gt;
+
+&lt;input type="checkbox" name="hobby" value="sports" id="sports"&gt;
+&lt;label for="sports"&gt;Sports&lt;/label&gt;
+
+&lt;input type="checkbox" name="agree" checked&gt; I agree to terms</code></pre>
+          </div>
+
+          <h4>Radio Buttons</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="radio" name="gender" value="male" id="male"&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+
+&lt;input type="radio" name="gender" value="female" id="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;
+
+&lt;input type="radio" name="gender" value="other" id="other"&gt;
+&lt;label for="other"&gt;Other&lt;/label&gt;</code></pre>
+          </div>
+
+          <h4>File Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="file" name="upload"&gt;
+&lt;input type="file" name="upload" accept="image/*"&gt;
+&lt;input type="file" name="upload" accept=".pdf,.doc,.docx" multiple&gt;</code></pre>
+          </div>
+
+          <h4>Range Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="range" name="volume" min="0" max="100" value="50"&gt;</code></pre>
+          </div>
+
+          <h4>Color Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="color" name="favcolor" value="#ff0000"&gt;</code></pre>
+          </div>
+
+          <h4>Hidden Input</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="hidden" name="user_id" value="12345"&gt;</code></pre>
+          </div>
+
+          <h4>Submit and Reset Buttons</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;input type="submit" value="Submit Form"&gt;
+&lt;input type="reset" value="Reset Form"&gt;
+&lt;input type="button" value="Click Me" onclick="alert('Hello!')"&gt;</code></pre>
+          </div>
+
+          <h3>Textarea Element</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;textarea name="message" rows="4" cols="50" placeholder="Enter your message"&gt;&lt;/textarea&gt;
+
+&lt;textarea name="comment" rows="10" cols="30" required&gt;Default text&lt;/textarea&gt;</code></pre>
+          </div>
+
+          <h3>Select Element (Dropdown)</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Single select --&gt;
+&lt;select name="country"&gt;
+    &lt;option value="usa"&gt;United States&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+    &lt;option value="canada"&gt;Canada&lt;/option&gt;
+    &lt;option value="australia"&gt;Australia&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- With default selected --&gt;
+&lt;select name="country"&gt;
+    &lt;option value="usa" selected&gt;United States&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Multiple select --&gt;
+&lt;select name="languages" multiple size="4"&gt;
+    &lt;option value="html"&gt;HTML&lt;/option&gt;
+    &lt;option value="css"&gt;CSS&lt;/option&gt;
+    &lt;option value="js"&gt;JavaScript&lt;/option&gt;
+    &lt;option value="python"&gt;Python&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- With optgroups --&gt;
+&lt;select name="course"&gt;
+    &lt;optgroup label="Web Development"&gt;
+        &lt;option value="html"&gt;HTML&lt;/option&gt;
+        &lt;option value="css"&gt;CSS&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Programming"&gt;
+        &lt;option value="python"&gt;Python&lt;/option&gt;
+        &lt;option value="java"&gt;Java&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+          </div>
+
+          <h3>Label Element</h3>
+          <p>The &lt;label&gt; element defines a label for form elements. It improves accessibility and usability:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Using for attribute --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+
+&lt;!-- Wrapping input --&gt;
+&lt;label&gt;
+    Email:
+    &lt;input type="email" name="email"&gt;
+&lt;/label&gt;</code></pre>
+          </div>
+
+          <h3>Fieldset and Legend</h3>
+          <p>Used to group related form elements:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    &lt;label&gt;Name: &lt;input type="text" name="name"&gt;&lt;/label&gt;
+    &lt;label&gt;Email: &lt;input type="email" name="email"&gt;&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset&gt;
+    &lt;legend&gt;Preferences&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="checkbox" name="newsletter"&gt; Subscribe to newsletter&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+          </div>
+
+          <h3>Complete Form Example</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;form action="/submit" method="POST"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Registration Form&lt;/legend&gt;
+        
+        &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+        
+        &lt;label for="password"&gt;Password:&lt;/label&gt;
+        &lt;input type="password" id="password" name="password" required minlength="8"&gt;
+        
+        &lt;label for="age"&gt;Age:&lt;/label&gt;
+        &lt;input type="number" id="age" name="age" min="18" max="100"&gt;
+        
+        &lt;label for="country"&gt;Country:&lt;/label&gt;
+        &lt;select id="country" name="country"&gt;
+            &lt;option value=""&gt;Select country&lt;/option&gt;
+            &lt;option value="usa"&gt;United States&lt;/option&gt;
+            &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+        &lt;/select&gt;
+        
+        &lt;label&gt;Gender:&lt;/label&gt;
+        &lt;input type="radio" id="male" name="gender" value="male"&gt;
+        &lt;label for="male"&gt;Male&lt;/label&gt;
+        &lt;input type="radio" id="female" name="gender" value="female"&gt;
+        &lt;label for="female"&gt;Female&lt;/label&gt;
+        
+        &lt;label&gt;Interests:&lt;/label&gt;
+        &lt;input type="checkbox" id="sports" name="interests" value="sports"&gt;
+        &lt;label for="sports"&gt;Sports&lt;/label&gt;
+        &lt;input type="checkbox" id="music" name="interests" value="music"&gt;
+        &lt;label for="music"&gt;Music&lt;/label&gt;
+        
+        &lt;label for="message"&gt;Message:&lt;/label&gt;
+        &lt;textarea id="message" name="message" rows="4"&gt;&lt;/textarea&gt;
+        
+        &lt;input type="submit" value="Submit"&gt;
+        &lt;input type="reset" value="Reset"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Forms</h3>
+            <div class="quiz" data-quiz="forms">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the default method for form submission?</p>
+                <label><input type="radio" name="q1" value="a"> a) POST</label>
+                <label><input type="radio" name="q1" value="b"> b) GET</label>
+                <label><input type="radio" name="q1" value="c"> c) PUT</label>
+                <label><input type="radio" name="q1" value="d"> d) DELETE</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What input type is used for passwords?</p>
+                <label><input type="radio" name="q2" value="a"> a) type="text"</label>
+                <label><input type="radio" name="q2" value="b"> b) type="password"</label>
+                <label><input type="radio" name="q2" value="c"> c) type="hidden"</label>
+                <label><input type="radio" name="q2" value="d"> d) type="secret"</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is the difference between checkbox and radio buttons?</p>
+                <label><input type="radio" name="q3" value="a"> a) Checkbox allows multiple, radio allows one</label>
+                <label><input type="radio" name="q3" value="b"> b) They are the same</label>
+                <label><input type="radio" name="q3" value="c"> c) Radio allows multiple, checkbox allows one</label>
+                <label><input type="radio" name="q3" value="d"> d) Checkbox is for text, radio for numbers</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does the required attribute do?</p>
+                <label><input type="radio" name="q4" value="a"> a) Makes field optional</label>
+                <label><input type="radio" name="q4" value="b"> b) Makes field mandatory</label>
+                <label><input type="radio" name="q4" value="c"> c) Hides the field</label>
+                <label><input type="radio" name="q4" value="d"> d) Disables the field</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What element is used for multi-line text input?</p>
+                <label><input type="radio" name="q5" value="a"> a) &lt;input type="textarea"&gt;</label>
+                <label><input type="radio" name="q5" value="b"> b) &lt;textarea&gt;</label>
+                <label><input type="radio" name="q5" value="c"> c) &lt;text&gt;</label>
+                <label><input type="radio" name="q5" value="d"> d) &lt;multiline&gt;</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does the name attribute do in form elements?</p>
+                <label><input type="radio" name="q6" value="a"> a) Sets the label</label>
+                <label><input type="radio" name="q6" value="b"> b) Identifies the field when form is submitted</label>
+                <label><input type="radio" name="q6" value="c"> c) Sets the placeholder</label>
+                <label><input type="radio" name="q6" value="d"> d) Sets the value</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does &lt;fieldset&gt; do?</p>
+                <label><input type="radio" name="q7" value="a"> a) Creates a field</label>
+                <label><input type="radio" name="q7" value="b"> b) Groups related form elements</label>
+                <label><input type="radio" name="q7" value="c"> c) Validates fields</label>
+                <label><input type="radio" name="q7" value="d"> d) Submits form</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What input type is used for selecting a date?</p>
+                <label><input type="radio" name="q8" value="a"> a) type="date"</label>
+                <label><input type="radio" name="q8" value="b"> b) type="calendar"</label>
+                <label><input type="radio" name="q8" value="c"> c) type="time"</label>
+                <label><input type="radio" name="q8" value="d"> d) type="datetime"</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does the multiple attribute do in a select element?</p>
+                <label><input type="radio" name="q9" value="a"> a) Allows selecting multiple options</label>
+                <label><input type="radio" name="q9" value="b"> b) Creates multiple selects</label>
+                <label><input type="radio" name="q9" value="c"> c) Validates multiple times</label>
+                <label><input type="radio" name="q9" value="d"> d) Submits multiple times</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does the label element improve?</p>
+                <label><input type="radio" name="q10" value="a"> a) Styling</label>
+                <label><input type="radio" name="q10" value="b"> b) Accessibility and usability</label>
+                <label><input type="radio" name="q10" value="c"> c) Performance</label>
+                <label><input type="radio" name="q10" value="d"> d) Security</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('forms')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Semantic HTML -->
+      <section id="semantic" class="topic-section">
+        <h2>5. Semantic HTML</h2>
+        <div class="topic-content">
+          <h3>What is Semantic HTML?</h3>
+          <p>Semantic HTML uses HTML elements that have meaning and clearly describe their purpose. Instead of using generic &lt;div&gt; and &lt;span&gt; elements, semantic HTML uses elements like &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, etc., which clearly indicate their role in the document.</p>
+
+          <h3>Benefits of Semantic HTML</h3>
+          <ul>
+            <li><strong>Accessibility:</strong> Screen readers can better understand page structure</li>
+            <li><strong>SEO:</strong> Search engines can better index content</li>
+            <li><strong>Maintainability:</strong> Code is easier to read and maintain</li>
+            <li><strong>Future-proof:</strong> Better compatibility with future technologies</li>
+          </ul>
+
+          <h3>Semantic Elements</h3>
+
+          <h4>&lt;header&gt;</h4>
+          <p>Represents introductory content or navigational aids:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+          </div>
+
+          <h4>&lt;nav&gt;</h4>
+          <p>Defines navigation links:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+          </div>
+
+          <h4>&lt;main&gt;</h4>
+          <p>Represents the main content of the document (should be unique):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;main&gt;
+    &lt;h1&gt;Main Content&lt;/h1&gt;
+    &lt;p&gt;This is the main content area.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+          </div>
+
+          <h4>&lt;article&gt;</h4>
+          <p>Represents independent, self-contained content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;article&gt;
+    &lt;header&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;Published on &lt;time datetime="2025-01-15"&gt;January 15, 2025&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;Article content goes here...&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Author: John Doe&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+          </div>
+
+          <h4>&lt;section&gt;</h4>
+          <p>Represents a thematic grouping of content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;section&gt;
+    &lt;h2&gt;Introduction&lt;/h2&gt;
+    &lt;p&gt;This section introduces the topic.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Main Content&lt;/h2&gt;
+    &lt;p&gt;This section contains the main content.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+          </div>
+
+          <h4>&lt;aside&gt;</h4>
+          <p>Represents content aside from the main content (sidebars, call-out boxes):</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;aside&gt;
+    &lt;h3&gt;Related Articles&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Article 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Article 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+          </div>
+
+          <h4>&lt;footer&gt;</h4>
+          <p>Represents footer content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;footer&gt;
+    &lt;p&gt;© 2025 Company Name. All rights reserved.&lt;/p&gt;
+    &lt;nav&gt;
+        &lt;a href="#"&gt;Privacy Policy&lt;/a&gt;
+        &lt;a href="#"&gt;Terms of Service&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+
+          <h4>&lt;figure&gt; and &lt;figcaption&gt;</h4>
+          <p>Used for images, diagrams, code blocks with captions:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;figure&gt;
+    &lt;img src="image.jpg" alt="Description"&gt;
+    &lt;figcaption&gt;This is a caption for the image&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;pre&gt;&lt;code&gt;function example() {
+    return "Hello";
+}&lt;/code&gt;&lt;/pre&gt;
+    &lt;figcaption&gt;Example JavaScript code&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+          </div>
+
+          <h4>&lt;time&gt;</h4>
+          <p>Represents a specific period in time:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;time datetime="2025-01-15"&gt;January 15, 2025&lt;/time&gt;
+&lt;time datetime="2025-01-15T10:30"&gt;10:30 AM on January 15&lt;/time&gt;
+&lt;time datetime="PT2H30M"&gt;2 hours 30 minutes&lt;/time&gt;</code></pre>
+          </div>
+
+          <h4>&lt;mark&gt;</h4>
+          <p>Highlights text for reference:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;p&gt;This is &lt;mark&gt;important&lt;/mark&gt; information.&lt;/p&gt;</code></pre>
+          </div>
+
+          <h4>&lt;address&gt;</h4>
+          <p>Represents contact information:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;address&gt;
+    Written by &lt;a href="mailto:author@example.com"&gt;John Doe&lt;/a&gt;&lt;br&gt;
+    Visit us at:&lt;br&gt;
+    123 Main St&lt;br&gt;
+    City, State 12345
+&lt;/address&gt;</code></pre>
+          </div>
+
+          <h3>Complete Semantic HTML Page Structure</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Semantic HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Website Title&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Article Title&lt;/h2&gt;
+                &lt;p&gt;Published on &lt;time datetime="2025-01-15"&gt;January 15, 2025&lt;/time&gt;&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;section&gt;
+                &lt;h3&gt;Introduction&lt;/h3&gt;
+                &lt;p&gt;Article introduction...&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h3&gt;Main Content&lt;/h3&gt;
+                &lt;p&gt;Main article content...&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;footer&gt;
+                &lt;p&gt;Author: John Doe&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+        
+        &lt;aside&gt;
+            &lt;h3&gt;Related Articles&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Article 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Article 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;© 2025 Company Name. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Semantic HTML</h3>
+            <div class="quiz" data-quiz="semantic">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the main benefit of semantic HTML?</p>
+                <label><input type="radio" name="q1" value="a"> a) Better styling</label>
+                <label><input type="radio" name="q1" value="b"> b) Better accessibility and SEO</label>
+                <label><input type="radio" name="q1" value="c"> c) Faster loading</label>
+                <label><input type="radio" name="q1" value="d"> d) Smaller file size</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does the &lt;article&gt; element represent?</p>
+                <label><input type="radio" name="q2" value="a"> a) Navigation links</label>
+                <label><input type="radio" name="q2" value="b"> b) Independent, self-contained content</label>
+                <label><input type="radio" name="q2" value="c"> c) Sidebar content</label>
+                <label><input type="radio" name="q2" value="d"> d) Footer content</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does the &lt;nav&gt; element define?</p>
+                <label><input type="radio" name="q3" value="a"> a) Main content</label>
+                <label><input type="radio" name="q3" value="b"> b) Navigation links</label>
+                <label><input type="radio" name="q3" value="c"> c) Article content</label>
+                <label><input type="radio" name="q3" value="d"> d) Section content</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does the &lt;aside&gt; element represent?</p>
+                <label><input type="radio" name="q4" value="a"> a) Main content</label>
+                <label><input type="radio" name="q4" value="b"> b) Content aside from main content</label>
+                <label><input type="radio" name="q4" value="c"> c) Header content</label>
+                <label><input type="radio" name="q4" value="d"> d) Footer content</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> How many &lt;main&gt; elements should a page have?</p>
+                <label><input type="radio" name="q5" value="a"> a) Multiple</label>
+                <label><input type="radio" name="q5" value="b"> b) One (unique)</label>
+                <label><input type="radio" name="q5" value="c"> c) None</label>
+                <label><input type="radio" name="q5" value="d"> d) Two</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is &lt;figure&gt; used for?</p>
+                <label><input type="radio" name="q6" value="a"> a) Creating shapes</label>
+                <label><input type="radio" name="q6" value="b"> b) Images/diagrams with captions</label>
+                <label><input type="radio" name="q6" value="c"> c) Navigation</label>
+                <label><input type="radio" name="q6" value="d"> d) Forms</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does the &lt;time&gt; element represent?</p>
+                <label><input type="radio" name="q7" value="a"> a) Time zone</label>
+                <label><input type="radio" name="q7" value="b"> b) A specific period in time</label>
+                <label><input type="radio" name="q7" value="c"> c) Clock</label>
+                <label><input type="radio" name="q7" value="d"> d) Timer</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the difference between &lt;section&gt; and &lt;article&gt;?</p>
+                <label><input type="radio" name="q8" value="a"> a) Section is for articles, article is for sections</label>
+                <label><input type="radio" name="q8" value="b"> b) Article is independent content, section is thematic grouping</label>
+                <label><input type="radio" name="q8" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q8" value="d"> d) Section is semantic, article is not</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does &lt;address&gt; represent?</p>
+                <label><input type="radio" name="q9" value="a"> a) IP address</label>
+                <label><input type="radio" name="q9" value="b"> b) Contact information</label>
+                <label><input type="radio" name="q9" value="c"> c) Web address</label>
+                <label><input type="radio" name="q9" value="d"> d) Email address only</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is &lt;figcaption&gt; used for?</p>
+                <label><input type="radio" name="q10" value="a"> a) Creating captions for figures</label>
+                <label><input type="radio" name="q10" value="b"> b) Creating figures</label>
+                <label><input type="radio" name="q10" value="c"> c) Creating images</label>
+                <label><input type="radio" name="q10" value="d"> d) Creating forms</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('semantic')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Media Elements -->
+      <section id="media" class="topic-section">
+        <h2>6. Media Elements</h2>
+        <div class="topic-content">
+          <h3>What are Media Elements?</h3>
+          <p>HTML5 provides native support for audio and video content without requiring plugins. These elements allow you to embed multimedia content directly into web pages.</p>
+
+          <h3>Audio Element</h3>
+          <p>The &lt;audio&gt; element is used to embed sound content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Basic audio --&gt;
+&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;
+
+&lt;!-- Audio with multiple sources --&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Audio with all attributes --&gt;
+&lt;audio controls autoplay loop muted preload="auto"&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+          </div>
+
+          <h4>Audio Attributes</h4>
+          <ul>
+            <li><strong>controls:</strong> Displays audio controls (play, pause, volume)</li>
+            <li><strong>autoplay:</strong> Starts playing automatically (use with caution)</li>
+            <li><strong>loop:</strong> Repeats audio when finished</li>
+            <li><strong>muted:</strong> Mutes audio by default</li>
+            <li><strong>preload:</strong> Specifies if audio should be preloaded (auto, metadata, none)</li>
+            <li><strong>src:</strong> URL of audio file</li>
+          </ul>
+
+          <h3>Video Element</h3>
+          <p>The &lt;video&gt; element is used to embed video content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Basic video --&gt;
+&lt;video src="video.mp4" controls&gt;&lt;/video&gt;
+
+&lt;!-- Video with multiple sources --&gt;
+&lt;video controls width="640" height="360"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    &lt;source src="video.ogg" type="video/ogg"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt;
+
+&lt;!-- Video with poster image --&gt;
+&lt;video controls poster="poster.jpg"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;!-- Video with all attributes --&gt;
+&lt;video 
+    controls 
+    autoplay 
+    loop 
+    muted 
+    preload="auto"
+    width="800"
+    height="450"
+    poster="poster.jpg"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt;</code></pre>
+          </div>
+
+          <h4>Video Attributes</h4>
+          <ul>
+            <li><strong>controls:</strong> Displays video controls</li>
+            <li><strong>autoplay:</strong> Starts playing automatically</li>
+            <li><strong>loop:</strong> Repeats video when finished</li>
+            <li><strong>muted:</strong> Mutes video by default</li>
+            <li><strong>preload:</strong> Specifies if video should be preloaded</li>
+            <li><strong>poster:</strong> Image shown before video plays</li>
+            <li><strong>width:</strong> Video width</li>
+            <li><strong>height:</strong> Video height</li>
+            <li><strong>src:</strong> URL of video file</li>
+          </ul>
+
+          <h3>Iframe Element</h3>
+          <p>The &lt;iframe&gt; element embeds another HTML page within the current page:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Basic iframe --&gt;
+&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;
+
+&lt;!-- Iframe with dimensions --&gt;
+&lt;iframe src="page.html" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;!-- Iframe with attributes --&gt;
+&lt;iframe 
+    src="https://example.com"
+    width="800"
+    height="600"
+    frameborder="0"
+    allowfullscreen
+    sandbox="allow-scripts allow-same-origin"&gt;
+&lt;/iframe&gt;
+
+&lt;!-- Embedding YouTube video --&gt;
+&lt;iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+          </div>
+
+          <h3>Embed Element</h3>
+          <p>The &lt;embed&gt; element embeds external content:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;embed src="file.pdf" type="application/pdf" width="800" height="600"&gt;
+&lt;embed src="animation.swf" type="application/x-shockwave-flash"&gt;</code></pre>
+          </div>
+
+          <h3>Object Element</h3>
+          <p>The &lt;object&gt; element embeds external resources:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;object data="file.pdf" type="application/pdf" width="800" height="600"&gt;
+    &lt;p&gt;Alternative text if object cannot be displayed&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+          </div>
+
+          <h3>Picture Element</h3>
+          <p>The &lt;picture&gt; element provides responsive images:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;picture&gt;
+    &lt;source media="(min-width: 1200px)" srcset="large.jpg"&gt;
+    &lt;source media="(min-width: 768px)" srcset="medium.jpg"&gt;
+    &lt;img src="small.jpg" alt="Responsive image"&gt;
+&lt;/picture&gt;
+
+&lt;picture&gt;
+    &lt;source srcset="image.webp" type="image/webp"&gt;
+    &lt;source srcset="image.jpg" type="image/jpeg"&gt;
+    &lt;img src="image.jpg" alt="Fallback image"&gt;
+&lt;/picture&gt;</code></pre>
+          </div>
+
+          <h3>Canvas Element</h3>
+          <p>The &lt;canvas&gt; element is used to draw graphics via JavaScript:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;canvas id="myCanvas" width="400" height="200"&gt;
+    Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'red';
+    ctx.fillRect(10, 10, 100, 100);
+&lt;/script&gt;</code></pre>
+          </div>
+
+          <h3>SVG (Scalable Vector Graphics)</h3>
+          <p>SVG can be embedded directly in HTML:</p>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!-- Inline SVG --&gt;
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" /&gt;
+&lt;/svg&gt;
+
+&lt;!-- SVG as image --&gt;
+&lt;img src="image.svg" alt="SVG image"&gt;
+
+&lt;!-- SVG as object --&gt;
+&lt;object data="image.svg" type="image/svg+xml"&gt;&lt;/object&gt;</code></pre>
+          </div>
+
+          <h3>Complete Media Example</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Media Elements&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Audio Example&lt;/h1&gt;
+    &lt;audio controls&gt;
+        &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+        Your browser does not support audio.
+    &lt;/audio&gt;
+    
+    &lt;h1&gt;Video Example&lt;/h1&gt;
+    &lt;video controls width="640" height="360" poster="poster.jpg"&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        Your browser does not support video.
+    &lt;/video&gt;
+    
+    &lt;h1&gt;Canvas Example&lt;/h1&gt;
+    &lt;canvas id="myCanvas" width="400" height="200"&gt;&lt;/canvas&gt;
+    &lt;script&gt;
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 100, 100);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Media Elements</h3>
+            <div class="quiz" data-quiz="media">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What attribute displays controls for audio/video?</p>
+                <label><input type="radio" name="q1" value="a"> a) show</label>
+                <label><input type="radio" name="q1" value="b"> b) controls</label>
+                <label><input type="radio" name="q1" value="c"> c) display</label>
+                <label><input type="radio" name="q1" value="d"> d) visible</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does the poster attribute do in video?</p>
+                <label><input type="radio" name="q2" value="a"> a) Shows image before video plays</label>
+                <label><input type="radio" name="q2" value="b"> b) Shows video controls</label>
+                <label><input type="radio" name="q2" value="c"> c) Plays video automatically</label>
+                <label><input type="radio" name="q2" value="d"> d) Loops video</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is the &lt;iframe&gt; element used for?</p>
+                <label><input type="radio" name="q3" value="a"> a) Embedding images</label>
+                <label><input type="radio" name="q3" value="b"> b) Embedding another HTML page</label>
+                <label><input type="radio" name="q3" value="c"> c) Embedding audio</label>
+                <label><input type="radio" name="q3" value="d"> d) Embedding video</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does the &lt;canvas&gt; element do?</p>
+                <label><input type="radio" name="q4" value="a"> a) Displays images</label>
+                <label><input type="radio" name="q4" value="b"> b) Draws graphics via JavaScript</label>
+                <label><input type="radio" name="q4" value="c"> c) Plays videos</label>
+                <label><input type="radio" name="q4" value="d"> d) Embeds external content</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does the loop attribute do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Creates a loop in code</label>
+                <label><input type="radio" name="q5" value="b"> b) Repeats media when finished</label>
+                <label><input type="radio" name="q5" value="c"> c) Skips to end</label>
+                <label><input type="radio" name="q5" value="d"> d) Pauses media</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is SVG?</p>
+                <label><input type="radio" name="q6" value="a"> a) Scalable Vector Graphics</label>
+                <label><input type="radio" name="q6" value="b"> b) Static Vector Graphics</label>
+                <label><input type="radio" name="q6" value="c"> c) Simple Vector Graphics</label>
+                <label><input type="radio" name="q6" value="d"> d) Standard Vector Graphics</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does preload="metadata" do?</p>
+                <label><input type="radio" name="q7" value="a"> a) Preloads full media</label>
+                <label><input type="radio" name="q7" value="b"> b) Preloads only metadata</label>
+                <label><input type="radio" name="q7" value="c"> c) Doesn't preload</label>
+                <label><input type="radio" name="q7" value="d"> d) Preloads on demand</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the &lt;picture&gt; element used for?</p>
+                <label><input type="radio" name="q8" value="a"> a) Displaying pictures</label>
+                <label><input type="radio" name="q8" value="b"> b) Responsive images</label>
+                <label><input type="radio" name="q8" value="c"> c) Image galleries</label>
+                <label><input type="radio" name="q8" value="d"> d) Image editing</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> Can you have multiple &lt;source&gt; elements in audio/video?</p>
+                <label><input type="radio" name="q9" value="a"> a) No</label>
+                <label><input type="radio" name="q9" value="b"> b) Yes, for browser compatibility</label>
+                <label><input type="radio" name="q9" value="c"> c) Only in video</label>
+                <label><input type="radio" name="q9" value="d"> d) Only in audio</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does the muted attribute do?</p>
+                <label><input type="radio" name="q10" value="a"> a) Hides media</label>
+                <label><input type="radio" name="q10" value="b"> b) Mutes audio by default</label>
+                <label><input type="radio" name="q10" value="c"> c) Pauses media</label>
+                <label><input type="radio" name="q10" value="d"> d) Loops media</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('media')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="playground" class="topic-section">
+        <h2>💻 HTML Playground</h2>
+        <div class="topic-content">
+          <div class="compiler-container">
+            <div class="compiler-header">
+              <h3>Write and Preview HTML Code</h3>
+              <p>Write your HTML code and see the live preview instantly!</p>
+            </div>
+            <div class="html-playground-wrapper">
+              <div class="html-editor-section">
+                <div class="editor-header">
+                  <span>HTML Editor</span>
+                  <button class="run-btn" onclick="updateHTMLPreview()">▶ Run</button>
+                </div>
+                <textarea id="html-editor" class="compiler-code-editor" placeholder="Enter your HTML code here...">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+              </div>
+              <div class="html-preview-section">
+                <div class="editor-header">
+                  <span>Live Preview</span>
+                </div>
+                <iframe id="html-preview" class="html-preview-frame"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">📘</div>
+        <h2>Course<span>.com</span></h2>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Course.com. Crafted with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+   <script src="c-course.js"></script>
+  <script>
+    // HTML Quiz Answers
+    const htmlQuizAnswers = {
+        'elements': {
+            'q1': 'b', 'q2': 'b', 'q3': 'b', 'q4': 'b', 'q5': 'a',
+            'q6': 'b', 'q7': 'a', 'q8': 'b', 'q9': 'b', 'q10': 'a'
+        },
+        'attributes': {
+            'q1': 'b', 'q2': 'b', 'q3': 'b', 'q4': 'b', 'q5': 'b',
+            'q6': 'b', 'q7': 'b', 'q8': 'b', 'q9': 'b', 'q10': 'a'
+        },
+        'forms': {
+            'q1': 'b', 'q2': 'b', 'q3': 'a', 'q4': 'b', 'q5': 'b',
+            'q6': 'b', 'q7': 'b', 'q8': 'a', 'q9': 'a', 'q10': 'b'
+        },
+        'semantic': {
+            'q1': 'b', 'q2': 'b', 'q3': 'b', 'q4': 'b', 'q5': 'b',
+            'q6': 'b', 'q7': 'b', 'q8': 'b', 'q9': 'b', 'q10': 'a'
+        },
+        'media': {
+            'q1': 'b', 'q2': 'a', 'q3': 'b', 'q4': 'b', 'q5': 'b',
+            'q6': 'a', 'q7': 'b', 'q8': 'b', 'q9': 'b', 'q10': 'b'
+        }
+    };
+
+    // Override checkQuiz for HTML
+    const originalCheckQuiz = window.checkQuiz;
+    window.checkQuiz = function(quizId) {
+        const quiz = document.querySelector(`[data-quiz="${quizId}"]`);
+        if (!quiz) return;
+        
+        const questions = quiz.querySelectorAll('.quiz-question');
+        const resultDiv = quiz.querySelector('.quiz-result');
+        let correctAnswers = 0;
+        let totalQuestions = questions.length;
+        const answers = htmlQuizAnswers[quizId] || {};
+
+        questions.forEach((question, index) => {
+            const questionNum = `q${index + 1}`;
+            const selectedAnswer = question.querySelector(`input[name="${questionNum}"]:checked`);
+            const correctAnswer = answers[questionNum];
+            const labels = question.querySelectorAll('label');
+
+            if (selectedAnswer && correctAnswer) {
+                if (selectedAnswer.value === correctAnswer) {
+                    correctAnswers++;
+                    labels.forEach(label => {
+                        const radio = label.querySelector('input');
+                        if (radio.value === correctAnswer) {
+                            label.style.background = '#d1fae5';
+                            label.style.color = '#065f46';
+                        }
+                    });
+                } else {
+                    labels.forEach(label => {
+                        const radio = label.querySelector('input');
+                        if (radio.value === correctAnswer) {
+                            label.style.background = '#d1fae5';
+                            label.style.color = '#065f46';
+                        }
+                        if (radio === selectedAnswer) {
+                            label.style.background = '#fee2e2';
+                            label.style.color = '#991b1b';
+                        }
+                    });
+                }
+            } else if (correctAnswer) {
+                labels.forEach(label => {
+                    const radio = label.querySelector('input');
+                    if (radio.value === correctAnswer) {
+                        label.style.background = '#d1fae5';
+                        label.style.color = '#065f46';
+                    }
+                });
+            }
+        });
+
+        const percentage = (correctAnswers / totalQuestions) * 100;
+        resultDiv.className = 'quiz-result';
+        
+        if (percentage === 100) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `🎉 Perfect! You got ${correctAnswers}/${totalQuestions} correct (100%)`;
+        } else if (percentage >= 70) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `Good job! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%)`;
+        } else if (percentage >= 50) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `Not bad! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%). Keep practicing!`;
+        } else {
+            resultDiv.classList.add('incorrect');
+            resultDiv.textContent = `Keep practicing! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%). Try again!`;
+        }
+    };
+
+    // HTML Preview Function
+    function updateHTMLPreview() {
+      const editor = document.getElementById('html-editor');
+      const preview = document.getElementById('html-preview');
+      if (editor && preview) {
+        preview.srcdoc = editor.value;
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      updateHTMLPreview();
+    });
+  </script>
+</body>
+</html>
+

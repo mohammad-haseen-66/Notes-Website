@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Generator</title>
+    <link rel="stylesheet" href="paper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Background Decorative Elements -->
+    <div class="bg-decoration">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-icon">📝</div>
+                <h1 class="gradient-text">Question Paper Generator</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Form Section -->
+            <section class="form-section" id="formSection">
+                <div class="form-container glass-card">
+                    <div class="section-header">
+                        <div class="section-icon">✨</div>
+                        <h2 class="gradient-text">Generate Your Question Paper</h2>
+                        <p class="section-subtitle">Fill in the details below to create a customized question paper</p>
+                    </div>
+                    
+                    <form id="questionForm" class="question-form">
+                        <div class="form-group">
+                            <label for="subject">
+                                <span class="label-icon">📚</span>
+                                Subject <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="c">C</option>
+                                    <option value="python">Python</option>
+                                    <option value="c++">C++</option>
+                                    <option value="java">Java</option>
+                                    <option value="css">CSS</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="html">HTML</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="totalMarks">
+                                <span class="label-icon">🎯</span>
+                                Total Marks <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <select id="totalMarks" name="totalMarks" required>
+                                    <option value="">Select Total Marks</option>
+                                    <option value="20">20</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                    <option value="60">60</option>
+                                    <option value="75">75</option>
+                                    <option value="80">80</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="difficulty">
+                                <span class="label-icon">⚡</span>
+                                Difficulty Level <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <select id="difficulty" name="difficulty" required>
+                                    <option value="">Select Difficulty</option>
+                                    <option value="Easy">Easy</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Hard">Hard</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pattern">
+                                <span class="label-icon">📋</span>
+                                Question Paper Pattern <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <select id="pattern" name="pattern" required>
+                                    <option value="">Select Pattern</option>
+                                    <option value="semester">Semester</option>
+                                    <option value="sessional">Sessional</option>
+                                    <option value="MCQ">MCQ</option>
+                                    <option value="mixed">Mixed (MCQ + Descriptive)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="topics">
+                                <span class="label-icon">🔍</span>
+                                Specific Topics to Focus (Optional)
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="text" id="topics" name="topics" placeholder="e.g., Arrays, Functions, OOP">
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label for="instructions">
+                                <span class="label-icon">📝</span>
+                                Additional Instructions (Optional)
+                            </label>
+                            <div class="input-wrapper">
+                                <textarea id="instructions" name="instructions" rows="4" placeholder="Any specific requirements or instructions..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large" id="generateBtn">
+                                <span class="btn-icon">🚀</span>
+                                <span class="btn-text">Generate Question Paper</span>
+                                <span class="btn-loader" style="display: none;"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Question Paper Display Section -->
+            <section class="paper-section" id="paperSection" style="display: none;">
+                <div class="paper-container glass-card">
+                    <div class="paper-header">
+                        <div class="section-header">
+                            <div class="section-icon">📄</div>
+                            <h2 class="gradient-text">Generated Question Paper</h2>
+                        </div>
+                        <div class="paper-actions">
+                            <button class="btn btn-secondary" id="generateSolutionsBtn">
+                                <span class="btn-icon">💡</span>
+                                <span class="btn-text">Generate Solutions</span>
+                                <span class="btn-loader" style="display: none;"></span>
+                            </button>
+                            <button class="btn btn-secondary" id="showAnswerFormBtn">
+                                <span class="btn-icon">✍️</span>
+                                <span class="btn-text">Submit Answers</span>
+                            </button>
+                            <button class="btn btn-secondary" id="backToFormBtn">
+                                <span class="btn-icon">🔄</span>
+                                <span class="btn-text">New Paper</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="paper-content" id="paperContent">
+                        <!-- Question paper will be rendered here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solutions Display Section -->
+            <section class="solutions-section" id="solutionsSection" style="display: none;">
+                <div class="solutions-container glass-card">
+                    <div class="solutions-header">
+                        <div class="section-header">
+                            <div class="section-icon">✅</div>
+                            <h2 class="gradient-text">Solutions</h2>
+                        </div>
+                        <button class="btn btn-secondary" id="hideSolutionsBtn">
+                            <span class="btn-icon">👁️</span>
+                            <span class="btn-text">Hide Solutions</span>
+                        </button>
+                    </div>
+                    <div class="solutions-content" id="solutionsContent">
+                        <!-- Solutions will be rendered here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Answer Submission Section -->
+            <section class="answer-section" id="answerSection" style="display: none;">
+                <div class="answer-container glass-card">
+                    <div class="answer-header">
+                        <div class="section-header">
+                            <div class="section-icon">📝</div>
+                            <h2 class="gradient-text">Submit Your Answers</h2>
+                        </div>
+                        <button class="btn btn-secondary" id="hideAnswerFormBtn">
+                            <span class="btn-icon">❌</span>
+                            <span class="btn-text">Cancel</span>
+                        </button>
+                    </div>
+                    <form id="answerForm" class="answer-form">
+                        <div id="answerInputs" class="answer-inputs">
+                            <!-- Answer inputs will be dynamically generated -->
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large" id="submitAnswersBtn">
+                                <span class="btn-icon">📊</span>
+                                <span class="btn-text">Evaluate Answers</span>
+                                <span class="btn-loader" style="display: none;"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Results Display Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-container glass-card">
+                    <div class="results-header">
+                        <div class="section-header">
+                            <div class="section-icon">🏆</div>
+                            <h2 class="gradient-text">Performance Evaluation</h2>
+                        </div>
+                        <button class="btn btn-secondary" id="hideResultsBtn">
+                            <span class="btn-icon">✖️</span>
+                            <span class="btn-text">Close Results</span>
+                        </button>
+                    </div>
+                    <div class="results-content" id="resultsContent">
+                        <!-- Results will be rendered here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Processing...</p>
+    </div>
+
+    <script src="paper.js"></script>
+</body>
+</html>
+
+ 

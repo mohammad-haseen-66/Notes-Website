@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Programming Course - Course.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="c-course.css" />
+  <link rel="stylesheet" href="compiler-modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">📘</div>
+        <h1><span>Not</span><span class="dot">es</span></h1>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <button id="compiler-btn" class="compiler-nav-btn" title="Open Code Compiler">💻 Compiler</button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch to dark mode">🌙</button>
+        <a href="index.html" class="btn">All Courses →</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="course-header">
+    <div class="course-header-content">
+      <div class="course-badge">JavaScript Programming</div>
+      <h1>Complete JavaScript Programming Course</h1>
+      <p>Master JavaScript programming from basics to advanced concepts with hands-on examples, quizzes, and interactive coding.</p>
+    </div>
+  </section>
+
+  <div class="course-container">
+    <aside class="course-sidebar">
+      <h3>Course Topics</h3>
+      <nav class="topic-nav" aria-label="Course topics navigation">
+        <a href="#intro" class="topic-link active">1. Introduction to JavaScript</a>
+        <a href="#variables" class="topic-link">2. Variables & Data Types</a>
+        <a href="#operators" class="topic-link">3. Operators</a>
+        <a href="#functions" class="topic-link">4. Functions</a>
+        <a href="#objects" class="topic-link">5. Objects & Arrays</a>
+        <a href="#dom" class="topic-link">6. DOM Manipulation</a>
+        <a href="#events" class="topic-link">7. Events</a>
+        <a href="#async" class="topic-link">8. Async JavaScript</a>
+        
+      </nav>
+    </aside>
+
+    <main class="course-content">
+      <section id="intro" class="topic-section">
+        <h2>1. Introduction to JavaScript</h2>
+        <div class="topic-content">
+          <h3>What is JavaScript?</h3>
+          <p>JavaScript is a high-level, interpreted programming language that is one of the core technologies of the World Wide Web. It enables interactive web pages and is an essential part of web applications.</p>
+          
+          <h3>Key Features:</h3>
+          <ul>
+            <li><strong>Client-side Scripting:</strong> Runs in the browser without server interaction</li>
+            <li><strong>Dynamic Typing:</strong> Variables don't need type declarations</li>
+            <li><strong>Event-driven:</strong> Responds to user interactions</li>
+            <li><strong>Object-oriented:</strong> Supports OOP with prototypes</li>
+            <li><strong>Functional:</strong> Functions are first-class citizens</li>
+          </ul>
+
+          <h3>Your First JavaScript Program</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">console.log("Hello, World!");</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Introduction to JavaScript</h3>
+            <div class="quiz" data-quiz="intro">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> JavaScript was created by?</p>
+                <label><input type="radio" name="q1" value="a"> a) Microsoft</label>
+                <label><input type="radio" name="q1" value="b"> b) Brendan Eich</label>
+                <label><input type="radio" name="q1" value="c"> c) Google</label>
+                <label><input type="radio" name="q1" value="d"> d) Apple</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> JavaScript is primarily used for?</p>
+                <label><input type="radio" name="q2" value="a"> a) Server-side programming</label>
+                <label><input type="radio" name="q2" value="b"> b) Client-side programming</label>
+                <label><input type="radio" name="q2" value="c"> c) Database management</label>
+                <label><input type="radio" name="q2" value="d"> d) System programming</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('intro')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Variables & Data Types -->
+      <section id="variables" class="topic-section">
+        <h2>2. Variables & Data Types</h2>
+        <div class="topic-content">
+          <h3>What are Variables?</h3>
+          <p>Variables are containers that store data values. In JavaScript, you can declare variables using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+
+          <h3>Variable Declaration</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Using var (function-scoped, can be redeclared)
+var name = "John";
+var age = 25;
+
+// Using let (block-scoped, cannot be redeclared)
+let city = "New York";
+let count = 0;
+
+// Using const (block-scoped, cannot be reassigned)
+const PI = 3.14159;
+const MAX_SIZE = 100;
+
+// Multiple variables
+let x = 5, y = 10, z = 15;</code></pre>
+          </div>
+
+          <h3>Difference Between var, let, and const</h3>
+          <table class="data-table">
+            <tr>
+              <th>Keyword</th>
+              <th>Scope</th>
+              <th>Redeclare</th>
+              <th>Reassign</th>
+            </tr>
+            <tr>
+              <td><code>var</code></td>
+              <td>Function-scoped</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td><code>let</code></td>
+              <td>Block-scoped</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td><code>const</code></td>
+              <td>Block-scoped</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+          </table>
+
+          <h3>Data Types in JavaScript</h3>
+          <p>JavaScript has 8 data types:</p>
+          
+          <h4>Primitive Types</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// String
+let name = "John";
+let greeting = 'Hello';
+let message = `Template literal ${name}`;
+
+// Number
+let age = 25;
+let price = 99.99;
+let temperature = -10;
+
+// Boolean
+let isStudent = true;
+let isActive = false;
+
+// Undefined
+let value;
+console.log(value); // undefined
+
+// Null
+let empty = null;
+
+// BigInt (for large integers)
+let bigNumber = 9007199254740991n;
+
+// Symbol (unique identifier)
+let id = Symbol('id');</code></pre>
+          </div>
+
+          <h4>Object Type</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Object
+let person = {
+    name: "John",
+    age: 25,
+    city: "New York"
+};
+
+// Array
+let fruits = ["apple", "banana", "cherry"];
+
+// Function
+function greet() {
+    return "Hello";
+}</code></pre>
+          </div>
+
+          <h3>Type Checking</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// typeof operator
+console.log(typeof "Hello");     // "string"
+console.log(typeof 42);           // "number"
+console.log(typeof true);         // "boolean"
+console.log(typeof undefined);    // "undefined"
+console.log(typeof null);         // "object" (this is a bug in JavaScript)
+console.log(typeof {});            // "object"
+console.log(typeof []);            // "object"
+console.log(typeof function(){}); // "function"
+
+// instanceof operator
+console.log([] instanceof Array);  // true
+console.log({} instanceof Object); // true</code></pre>
+          </div>
+
+          <h3>Type Conversion</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// String to Number
+let str = "123";
+let num = Number(str);        // 123
+let num2 = parseInt(str);     // 123
+let num3 = parseFloat("12.5"); // 12.5
+
+// Number to String
+let num = 123;
+let str = String(num);       // "123"
+let str2 = num.toString();   // "123"
+
+// Boolean conversion
+let bool1 = Boolean(1);      // true
+let bool2 = Boolean(0);      // false
+let bool3 = Boolean("");     // false
+let bool4 = Boolean("text"); // true
+
+// Automatic type conversion (coercion)
+console.log("5" + 3);        // "53" (string concatenation)
+console.log("5" - 3);        // 2 (number subtraction)
+console.log("5" * 3);        // 15 (number multiplication)</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Variables & Data Types</h3>
+            <div class="quiz" data-quiz="variables">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the difference between let and const?</p>
+                <label><input type="radio" name="q1" value="a"> a) let can be reassigned, const cannot</label>
+                <label><input type="radio" name="q1" value="b"> b) const can be reassigned, let cannot</label>
+                <label><input type="radio" name="q1" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q1" value="d"> d) let is for numbers, const for strings</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is the output of: typeof null?</p>
+                <label><input type="radio" name="q2" value="a"> a) "null"</label>
+                <label><input type="radio" name="q2" value="b"> b) "object"</label>
+                <label><input type="radio" name="q2" value="c"> c) "undefined"</label>
+                <label><input type="radio" name="q2" value="d"> d) "boolean"</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is the output of: "5" + 3?</p>
+                <label><input type="radio" name="q3" value="a"> a) 8</label>
+                <label><input type="radio" name="q3" value="b"> b) "53"</label>
+                <label><input type="radio" name="q3" value="c"> c) Error</label>
+                <label><input type="radio" name="q3" value="d"> d) 53</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> Which keyword has function scope?</p>
+                <label><input type="radio" name="q4" value="a"> a) let</label>
+                <label><input type="radio" name="q4" value="b"> b) const</label>
+                <label><input type="radio" name="q4" value="c"> c) var</label>
+                <label><input type="radio" name="q4" value="d"> d) function</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is the output of: typeof []?</p>
+                <label><input type="radio" name="q5" value="a"> a) "array"</label>
+                <label><input type="radio" name="q5" value="b"> b) "object"</label>
+                <label><input type="radio" name="q5" value="c"> c) "list"</label>
+                <label><input type="radio" name="q5" value="d"> d) "undefined"</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> How do you convert a string to a number?</p>
+                <label><input type="radio" name="q6" value="a"> a) Number()</label>
+                <label><input type="radio" name="q6" value="b"> b) String()</label>
+                <label><input type="radio" name="q6" value="c"> c) Boolean()</label>
+                <label><input type="radio" name="q6" value="d"> d) Array()</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the output of: Boolean("")?</p>
+                <label><input type="radio" name="q7" value="a"> a) true</label>
+                <label><input type="radio" name="q7" value="b"> b) false</label>
+                <label><input type="radio" name="q7" value="c"> c) undefined</label>
+                <label><input type="radio" name="q7" value="d"> d) null</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is a template literal?</p>
+                <label><input type="radio" name="q8" value="a"> a) A string with backticks</label>
+                <label><input type="radio" name="q8" value="b"> b) A string with quotes</label>
+                <label><input type="radio" name="q8" value="c"> c) A number</label>
+                <label><input type="radio" name="q8" value="d"> d) A boolean</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> Can you redeclare a variable with let?</p>
+                <label><input type="radio" name="q9" value="a"> a) Yes</label>
+                <label><input type="radio" name="q9" value="b"> b) No</label>
+                <label><input type="radio" name="q9" value="c"> c) Only in functions</label>
+                <label><input type="radio" name="q9" value="d"> d) Only in loops</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the output of: "5" - 3?</p>
+                <label><input type="radio" name="q10" value="a"> a) "53"</label>
+                <label><input type="radio" name="q10" value="b"> b) 2</label>
+                <label><input type="radio" name="q10" value="c"> c) Error</label>
+                <label><input type="radio" name="q10" value="d"> d) "2"</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('variables')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operators -->
+      <section id="operators" class="topic-section">
+        <h2>3. Operators</h2>
+        <div class="topic-content">
+          <h3>What are Operators?</h3>
+          <p>Operators are symbols that perform operations on values and variables. JavaScript has various types of operators.</p>
+
+          <h3>Arithmetic Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let a = 10;
+let b = 3;
+
+console.log(a + b);  // 13 (Addition)
+console.log(a - b);  // 7 (Subtraction)
+console.log(a * b);  // 30 (Multiplication)
+console.log(a / b);  // 3.333... (Division)
+console.log(a % b);  // 1 (Modulus - remainder)
+console.log(a ** b); // 1000 (Exponentiation)
+console.log(++a);    // 11 (Pre-increment)
+console.log(a++);    // 11 (Post-increment)
+console.log(--b);    // 2 (Pre-decrement)
+console.log(b--);    // 2 (Post-decrement)</code></pre>
+          </div>
+
+          <h3>Assignment Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let x = 10;
+
+x += 5;  // x = x + 5 (15)
+x -= 3;  // x = x - 3 (12)
+x *= 2;  // x = x * 2 (24)
+x /= 4;  // x = x / 4 (6)
+x %= 4;  // x = x % 4 (2)
+x **= 3; // x = x ** 3 (8)</code></pre>
+          </div>
+
+          <h3>Comparison Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let a = 5;
+let b = 10;
+
+console.log(a == b);   // false (loose equality)
+console.log(a != b);   // true (loose inequality)
+console.log(a === b);  // false (strict equality)
+console.log(a !== b);  // true (strict inequality)
+console.log(a < b);    // true (less than)
+console.log(a > b);    // false (greater than)
+console.log(a <= b);   // true (less than or equal)
+console.log(a >= b);   // false (greater than or equal)
+
+// Loose vs Strict Equality
+console.log(5 == "5");   // true (type coercion)
+console.log(5 === "5");  // false (no type coercion)</code></pre>
+          </div>
+
+          <h3>Logical Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let x = true;
+let y = false;
+
+console.log(x && y);   // false (AND)
+console.log(x || y);   // true (OR)
+console.log(!x);       // false (NOT)
+
+// Short-circuit evaluation
+let result = true && "Hello";  // "Hello"
+let result2 = false || "World"; // "World"
+
+// Nullish coalescing (??)
+let value = null ?? "default";  // "default"
+let value2 = undefined ?? "default"; // "default"
+let value3 = 0 ?? "default";     // 0</code></pre>
+          </div>
+
+          <h3>Ternary Operator</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Syntax: condition ? valueIfTrue : valueIfFalse
+let age = 18;
+let status = age >= 18 ? "Adult" : "Minor";
+console.log(status); // "Adult"
+
+// Nested ternary
+let score = 85;
+let grade = score >= 90 ? "A" : 
+            score >= 80 ? "B" : 
+            score >= 70 ? "C" : "F";
+console.log(grade); // "B"</code></pre>
+          </div>
+
+          <h3>Type Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// typeof
+console.log(typeof "Hello");  // "string"
+console.log(typeof 42);        // "number"
+
+// instanceof
+let arr = [1, 2, 3];
+console.log(arr instanceof Array);  // true
+console.log(arr instanceof Object);  // true</code></pre>
+          </div>
+
+          <h3>String Operators</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Concatenation
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName; // "John Doe"
+
+// Template literals
+let message = `Hello, ${firstName}!`; // "Hello, John!"
+
+// String methods
+let text = "Hello";
+console.log(text + " World"); // "Hello World"</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Operators</h3>
+            <div class="quiz" data-quiz="operators">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the difference between == and ===?</p>
+                <label><input type="radio" name="q1" value="a"> a) == is strict, === is loose</label>
+                <label><input type="radio" name="q1" value="b"> b) == is loose, === is strict</label>
+                <label><input type="radio" name="q1" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q1" value="d"> d) == is for numbers, === for strings</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is the output of: 5 ** 2?</p>
+                <label><input type="radio" name="q2" value="a"> a) 10</label>
+                <label><input type="radio" name="q2" value="b"> b) 25</label>
+                <label><input type="radio" name="q2" value="c"> c) 7</label>
+                <label><input type="radio" name="q2" value="d"> d) Error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does the && operator do?</p>
+                <label><input type="radio" name="q3" value="a"> a) OR operation</label>
+                <label><input type="radio" name="q3" value="b"> b) AND operation</label>
+                <label><input type="radio" name="q3" value="c"> c) NOT operation</label>
+                <label><input type="radio" name="q3" value="d"> d) XOR operation</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is the output of: true && "Hello"?</p>
+                <label><input type="radio" name="q4" value="a"> a) true</label>
+                <label><input type="radio" name="q4" value="b"> b) "Hello"</label>
+                <label><input type="radio" name="q4" value="c"> c) false</label>
+                <label><input type="radio" name="q4" value="d"> d) Error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does the ?? operator do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Nullish coalescing</label>
+                <label><input type="radio" name="q5" value="b"> b) Logical OR</label>
+                <label><input type="radio" name="q5" value="c"> c) Logical AND</label>
+                <label><input type="radio" name="q5" value="d"> d) Comparison</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is the output of: 10 % 3?</p>
+                <label><input type="radio" name="q6" value="a"> a) 3</label>
+                <label><input type="radio" name="q6" value="b"> b) 1</label>
+                <label><input type="radio" name="q6" value="c"> c) 0</label>
+                <label><input type="radio" name="q6" value="d"> d) 3.33</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does x += 5 mean?</p>
+                <label><input type="radio" name="q7" value="a"> a) x = x + 5</label>
+                <label><input type="radio" name="q7" value="b"> b) x = 5</label>
+                <label><input type="radio" name="q7" value="c"> c) x = x * 5</label>
+                <label><input type="radio" name="q7" value="d"> d) x = x / 5</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the ternary operator syntax?</p>
+                <label><input type="radio" name="q8" value="a"> a) condition ? true : false</label>
+                <label><input type="radio" name="q8" value="b"> b) condition ? false : true</label>
+                <label><input type="radio" name="q8" value="c"> c) condition if true else false</label>
+                <label><input type="radio" name="q8" value="d"> d) if condition then true else false</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is the output of: !true?</p>
+                <label><input type="radio" name="q9" value="a"> a) true</label>
+                <label><input type="radio" name="q9" value="b"> b) false</label>
+                <label><input type="radio" name="q9" value="c"> c) undefined</label>
+                <label><input type="radio" name="q9" value="d"> d) null</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the output of: 0 ?? "default"?</p>
+                <label><input type="radio" name="q10" value="a"> a) "default"</label>
+                <label><input type="radio" name="q10" value="b"> b) 0</label>
+                <label><input type="radio" name="q10" value="c"> c) null</label>
+                <label><input type="radio" name="q10" value="d"> d) undefined</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('operators')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Functions -->
+      <section id="functions" class="topic-section">
+        <h2>4. Functions</h2>
+        <div class="topic-content">
+          <h3>What are Functions?</h3>
+          <p>Functions are reusable blocks of code that perform a specific task. They help organize code, make it more readable, and avoid repetition.</p>
+
+          <h3>Function Declaration</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Function declaration
+function greet() {
+    console.log("Hello, World!");
+}
+
+// Calling a function
+greet(); // "Hello, World!"
+
+// Function with parameters
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+
+greet("John"); // "Hello, John!"
+
+// Function with return
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(5, 3);
+console.log(result); // 8</code></pre>
+          </div>
+
+          <h3>Function Expression</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Function expression
+const greet = function(name) {
+    console.log(`Hello, ${name}!`);
+};
+
+greet("John"); // "Hello, John!"
+
+// Named function expression
+const add = function sum(a, b) {
+    return a + b;
+};</code></pre>
+          </div>
+
+          <h3>Arrow Functions</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Arrow function (ES6)
+const greet = (name) => {
+    console.log(`Hello, ${name}!`);
+};
+
+// Single parameter - parentheses optional
+const greet = name => {
+    console.log(`Hello, ${name}!`);
+};
+
+// Single expression - return implicit
+const add = (a, b) => a + b;
+
+// No parameters
+const sayHello = () => console.log("Hello!");
+
+// Arrow function with object return
+const createPerson = (name, age) => ({ name, age });</code></pre>
+          </div>
+
+          <h3>Default Parameters</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Default parameter values
+function greet(name = "Guest") {
+    console.log(`Hello, ${name}!`);
+}
+
+greet();        // "Hello, Guest!"
+greet("John");  // "Hello, John!"
+
+// Multiple default parameters
+function createUser(name, age = 18, city = "Unknown") {
+    return { name, age, city };
+}</code></pre>
+          </div>
+
+          <h3>Rest Parameters</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Rest parameters (...)
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3));        // 6
+console.log(sum(1, 2, 3, 4, 5));   // 15
+
+// Rest with other parameters
+function greet(greeting, ...names) {
+    names.forEach(name => {
+        console.log(`${greeting}, ${name}!`);
+    });
+}
+
+greet("Hello", "John", "Jane", "Bob");</code></pre>
+          </div>
+
+          <h3>Higher-Order Functions</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Functions that take other functions as arguments
+function processArray(arr, callback) {
+    return arr.map(callback);
+}
+
+let numbers = [1, 2, 3, 4];
+let doubled = processArray(numbers, x => x * 2);
+console.log(doubled); // [2, 4, 6, 8]
+
+// Functions that return functions
+function multiplier(factor) {
+    return function(number) {
+        return number * factor;
+    };
+}
+
+let double = multiplier(2);
+console.log(double(5)); // 10</code></pre>
+          </div>
+
+          <h3>Immediately Invoked Function Expression (IIFE)</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// IIFE - executes immediately
+(function() {
+    console.log("This runs immediately!");
+})();
+
+// IIFE with parameters
+(function(name) {
+    console.log(`Hello, ${name}!`);
+})("John");
+
+// Arrow function IIFE
+(() => {
+    console.log("Arrow IIFE");
+})();</code></pre>
+          </div>
+
+          <h3>Closures</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Closure - inner function has access to outer function's variables
+function outer() {
+    let count = 0;
+    
+    return function inner() {
+        count++;
+        return count;
+    };
+}
+
+let counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Functions</h3>
+            <div class="quiz" data-quiz="functions">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is the difference between function declaration and function expression?</p>
+                <label><input type="radio" name="q1" value="a"> a) Declaration is hoisted, expression is not</label>
+                <label><input type="radio" name="q1" value="b"> b) Expression is hoisted, declaration is not</label>
+                <label><input type="radio" name="q1" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q1" value="d"> d) Declaration uses const, expression uses function</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What is an arrow function?</p>
+                <label><input type="radio" name="q2" value="a"> a) A function with => syntax</label>
+                <label><input type="radio" name="q2" value="b"> b) A function with -> syntax</label>
+                <label><input type="radio" name="q2" value="c"> c) A function with :: syntax</label>
+                <label><input type="radio" name="q2" value="d"> d) A function with =>> syntax</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does ... do in function parameters?</p>
+                <label><input type="radio" name="q3" value="a"> a) Rest parameters</label>
+                <label><input type="radio" name="q3" value="b"> b) Spread operator</label>
+                <label><input type="radio" name="q3" value="c"> c) Default parameter</label>
+                <label><input type="radio" name="q3" value="d"> d) Optional parameter</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is a closure?</p>
+                <label><input type="radio" name="q4" value="a"> a) Inner function accessing outer function's variables</label>
+                <label><input type="radio" name="q4" value="b"> b) Outer function accessing inner function's variables</label>
+                <label><input type="radio" name="q4" value="c"> c) Function that closes immediately</label>
+                <label><input type="radio" name="q4" value="d"> d) Function that cannot be called</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is an IIFE?</p>
+                <label><input type="radio" name="q5" value="a"> a) Immediately Invoked Function Expression</label>
+                <label><input type="radio" name="q5" value="b"> b) Internal Invoked Function Expression</label>
+                <label><input type="radio" name="q5" value="c"> c) Instant Invoked Function Expression</label>
+                <label><input type="radio" name="q5" value="d"> d) Inline Invoked Function Expression</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> Can arrow functions have implicit return?</p>
+                <label><input type="radio" name="q6" value="a"> a) Yes, for single expressions</label>
+                <label><input type="radio" name="q6" value="b"> b) No</label>
+                <label><input type="radio" name="q6" value="c"> c) Only in strict mode</label>
+                <label><input type="radio" name="q6" value="d"> d) Only with return keyword</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is a higher-order function?</p>
+                <label><input type="radio" name="q7" value="a"> a) Function that takes or returns functions</label>
+                <label><input type="radio" name="q7" value="b"> b) Function with higher priority</label>
+                <label><input type="radio" name="q7" value="c"> c) Function that runs first</label>
+                <label><input type="radio" name="q7" value="d"> d) Function with more parameters</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the output of: const add = (a, b) => a + b; add(2, 3)?</p>
+                <label><input type="radio" name="q8" value="a"> a) 5</label>
+                <label><input type="radio" name="q8" value="b"> b) "23"</label>
+                <label><input type="radio" name="q8" value="c"> c) Error</label>
+                <label><input type="radio" name="q8" value="d"> d) undefined</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does default parameter do?</p>
+                <label><input type="radio" name="q9" value="a"> a) Sets default value if parameter is undefined</label>
+                <label><input type="radio" name="q9" value="b"> b) Makes parameter optional</label>
+                <label><input type="radio" name="q9" value="c"> c) Validates parameter</label>
+                <label><input type="radio" name="q9" value="d"> d) Converts parameter type</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> Can you have multiple default parameters?</p>
+                <label><input type="radio" name="q10" value="a"> a) Yes</label>
+                <label><input type="radio" name="q10" value="b"> b) No</label>
+                <label><input type="radio" name="q10" value="c"> c) Only in arrow functions</label>
+                <label><input type="radio" name="q10" value="d"> d) Only in function declarations</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('functions')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Objects & Arrays -->
+      <section id="objects" class="topic-section">
+        <h2>5. Objects & Arrays</h2>
+        <div class="topic-content">
+          <h3>Objects</h3>
+          <p>Objects are collections of key-value pairs. They are used to store and organize data.</p>
+
+          <h3>Creating Objects</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Object literal
+let person = {
+    name: "John",
+    age: 25,
+    city: "New York"
+};
+
+// Using new Object()
+let person2 = new Object();
+person2.name = "Jane";
+person2.age = 30;
+
+// Object with methods
+let person3 = {
+    name: "Bob",
+    age: 28,
+    greet: function() {
+        return `Hello, I'm ${this.name}`;
+    }
+};
+
+// ES6 shorthand
+let name = "Alice";
+let age = 25;
+let person4 = { name, age }; // { name: "Alice", age: 25 }</code></pre>
+          </div>
+
+          <h3>Accessing Object Properties</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let person = {
+    name: "John",
+    age: 25
+};
+
+// Dot notation
+console.log(person.name);  // "John"
+console.log(person.age);   // 25
+
+// Bracket notation
+console.log(person["name"]); // "John"
+console.log(person["age"]);  // 25
+
+// Dynamic property access
+let prop = "name";
+console.log(person[prop]); // "John"</code></pre>
+          </div>
+
+          <h3>Object Methods</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let person = {
+    firstName: "John",
+    lastName: "Doe",
+    fullName: function() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    // ES6 method shorthand
+    greet() {
+        return `Hello, ${this.firstName}!`;
+    }
+};
+
+console.log(person.fullName()); // "John Doe"
+console.log(person.greet());    // "Hello, John!"</code></pre>
+          </div>
+
+          <h3>Arrays</h3>
+          <p>Arrays are ordered collections of values. They can contain any data type.</p>
+
+          <h3>Creating Arrays</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Array literal
+let fruits = ["apple", "banana", "cherry"];
+
+// Using new Array()
+let numbers = new Array(1, 2, 3);
+
+// Empty array
+let empty = [];
+
+// Array with mixed types
+let mixed = [1, "hello", true, { name: "John" }];</code></pre>
+          </div>
+
+          <h3>Array Methods</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let fruits = ["apple", "banana", "cherry"];
+
+// Adding elements
+fruits.push("orange");        // Add to end
+fruits.unshift("grape");      // Add to beginning
+
+// Removing elements
+fruits.pop();                 // Remove from end
+fruits.shift();               // Remove from beginning
+
+// Finding elements
+fruits.indexOf("banana");      // 1
+fruits.includes("apple");      // true
+
+// Array iteration
+fruits.forEach(fruit => {
+    console.log(fruit);
+});
+
+// Map - creates new array
+let lengths = fruits.map(fruit => fruit.length);
+
+// Filter - creates new array
+let longFruits = fruits.filter(fruit => fruit.length > 5);
+
+// Reduce - reduces to single value
+let sum = [1, 2, 3, 4].reduce((total, num) => total + num, 0);
+
+// Find - finds first matching element
+let found = fruits.find(fruit => fruit.length > 5);
+
+// Some - checks if any element matches
+let hasLong = fruits.some(fruit => fruit.length > 5);
+
+// Every - checks if all elements match
+let allLong = fruits.every(fruit => fruit.length > 5);</code></pre>
+          </div>
+
+          <h3>Array Destructuring</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let fruits = ["apple", "banana", "cherry"];
+
+// Basic destructuring
+let [first, second, third] = fruits;
+console.log(first);  // "apple"
+
+// Skipping elements
+let [first, , third] = fruits;
+
+// Default values
+let [first = "unknown", second] = fruits;
+
+// Rest in destructuring
+let [first, ...rest] = fruits;
+console.log(rest); // ["banana", "cherry"]</code></pre>
+          </div>
+
+          <h3>Object Destructuring</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">let person = {
+    name: "John",
+    age: 25,
+    city: "New York"
+};
+
+// Basic destructuring
+let { name, age } = person;
+console.log(name); // "John"
+
+// Renaming
+let { name: fullName, age: years } = person;
+
+// Default values
+let { name, age = 18 } = person;
+
+// Rest in destructuring
+let { name, ...rest } = person;</code></pre>
+          </div>
+
+          <h3>Spread Operator</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Array spread
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let combined = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
+
+// Object spread
+let obj1 = { a: 1, b: 2 };
+let obj2 = { c: 3, d: 4 };
+let merged = { ...obj1, ...obj2 }; // { a: 1, b: 2, c: 3, d: 4 }
+
+// Copying
+let arrCopy = [...arr1];
+let objCopy = { ...obj1 };</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Objects & Arrays</h3>
+            <div class="quiz" data-quiz="objects">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> How do you access object property "name" in object person?</p>
+                <label><input type="radio" name="q1" value="a"> a) person.name or person["name"]</label>
+                <label><input type="radio" name="q1" value="b"> b) person->name</label>
+                <label><input type="radio" name="q1" value="c"> c) person::name</label>
+                <label><input type="radio" name="q1" value="d"> d) person.name()</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does array.push() do?</p>
+                <label><input type="radio" name="q2" value="a"> a) Adds element to beginning</label>
+                <label><input type="radio" name="q2" value="b"> b) Adds element to end</label>
+                <label><input type="radio" name="q2" value="c"> c) Removes element from end</label>
+                <label><input type="radio" name="q2" value="d"> d) Removes element from beginning</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does array.map() do?</p>
+                <label><input type="radio" name="q3" value="a"> a) Creates new array with transformed elements</label>
+                <label><input type="radio" name="q3" value="b"> b) Filters array elements</label>
+                <label><input type="radio" name="q3" value="c"> c) Reduces array to single value</label>
+                <label><input type="radio" name="q3" value="d"> d) Sorts array elements</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does the spread operator (...) do?</p>
+                <label><input type="radio" name="q4" value="a"> a) Expands array/object into individual elements</label>
+                <label><input type="radio" name="q4" value="b"> b) Combines arrays</label>
+                <label><input type="radio" name="q4" value="c"> c) Copies arrays</label>
+                <label><input type="radio" name="q4" value="d"> d) All of the above</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does array.filter() do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Creates new array with filtered elements</label>
+                <label><input type="radio" name="q5" value="b"> b) Modifies original array</label>
+                <label><input type="radio" name="q5" value="c"> c) Sorts array</label>
+                <label><input type="radio" name="q5" value="d"> d) Reverses array</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What is destructuring?</p>
+                <label><input type="radio" name="q6" value="a"> a) Extracting values from arrays/objects</label>
+                <label><input type="radio" name="q6" value="b"> b) Creating arrays/objects</label>
+                <label><input type="radio" name="q6" value="c"> c) Modifying arrays/objects</label>
+                <label><input type="radio" name="q6" value="d"> d) Deleting arrays/objects</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does array.reduce() do?</p>
+                <label><input type="radio" name="q7" value="a"> a) Reduces array to single value</label>
+                <label><input type="radio" name="q7" value="b"> b) Reduces array size</label>
+                <label><input type="radio" name="q7" value="c"> c) Filters array</label>
+                <label><input type="radio" name="q7" value="d"> d) Sorts array</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the output of: [1, 2, 3].map(x => x * 2)?</p>
+                <label><input type="radio" name="q8" value="a"> a) [2, 4, 6]</label>
+                <label><input type="radio" name="q8" value="b"> b) [1, 2, 3]</label>
+                <label><input type="radio" name="q8" value="c"> c) [3, 6, 9]</label>
+                <label><input type="radio" name="q8" value="d"> d) Error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does array.find() do?</p>
+                <label><input type="radio" name="q9" value="a"> a) Finds first matching element</label>
+                <label><input type="radio" name="q9" value="b"> b) Finds all matching elements</label>
+                <label><input type="radio" name="q9" value="c"> c) Finds index of element</label>
+                <label><input type="radio" name="q9" value="d"> d) Finds last matching element</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the output of: [...[1, 2], ...[3, 4]]?</p>
+                <label><input type="radio" name="q10" value="a"> a) [1, 2, 3, 4]</label>
+                <label><input type="radio" name="q10" value="b"> b) [[1, 2], [3, 4]]</label>
+                <label><input type="radio" name="q10" value="c"> c) [1, 2, [3, 4]]</label>
+                <label><input type="radio" name="q10" value="d"> d) Error</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('objects')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOM Manipulation -->
+      <section id="dom" class="topic-section">
+        <h2>6. DOM Manipulation</h2>
+        <div class="topic-content">
+          <h3>What is the DOM?</h3>
+          <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page structure as a tree of objects that can be manipulated with JavaScript.</p>
+
+          <h3>Selecting Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Select by ID
+let element = document.getElementById("myId");
+
+// Select by class (returns NodeList)
+let elements = document.getElementsByClassName("myClass");
+
+// Select by tag name (returns NodeList)
+let paragraphs = document.getElementsByTagName("p");
+
+// Query selector (returns first match)
+let element = document.querySelector("#myId");
+let element = document.querySelector(".myClass");
+let element = document.querySelector("p");
+
+// Query selector all (returns NodeList)
+let elements = document.querySelectorAll(".myClass");
+let elements = document.querySelectorAll("p");</code></pre>
+          </div>
+
+          <h3>Modifying Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Change text content
+element.textContent = "New text";
+element.innerText = "New text";
+element.innerHTML = "<strong>New text</strong>";
+
+// Change attributes
+element.setAttribute("id", "newId");
+element.setAttribute("class", "newClass");
+element.id = "newId";
+element.className = "newClass";
+element.classList.add("newClass");
+element.classList.remove("oldClass");
+element.classList.toggle("active");
+
+// Change styles
+element.style.color = "red";
+element.style.backgroundColor = "blue";
+element.style.fontSize = "20px";</code></pre>
+          </div>
+
+          <h3>Creating Elements</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Create new element
+let newDiv = document.createElement("div");
+newDiv.textContent = "New div";
+newDiv.className = "container";
+
+// Create text node
+let textNode = document.createTextNode("Some text");
+
+// Append to parent
+let parent = document.getElementById("parent");
+parent.appendChild(newDiv);
+
+// Insert before
+let sibling = document.getElementById("sibling");
+parent.insertBefore(newDiv, sibling);
+
+// Replace child
+parent.replaceChild(newDiv, oldChild);
+
+// Remove child
+parent.removeChild(newDiv);</code></pre>
+          </div>
+
+          <h3>Event Listeners</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Add event listener
+element.addEventListener("click", function() {
+    console.log("Clicked!");
+});
+
+// Arrow function
+element.addEventListener("click", () => {
+    console.log("Clicked!");
+});
+
+// Named function
+function handleClick() {
+    console.log("Clicked!");
+}
+element.addEventListener("click", handleClick);
+
+// Remove event listener
+element.removeEventListener("click", handleClick);
+
+// Event object
+element.addEventListener("click", function(event) {
+    console.log(event.target);
+    console.log(event.type);
+    event.preventDefault(); // Prevent default behavior
+    event.stopPropagation(); // Stop event bubbling
+});</code></pre>
+          </div>
+
+          <h3>Common Events</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Mouse events
+element.addEventListener("click", handler);
+element.addEventListener("dblclick", handler);
+element.addEventListener("mouseenter", handler);
+element.addEventListener("mouseleave", handler);
+element.addEventListener("mousemove", handler);
+
+// Keyboard events
+element.addEventListener("keydown", handler);
+element.addEventListener("keyup", handler);
+element.addEventListener("keypress", handler);
+
+// Form events
+element.addEventListener("submit", handler);
+element.addEventListener("change", handler);
+element.addEventListener("focus", handler);
+element.addEventListener("blur", handler);
+element.addEventListener("input", handler);
+
+// Window events
+window.addEventListener("load", handler);
+window.addEventListener("resize", handler);
+window.addEventListener("scroll", handler);</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: DOM Manipulation</h3>
+            <div class="quiz" data-quiz="dom">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What does document.getElementById() return?</p>
+                <label><input type="radio" name="q1" value="a"> a) Single element</label>
+                <label><input type="radio" name="q1" value="b"> b) NodeList</label>
+                <label><input type="radio" name="q1" value="c"> c) Array</label>
+                <label><input type="radio" name="q1" value="d"> d) String</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does querySelector() return?</p>
+                <label><input type="radio" name="q2" value="a"> a) First matching element</label>
+                <label><input type="radio" name="q2" value="b"> b) All matching elements</label>
+                <label><input type="radio" name="q2" value="c"> c) NodeList</label>
+                <label><input type="radio" name="q2" value="d"> d) Array</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is the difference between textContent and innerHTML?</p>
+                <label><input type="radio" name="q3" value="a"> a) textContent is plain text, innerHTML can contain HTML</label>
+                <label><input type="radio" name="q3" value="b"> b) innerHTML is plain text, textContent can contain HTML</label>
+                <label><input type="radio" name="q3" value="c"> c) They are the same</label>
+                <label><input type="radio" name="q3" value="d"> d) textContent is faster</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does appendChild() do?</p>
+                <label><input type="radio" name="q4" value="a"> a) Adds element as last child</label>
+                <label><input type="radio" name="q4" value="b"> b) Adds element as first child</label>
+                <label><input type="radio" name="q4" value="c"> c) Replaces child</label>
+                <label><input type="radio" name="q4" value="d"> d) Removes child</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What does createElement() do?</p>
+                <label><input type="radio" name="q5" value="a"> a) Creates new DOM element</label>
+                <label><input type="radio" name="q5" value="b"> b) Creates new function</label>
+                <label><input type="radio" name="q5" value="c"> c) Creates new object</label>
+                <label><input type="radio" name="q5" value="d"> d) Creates new array</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does addEventListener() do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Adds event handler to element</label>
+                <label><input type="radio" name="q6" value="b"> b) Removes event handler</label>
+                <label><input type="radio" name="q6" value="c"> c) Triggers event</label>
+                <label><input type="radio" name="q6" value="d"> d) Prevents event</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does event.preventDefault() do?</p>
+                <label><input type="radio" name="q7" value="a"> a) Prevents default behavior</label>
+                <label><input type="radio" name="q7" value="b"> b) Prevents event bubbling</label>
+                <label><input type="radio" name="q7" value="c"> c) Stops event</label>
+                <label><input type="radio" name="q7" value="d"> d) Cancels event</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does classList.add() do?</p>
+                <label><input type="radio" name="q8" value="a"> a) Adds class to element</label>
+                <label><input type="radio" name="q8" value="b"> b) Removes class from element</label>
+                <label><input type="radio" name="q8" value="c"> c) Toggles class</label>
+                <label><input type="radio" name="q8" value="d"> d) Replaces class</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does querySelectorAll() return?</p>
+                <label><input type="radio" name="q9" value="a"> a) NodeList of all matching elements</label>
+                <label><input type="radio" name="q9" value="b"> b) First matching element</label>
+                <label><input type="radio" name="q9" value="c"> c) Array of elements</label>
+                <label><input type="radio" name="q9" value="d"> d) Single element</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does removeChild() do?</p>
+                <label><input type="radio" name="q10" value="a"> a) Removes child element</label>
+                <label><input type="radio" name="q10" value="b"> b) Adds child element</label>
+                <label><input type="radio" name="q10" value="c"> c) Replaces child element</label>
+                <label><input type="radio" name="q10" value="d"> d) Moves child element</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('dom')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section id="events" class="topic-section">
+        <h2>7. Events</h2>
+        <div class="topic-content">
+          <h3>What are Events?</h3>
+          <p>Events are actions or occurrences that happen in the browser, such as clicks, key presses, form submissions, etc. JavaScript can listen for these events and execute code in response.</p>
+
+          <h3>Event Types</h3>
+          
+          <h4>Mouse Events</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Click event
+button.addEventListener("click", function(event) {
+    console.log("Button clicked!");
+});
+
+// Double click
+element.addEventListener("dblclick", handler);
+
+// Mouse enter/leave
+element.addEventListener("mouseenter", handler);
+element.addEventListener("mouseleave", handler);
+
+// Mouse move
+element.addEventListener("mousemove", handler);
+
+// Mouse down/up
+element.addEventListener("mousedown", handler);
+element.addEventListener("mouseup", handler);</code></pre>
+          </div>
+
+          <h4>Keyboard Events</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Key down
+input.addEventListener("keydown", function(event) {
+    console.log("Key pressed:", event.key);
+    console.log("Key code:", event.keyCode);
+});
+
+// Key up
+input.addEventListener("keyup", handler);
+
+// Key press
+input.addEventListener("keypress", handler);</code></pre>
+          </div>
+
+          <h4>Form Events</h4>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Submit
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    // Handle form data
+});
+
+// Change
+input.addEventListener("change", function(event) {
+    console.log("Value changed:", event.target.value);
+});
+
+// Input (fires on every keystroke)
+input.addEventListener("input", function(event) {
+    console.log("Current value:", event.target.value);
+});
+
+// Focus/Blur
+input.addEventListener("focus", handler);
+input.addEventListener("blur", handler);</code></pre>
+          </div>
+
+          <h3>Event Object</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">element.addEventListener("click", function(event) {
+    // Event properties
+    console.log(event.type);        // "click"
+    console.log(event.target);      // Element that triggered event
+    console.log(event.currentTarget); // Element with listener
+    console.log(event.clientX);     // Mouse X position
+    console.log(event.clientY);     // Mouse Y position
+    console.log(event.key);         // Key pressed
+    console.log(event.preventDefault); // Function to prevent default
+    console.log(event.stopPropagation); // Function to stop bubbling
+});</code></pre>
+          </div>
+
+          <h3>Event Bubbling and Capturing</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Event bubbling (default) - event bubbles up from target
+// Event capturing - event captured from top down
+
+// Capturing phase
+element.addEventListener("click", handler, true);
+
+// Bubbling phase (default)
+element.addEventListener("click", handler, false);
+element.addEventListener("click", handler); // Same as false
+
+// Stop propagation
+element.addEventListener("click", function(event) {
+    event.stopPropagation(); // Stops event from bubbling
+});</code></pre>
+          </div>
+
+          <h3>Event Delegation</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Instead of adding listener to each element,
+// add listener to parent and use event.target
+let list = document.getElementById("list");
+
+list.addEventListener("click", function(event) {
+    if (event.target.tagName === "LI") {
+        console.log("List item clicked:", event.target.textContent);
+    }
+});</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Events</h3>
+            <div class="quiz" data-quiz="events">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is event bubbling?</p>
+                <label><input type="radio" name="q1" value="a"> a) Event propagates from target to parent</label>
+                <label><input type="radio" name="q1" value="b"> b) Event propagates from parent to target</label>
+                <label><input type="radio" name="q1" value="c"> c) Event doesn't propagate</label>
+                <label><input type="radio" name="q1" value="d"> d) Event is cancelled</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does event.preventDefault() do?</p>
+                <label><input type="radio" name="q2" value="a"> a) Prevents default browser behavior</label>
+                <label><input type="radio" name="q2" value="b"> b) Prevents event bubbling</label>
+                <label><input type="radio" name="q2" value="c"> c) Stops event</label>
+                <label><input type="radio" name="q2" value="d"> d) Cancels event listener</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What is event.target?</p>
+                <label><input type="radio" name="q3" value="a"> a) Element that triggered the event</label>
+                <label><input type="radio" name="q3" value="b"> b) Element with the listener</label>
+                <label><input type="radio" name="q3" value="c"> c) Parent element</label>
+                <label><input type="radio" name="q3" value="d"> d) Document</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What is event delegation?</p>
+                <label><input type="radio" name="q4" value="a"> a) Adding listener to parent instead of children</label>
+                <label><input type="radio" name="q4" value="b"> b) Removing event listeners</label>
+                <label><input type="radio" name="q4" value="c"> c) Preventing events</label>
+                <label><input type="radio" name="q4" value="d"> d) Stopping events</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is the difference between keydown and keypress?</p>
+                <label><input type="radio" name="q5" value="a"> a) keydown fires for all keys, keypress for character keys</label>
+                <label><input type="radio" name="q5" value="b"> b) They are the same</label>
+                <label><input type="radio" name="q5" value="c"> c) keypress fires first</label>
+                <label><input type="radio" name="q5" value="d"> d) keydown is deprecated</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does event.stopPropagation() do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Stops event from bubbling</label>
+                <label><input type="radio" name="q6" value="b"> b) Stops event from capturing</label>
+                <label><input type="radio" name="q6" value="c"> c) Prevents default behavior</label>
+                <label><input type="radio" name="q6" value="d"> d) Removes event listener</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What is the difference between change and input events?</p>
+                <label><input type="radio" name="q7" value="a"> a) change fires on blur, input fires on every keystroke</label>
+                <label><input type="radio" name="q7" value="b"> b) They are the same</label>
+                <label><input type="radio" name="q7" value="c"> c) input fires on blur, change fires on keystroke</label>
+                <label><input type="radio" name="q7" value="d"> d) change is for forms, input is for buttons</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What does the third parameter in addEventListener() control?</p>
+                <label><input type="radio" name="q8" value="a"> a) Event capturing vs bubbling</label>
+                <label><input type="radio" name="q8" value="b"> b) Event type</label>
+                <label><input type="radio" name="q8" value="c"> c) Event handler</label>
+                <label><input type="radio" name="q8" value="d"> d) Event target</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What is event.currentTarget?</p>
+                <label><input type="radio" name="q9" value="a"> a) Element with the event listener</label>
+                <label><input type="radio" name="q9" value="b"> b) Element that triggered the event</label>
+                <label><input type="radio" name="q9" value="c"> c) Parent element</label>
+                <label><input type="radio" name="q9" value="d"> d) Document</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What is the difference between mouseenter and mouseover?</p>
+                <label><input type="radio" name="q10" value="a"> a) mouseenter doesn't bubble, mouseover does</label>
+                <label><input type="radio" name="q10" value="b"> b) They are the same</label>
+                <label><input type="radio" name="q10" value="c"> c) mouseover doesn't bubble, mouseenter does</label>
+                <label><input type="radio" name="q10" value="d"> d) mouseenter is deprecated</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('events')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Async JavaScript -->
+      <section id="async" class="topic-section">
+        <h2>8. Async JavaScript</h2>
+        <div class="topic-content">
+          <h3>What is Asynchronous JavaScript?</h3>
+          <p>Asynchronous JavaScript allows code to run without blocking the main thread. This is essential for operations like fetching data, reading files, or waiting for user input.</p>
+
+          <h3>Callbacks</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Callback function
+function fetchData(callback) {
+    setTimeout(() => {
+        callback("Data received");
+    }, 1000);
+}
+
+fetchData(function(data) {
+    console.log(data); // "Data received" after 1 second
+});
+
+// Callback hell (nested callbacks)
+getData(function(a) {
+    getMoreData(a, function(b) {
+        getEvenMoreData(b, function(c) {
+            console.log(c);
+        });
+    });
+});</code></pre>
+          </div>
+
+          <h3>Promises</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Creating a promise
+let promise = new Promise(function(resolve, reject) {
+    let success = true;
+    
+    if (success) {
+        resolve("Success!");
+    } else {
+        reject("Error!");
+    }
+});
+
+// Using promises
+promise
+    .then(function(result) {
+        console.log(result); // "Success!"
+    })
+    .catch(function(error) {
+        console.log(error); // "Error!"
+    })
+    .finally(function() {
+        console.log("Always runs");
+    });
+
+// Promise chaining
+fetchData()
+    .then(result => processData(result))
+    .then(processed => displayData(processed))
+    .catch(error => console.error(error));</code></pre>
+          </div>
+
+          <h3>Async/Await</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Async function
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+// Using async/await
+async function displayData() {
+    let data = await fetchData();
+    console.log(data);
+}
+
+displayData();
+
+// Multiple async operations
+async function fetchMultiple() {
+    let [data1, data2, data3] = await Promise.all([
+        fetchData1(),
+        fetchData2(),
+        fetchData3()
+    ]);
+    return { data1, data2, data3 };
+}</code></pre>
+          </div>
+
+          <h3>Fetch API</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// Basic fetch
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+
+// Fetch with async/await
+async function getData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+// POST request
+fetch('https://api.example.com/data', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name: "John", age: 25 })
+})
+    .then(response => response.json())
+    .then(data => console.log(data));</code></pre>
+          </div>
+
+          <h3>setTimeout and setInterval</h3>
+          <div class="code-block-wrapper">
+            <pre><code class="language-javascript">// setTimeout - executes once after delay
+setTimeout(function() {
+    console.log("This runs after 2 seconds");
+}, 2000);
+
+// setInterval - executes repeatedly
+let interval = setInterval(function() {
+    console.log("This runs every second");
+}, 1000);
+
+// Clear interval
+clearInterval(interval);
+
+// Clear timeout
+let timeout = setTimeout(handler, 1000);
+clearTimeout(timeout);</code></pre>
+          </div>
+
+          <div class="quiz-section">
+            <h3>Quiz: Async JavaScript</h3>
+            <div class="quiz" data-quiz="async">
+              <div class="quiz-question">
+                <p><strong>Q1:</strong> What is a promise?</p>
+                <label><input type="radio" name="q1" value="a"> a) Object representing eventual completion of async operation</label>
+                <label><input type="radio" name="q1" value="b"> b) Function that runs immediately</label>
+                <label><input type="radio" name="q1" value="c"> c) Variable that stores data</label>
+                <label><input type="radio" name="q1" value="d"> d) Array of functions</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q2:</strong> What does async/await do?</p>
+                <label><input type="radio" name="q2" value="a"> a) Makes async code look synchronous</label>
+                <label><input type="radio" name="q2" value="b"> b) Makes sync code async</label>
+                <label><input type="radio" name="q2" value="c"> c) Runs code faster</label>
+                <label><input type="radio" name="q2" value="d"> d) Prevents errors</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q3:</strong> What does .then() do in promises?</p>
+                <label><input type="radio" name="q3" value="a"> a) Handles successful promise resolution</label>
+                <label><input type="radio" name="q3" value="b"> b) Handles promise rejection</label>
+                <label><input type="radio" name="q3" value="c"> c) Creates new promise</label>
+                <label><input type="radio" name="q3" value="d"> d) Cancels promise</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q4:</strong> What does .catch() do in promises?</p>
+                <label><input type="radio" name="q4" value="a"> a) Handles promise rejection</label>
+                <label><input type="radio" name="q4" value="b"> b) Handles successful resolution</label>
+                <label><input type="radio" name="q4" value="c"> c) Creates new promise</label>
+                <label><input type="radio" name="q4" value="d"> d) Cancels promise</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q5:</strong> What is callback hell?</p>
+                <label><input type="radio" name="q5" value="a"> a) Deeply nested callbacks</label>
+                <label><input type="radio" name="q5" value="b"> b) Multiple callbacks</label>
+                <label><input type="radio" name="q5" value="c"> c) No callbacks</label>
+                <label><input type="radio" name="q5" value="d"> d) Async callbacks</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q6:</strong> What does Promise.all() do?</p>
+                <label><input type="radio" name="q6" value="a"> a) Waits for all promises to resolve</label>
+                <label><input type="radio" name="q6" value="b"> b) Waits for first promise to resolve</label>
+                <label><input type="radio" name="q6" value="c"> c) Rejects all promises</label>
+                <label><input type="radio" name="q6" value="d"> d) Cancels all promises</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q7:</strong> What does setTimeout() do?</p>
+                <label><input type="radio" name="q7" value="a"> a) Executes function after delay</label>
+                <label><input type="radio" name="q7" value="b"> b) Executes function repeatedly</label>
+                <label><input type="radio" name="q7" value="c"> c) Executes function immediately</label>
+                <label><input type="radio" name="q7" value="d"> d) Cancels function execution</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q8:</strong> What is the difference between setTimeout and setInterval?</p>
+                <label><input type="radio" name="q8" value="a"> a) setTimeout runs once, setInterval runs repeatedly</label>
+                <label><input type="radio" name="q8" value="b"> b) They are the same</label>
+                <label><input type="radio" name="q8" value="c"> c) setInterval runs once, setTimeout runs repeatedly</label>
+                <label><input type="radio" name="q8" value="d"> d) setTimeout is faster</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q9:</strong> What does fetch() return?</p>
+                <label><input type="radio" name="q9" value="a"> a) Promise</label>
+                <label><input type="radio" name="q9" value="b"> b) Data</label>
+                <label><input type="radio" name="q9" value="c"> c) Response object</label>
+                <label><input type="radio" name="q9" value="d"> d) Error</label>
+              </div>
+              <div class="quiz-question">
+                <p><strong>Q10:</strong> What does await do?</p>
+                <label><input type="radio" name="q10" value="a"> a) Waits for promise to resolve</label>
+                <label><input type="radio" name="q10" value="b"> b) Creates new promise</label>
+                <label><input type="radio" name="q10" value="c"> c) Rejects promise</label>
+                <label><input type="radio" name="q10" value="d"> d) Cancels promise</label>
+              </div>
+              <button class="quiz-submit" onclick="checkQuiz('async')">Submit Quiz</button>
+              <div class="quiz-result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">📘</div>
+        <h2>Not<span>es</span></h2>
+        <p>Master programming from beginner to advanced with our curated collection of online courses.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Course.com. Crafted with ❤️ for learners worldwide.</p>
+    </div>
+  </footer>
+
+  <div id="compiler-modal" class="compiler-modal">
+    <div class="compiler-modal-content">
+      <div class="compiler-modal-header">
+        <h2>💻 Code Compiler</h2>
+        <button class="compiler-close-btn" id="close-compiler">&times;</button>
+      </div>
+      <div class="compiler-body">
+        <div class="compiler-toolbar">
+          <div class="compiler-left-tools">
+            <button class="tool-btn" onclick="loadCodeTemplate('hello')">📝 Hello World</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('array')">📊 Array Example</button>
+            <button class="tool-btn" onclick="loadCodeTemplate('oop')">🎯 OOP Example</button>
+            <button class="tool-btn" onclick="clearCompilerCode()">🗑️ Clear</button>
+            <button class="tool-btn" onclick="saveCompilerCode()">💾 Save</button>
+            <button class="tool-btn" onclick="loadCompilerCode()">📂 Load</button>
+          </div>
+          <div class="compiler-right-tools">
+            <select id="compiler-language" class="compiler-language-selector" onchange="setCompilerLanguage(this.value)">
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+              <option value="javascript" selected>JavaScript</option>
+            </select>
+            <input type="text" id="compiler-api-key" placeholder="RapidAPI Key" class="api-key-input-small" />
+            <button class="tool-btn primary" onclick="saveCompilerApiKey()">Save Key</button>
+            <button class="tool-btn run-btn-large" onclick="runCompilerCode()">▶ Run Code</button>
+          </div>
+        </div>
+        <div class="compiler-editor-container">
+          <div class="compiler-editor-section">
+            <div class="editor-tab">
+              <span class="tab-active">Code Editor</span>
+            </div>
+            <textarea id="compiler-code-editor" class="compiler-code-editor" placeholder="Enter your JavaScript code here...">console.log("Hello, World!");</textarea>
+          </div>
+          <div class="compiler-input-section">
+            <div class="input-label">Input (stdin):</div>
+            <textarea id="compiler-input" class="compiler-input" placeholder="Enter input for your program (optional)"></textarea>
+          </div>
+        </div>
+        <div class="compiler-output-container">
+          <div class="output-header-bar">
+            <span>Output</span>
+            <div class="output-actions">
+              <span id="compiler-status" class="status-badge">Ready</span>
+              <button class="tool-btn-small" onclick="clearCompilerOutput()">Clear Output</button>
+              <button class="tool-btn-small" onclick="downloadCompilerOutput()">Download</button>
+            </div>
+          </div>
+          <div id="compiler-output" class="compiler-output-display"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="c-course.js"></script>
+  <script src="compiler.js"></script>
+  <script>
+    // JavaScript Quiz Answers
+    const jsQuizAnswers = {
+        'intro': {
+            'q1': 'b', 'q2': 'b'
+        },
+        'variables': {
+            'q1': 'a', 'q2': 'b', 'q3': 'b', 'q4': 'c', 'q5': 'b',
+            'q6': 'a', 'q7': 'b', 'q8': 'a', 'q9': 'b', 'q10': 'b'
+        },
+        'operators': {
+            'q1': 'b', 'q2': 'b', 'q3': 'b', 'q4': 'b', 'q5': 'a',
+            'q6': 'b', 'q7': 'a', 'q8': 'a', 'q9': 'b', 'q10': 'b'
+        },
+        'functions': {
+            'q1': 'a', 'q2': 'a', 'q3': 'a', 'q4': 'a', 'q5': 'a',
+            'q6': 'a', 'q7': 'a', 'q8': 'a', 'q9': 'a', 'q10': 'a'
+        },
+        'objects': {
+            'q1': 'a', 'q2': 'b', 'q3': 'a', 'q4': 'd', 'q5': 'a',
+            'q6': 'a', 'q7': 'a', 'q8': 'a', 'q9': 'a', 'q10': 'a'
+        },
+        'dom': {
+            'q1': 'a', 'q2': 'a', 'q3': 'a', 'q4': 'a', 'q5': 'a',
+            'q6': 'a', 'q7': 'a', 'q8': 'a', 'q9': 'a', 'q10': 'a'
+        },
+        'events': {
+            'q1': 'a', 'q2': 'a', 'q3': 'a', 'q4': 'a', 'q5': 'a',
+            'q6': 'a', 'q7': 'a', 'q8': 'a', 'q9': 'a', 'q10': 'a'
+        },
+        'async': {
+            'q1': 'a', 'q2': 'a', 'q3': 'a', 'q4': 'a', 'q5': 'a',
+            'q6': 'a', 'q7': 'a', 'q8': 'a', 'q9': 'a', 'q10': 'a'
+        }
+    };
+
+    // Override checkQuiz for JavaScript
+    const originalCheckQuiz = window.checkQuiz;
+    window.checkQuiz = function(quizId) {
+        const quiz = document.querySelector(`[data-quiz="${quizId}"]`);
+        if (!quiz) return;
+        
+        const questions = quiz.querySelectorAll('.quiz-question');
+        const resultDiv = quiz.querySelector('.quiz-result');
+        let correctAnswers = 0;
+        let totalQuestions = questions.length;
+        const answers = jsQuizAnswers[quizId] || {};
+
+        questions.forEach((question, index) => {
+            const questionNum = `q${index + 1}`;
+            const selectedAnswer = question.querySelector(`input[name="${questionNum}"]:checked`);
+            const correctAnswer = answers[questionNum];
+            const labels = question.querySelectorAll('label');
+
+            if (selectedAnswer && correctAnswer) {
+                if (selectedAnswer.value === correctAnswer) {
+                    correctAnswers++;
+                    labels.forEach(label => {
+                        const radio = label.querySelector('input');
+                        if (radio.value === correctAnswer) {
+                            label.style.background = '#d1fae5';
+                            label.style.color = '#065f46';
+                        }
+                    });
+                } else {
+                    labels.forEach(label => {
+                        const radio = label.querySelector('input');
+                        if (radio.value === correctAnswer) {
+                            label.style.background = '#d1fae5';
+                            label.style.color = '#065f46';
+                        }
+                        if (radio === selectedAnswer) {
+                            label.style.background = '#fee2e2';
+                            label.style.color = '#991b1b';
+                        }
+                    });
+                }
+            } else if (correctAnswer) {
+                labels.forEach(label => {
+                    const radio = label.querySelector('input');
+                    if (radio.value === correctAnswer) {
+                        label.style.background = '#d1fae5';
+                        label.style.color = '#065f46';
+                    }
+                });
+            }
+        });
+
+        const percentage = (correctAnswers / totalQuestions) * 100;
+        resultDiv.className = 'quiz-result';
+        
+        if (percentage === 100) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `🎉 Perfect! You got ${correctAnswers}/${totalQuestions} correct (100%)`;
+        } else if (percentage >= 70) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `Good job! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%)`;
+        } else if (percentage >= 50) {
+            resultDiv.classList.add('correct');
+            resultDiv.textContent = `Not bad! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%). Keep practicing!`;
+        } else {
+            resultDiv.classList.add('incorrect');
+            resultDiv.textContent = `Keep practicing! You got ${correctAnswers}/${totalQuestions} correct (${percentage.toFixed(0)}%). Try again!`;
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      setCompilerLanguage('javascript');
+    });
+  </script>
+  </script>
+</body>
+</html>
+
