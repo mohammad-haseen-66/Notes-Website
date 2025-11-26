@@ -1,6 +1,6 @@
 // Configuration
-const GEMINI_API_KEY = "AIzaSyBITAn1JXiE6Z5pABrkI_elEf5EMU9ww_g";
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+const GEMINI_API_KEY = "API KEY";
+const GEMINI_API_URL = "API URL";
 
 // State Management
 let currentQuestionPaper = null;
@@ -594,4 +594,5 @@ function loadSavedData() {
         }
     }
 }
+
 
