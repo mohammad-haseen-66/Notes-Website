@@ -1,6 +1,6 @@
 // Compiler Modal Functionality
 // Constants
-const DEFAULT_API_KEY = '2cb1e74a5amsh9f983a682930776p1105dcjsnb5f9af6baef6';
+const DEFAULT_API_KEY = 'API KEY';
 
 document.addEventListener('DOMContentLoaded', function() {
     initCompilerModal();
